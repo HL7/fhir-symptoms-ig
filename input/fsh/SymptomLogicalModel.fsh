@@ -9,24 +9,24 @@ Characteristics: #can-be-target
 * identifier.system
 * identifier.value
 
-* keyFeatures
-* keyFeatures.location
-* keyFeatures.location.laterality
-* keyFeatures.location.qualifier
-* keyFeatures.quality
-* keyFeatures.severity
-* keyFeatures.functionalImpact
-* keyFeatures.surroundingEvents
-* keyFeatures.triggers
-* keyFeatures.exacerbatingFactors
-* keyFeatures.alleviatingFactors
+* keyFeatures 0..* BackboneElement "The key features of the symptom" ""
+* keyFeatures.location 0..* "Where on the body the feature is located" ""
+* keyFeatures.location.laterality 0..1  
+* keyFeatures.location.qualifier 0..* 
+* keyFeatures.quality 1..1 
+* keyFeatures.severity 1..1 
+* keyFeatures.functionalImpact 1..1 CodeableConcept
+* keyFeatures.surroundingEvents 0..* 
+* keyFeatures.triggers 0..*
+* keyFeatures.exacerbatingFactors 0..*
+* keyFeatures.alleviatingFactors 0..* 
 
-* inputs
+* inputs 0..* BackboneElement "Information about the symptom"
 * inputs.patient
 * inputs.careTeam
 * inputs.careTeam.member
 
-* timing
+* timing 1..1 BackboneElement ""
 * timing.onset
 * timing.onset.speed
 * timing.duration
@@ -34,5 +34,5 @@ Characteristics: #can-be-target
 * timing.clinicalCourse
 * timing.trend
 
-* metadata
+* metadata 1..1 BackboneElement
 * metadate.documentationDate
