@@ -6,6 +6,12 @@ Title: "Symptom Logical Model"
 Characteristics: #can-be-target
 
 * identifier 1..1 string ""
+* affectedPatient 1..1 Reference(Patient) ""
+
+* inputs 0..* BackboneElement "Information about who reported or documented the symptom" 
+* inputs.reporter 1..1 Reference(Patient or RelatedPerson) "" "Who reports the patient symptom to the care team, how it is reported, and in what format it is reported."
+* inputs.careTeam 0..* BackboneElement "" "Who from the care team documents the patient symptom, where and how it is documented, and in what format it is documented."
+* inputs.careTeam.member 0..* Reference(PractitionerRole or Organization) "" ""
 
 * keyFeatures 0..* BackboneElement "Key Features" "The key features of the symptom"
 * keyFeatures.location 0..* Reference(BodyStructure) "Where the patient feels the symptom in the body."
@@ -37,19 +43,14 @@ Characteristics: #can-be-target
 * keyFeatures.alleviatingFactors.relatedMedication 0..* BackboneElement "Medication given during the event"
 * keyFeatures.alleviatingFactors.relatedMedication.value[x] 0..* Reference(Medication) ""
 
-* inputs 0..* BackboneElement "Information about who reported or documented the symptom" 
-* inputs.reporter 1..1 Reference(Patient or RelatedPerson) "" "Who reports the patient symptom to the care team, how it is reported, and in what format it is reported."
-* inputs.careTeam 0..* BackboneElement "" "Who from the care team documents the patient symptom, where and how it is documented, and in what format it is documented."
-* inputs.careTeam.member 0..* Reference(PractitionerRole or Organization) "" ""
-
 * timing 0..1 BackboneElement "" "Timing includes the actual or estimated date/time of onset, character of onset, how often the patient experiences the symptom, and the length of time the symptom persists."
 * timing.onset 1..1 BackboneElement "Time of first appearance" "Actual or estimated date/time of onset."
 * timing.onset.speed 0..1 CodeableConcept "The rate at which a physiological condition became apparent." ""
 * timing.onset.effective[x] 0..1 dateTime or Period "Clinically relevant time or period for the symptom" 
 * timing.onset.note 0..1 string "Free text related to the observation" 
-* timing.duration 0..1 Duration "The length of time the symptom persists." ""
+* timing.duration[x] 0..1 Duration or CodeableConcept "The length of time the symptom persists." ""
 * timing.frequency[x] 0..* Quantity or CodeableConcept "How often the patient experiences the symptom." ""
-* timing.clinicalCourse 0..1 CodeableConcept "" "Character of symptom onset."
+* timing.clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Is the pain acute, chronic, acute-on-chronic"
 * timing.trend 0..* CodeableConcept "" "Whether a condition is improving, worsening, stable, or resolved."
 
 * metadata 1..1 BackboneElement "" ""
