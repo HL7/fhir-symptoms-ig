@@ -8,7 +8,7 @@ Characteristics: #can-be-target
 * identifier 1..1 string ""
 
 * keyFeatures 0..* BackboneElement "Key Features" "The key features of the symptom"
-* keyFeatures.location 0..* Reference(BodySite) "Where the patient feels the symptom in the body."
+* keyFeatures.location 0..* Reference(BodyStructure) "Where the patient feels the symptom in the body."
 * keyFeatures.quality 0..* BackboneElement "The patient's internal perception of the symptom." 
 * keyFeatures.quality.assessment 0..* BackboneElement "" 
 * keyFeatures.quality.assessment.code 1..1 code "Code for the specific scale or assessment (e.g., pain, depression, or disability scale)." 
