@@ -20,17 +20,17 @@ Characteristics: #can-be-target
 * keyFeatures.quality.assessment 0..* BackboneElement "" 
 * keyFeatures.quality.assessment.code 1..1 code "Code for the specific scale or assessment (e.g., pain, depression, or disability scale)." 
 * keyFeatures.quality.assessment.value[x] 1..1 CodeableConcept or string "Code or quantity for the scale or assessment" 
-* keyFeatures.severity 1..1 BackboneElement "The intensity with which the patient experiences the symptom."
+* keyFeatures.severity 0..1 BackboneElement "The intensity with which the patient experiences the symptom."
 * keyFeatures.severity.assessment 0..* BackboneElement "" 
 * keyFeatures.severity.assessment.code 1..1 code "Code for the specific scale or assessment (e.g., pain, depression, or disability scale)." 
 * keyFeatures.severity.assessment.value[x] 1..1 CodeableConcept or string "Code or quantity for the scale or assessment" 
-* keyFeatures.functionalImpact 1..1 BackboneElement "How the symptom affects the patient's daily activities." 
+* keyFeatures.functionalImpact 0..1 BackboneElement "How the symptom affects the patient's daily activities." 
 * keyFeatures.functionalImpact.note 0..* Annotation "Free text related to the observation" 
+* keyFeatures.functionalImpact.affectiveGrade 0..* CodeableConcept "Emotional or mental impact of a symptom"
 * keyFeatures.functionalImpact.assessment 0..* BackboneElement "" 
 * keyFeatures.functionalImpact.assessment.code 1..1 code "Code for the specific scale or assessment (e.g., pain, depression, or disability scale)." 
 * keyFeatures.functionalImpact.assessment.value[x] 1..1 CodeableConcept or string "Code or quantity for the scale or assessment" 
 * keyFeatures.surroundingEvents 0..* BackboneElement "What was occurring at the time of symptom onset." 
-* keyFeatures.surroundingEvents.otherEvents 0..* CodeableConcept "Patient-reported actions that were occuring at time of symptom onset"
 * keyFeatures.surroundingEvents.triggers 0..* BackboneElement "Actions or environments that initiate the symptom."
 * keyFeatures.surroundingEvents.triggers.code 1..1 CodeableConcept "Code describing the type of trigger" 
 * keyFeatures.surroundingEvents.triggers.value[x] 1..1 CodeableConcept or string "Code or string describing the specific event." 
@@ -44,19 +44,20 @@ Characteristics: #can-be-target
 * keyFeatures.surroundingEvents.alleviatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 * keyFeatures.surroundingEvents.alleviatingFactors.relatedMedication 0..* BackboneElement "Medication given during the event"
 * keyFeatures.surroundingEvents.alleviatingFactors.relatedMedication.value[x] 0..* Reference(Medication) ""
+* keyFeatures.surroundingEvents.otherEvents 0..* CodeableConcept "Patient-reported actions that were occuring at time of symptom onset"
 
 * timing 0..1 BackboneElement "" "Timing includes the actual or estimated date/time of onset, character of onset, how often the patient experiences the symptom, and the length of time the symptom persists."
-* timing.onset 1..1 BackboneElement "Time of first appearance" "Actual or estimated date/time of onset."
-* timing.onset.speed 0..1 CodeableConcept "The rate at which a physiological condition became apparent." ""
-* timing.onset.effective[x] 0..1 dateTime or Period "Clinically relevant time or period for the symptom since first occurance." 
-* timing.onset.note 0..1 Annotation "Free text related to the observation" 
+* timing.speed 0..1 CodeableConcept "The rate at which a physiological condition became apparent." ""
+* timing.onset[x] 0..1 dateTime or Period "Clinically relevant time or period for the symptom since first occurance." 
+* timing.note 0..1 Annotation "Free text related to the observation" 
 * timing.duration[x] 0..1 Duration or CodeableConcept "The length of time the symptom persists in this instance of occurance." ""
 * timing.frequency 0..1 Quantity "How often the patient experiences the symptom." ""
 * timing.timePattern 0..1 CodeableConcept "The pattern of experiencing the symptom" "Continuous, intermittent, paroxysmal, or cyclic"
-* timing.clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course." //https://loinc.org/89261-2/
-* timing.trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved." //https://loinc.org/89253-9/
 
-* metadata 1..1 BackboneElement "" ""
+* clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course." //https://loinc.org/89261-2/
+* trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved." //https://loinc.org/89253-9/
+
+* metadata 1..1 BackboneElement "" "" //eventually provenance
 * metadata.documentationDate 1..1 dateTime "Date of recorded visit" "The date the symptom was entered, edited, or deleted."
 * metadata.issued 1..1 dateTime "Date/time when the current version was made available."
 
