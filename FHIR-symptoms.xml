@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="cic" url="http://hl7.org/fhir/uv/symptoms">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/FunctionalImpactObservation" key="StructureDefinition-FunctionalImpactObservation" name="Functional Impact Observation"/>
+<artifact id="StructureDefinition/QualityObservation" key="StructureDefinition-QualityObservation" name="Quality Observation"/>
+<artifact id="StructureDefinition/SeverityObservation" key="StructureDefinition-SeverityObservation" name="Severity Observation"/>
+<artifact id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
+<artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="index" name="Home"/>
+<page key="toc" name="Table of Contents"/>
+</specification>
