@@ -2,72 +2,62 @@
 class Symptom {
   string identifier
   CodeableConcept symptomCode
-  Reference affectedPatient
-  Reference recorder
+  Patient affectedPatient
+  CareTeamMember recorder
+  Annotation 0..* symptomDescription
   CodeableConcept 0..1 clinicalCourse
   CodeableConcept 0..1 trend
 }
-Symptom *-- "0..*" Inputs
-class Inputs {
-	Annotation text
-	Reference 0..1 careTeamMember
-}
 Symptom *-- "0..*" KeyFeatures
 class KeyFeatures {
-  Reference 0..* location
+  BodyStructure 0..* location
 }
 KeyFeatures *-- "0..1" Quality
 class Quality {
   code scaleCode
-  CodeableConcept valueCodeableConcept
-  string valueString
+  CodeableConceptOrString value
 }
 KeyFeatures *-- "0..1" Severity
 class Severity {
   code scaleCode
-  CodeableConcept valueCodeableConcept
-  string valueString
+  CodeableConceptOrString value
 }
 KeyFeatures *-- "0..*" FunctionalImpact
 class FunctionalImpact {
-  Annotation "0..1" note
-  CodeableConcept "0..1" affectiveGrade
+  Annotation 0..1 note
+  CodeableConcept 0..1 affectiveGrade
   code scaleCode
-  CodeableConcept valueCodeableConcept
-  string valueString
+  CodeableConceptOrString value
 }
 KeyFeatures *-- "0..*" SurroundingEvents
 class SurroundingEvents {
-  CodeableConcept "0..*" otherEvents
+  CodeableConcept 0..* otherEvents
 }
 SurroundingEvents *-- "0..*" Triggers
 class Triggers {
   CodeableConcept triggerCode
-  CodeableConcept valueCodeableConcept
-  string valueString
-  Annotation "0..1" note
+  CodeableConceptOrString value
+  Annotation 0..1 note
 }
 SurroundingEvents *-- "0..*" ExacerbatingFactors
 class ExacerbatingFactors {
-  CodeableReference "0..*" factor
-  Reference "0..*" relatedMedication
-  Annotation "0..1" note
+  CodeableReference 0..* factor
+  Medication 0..* relatedMedication
+  Annotation 0..1 note
 }
 SurroundingEvents *-- "0..*" AlleviatingFactors
 class AlleviatingFactors {
-  CodeableReference "0..*" factor
-  Reference "0..*" relatedMedication
-  Annotation "0..1" note
+  CodeableReference 0..* factor
+  Medication 0..* relatedMedication
+  Annotation 0..1 note
 }
 
 Symptom *-- "0..1" Timing
 class Timing {
   CodeableConcept 0..1 speed
-  dateTime 0..1 onsetDateTime
-  Period 0..1 onsetPeriod
+  dateTimeOrPeriod 0..1 onset
   Annotation 0..1 note
-  duration 0..1 durationDuration
-  CodeableConcept 0..1 durationCodeableConcept
+  CodableConceptOrDuration 0..1 duration
   Quantity 0..1 frequency
   CodeableConcept 0..1 timePattern
 }
