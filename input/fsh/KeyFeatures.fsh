@@ -5,7 +5,7 @@ Description: "The severity of the patient's experienced symptom."
 Title: "Severity Observation"
 
 * code 1..1 MS
-* code = http://loinc.org/64750-3 "Severity of symptoms"
+* code = http://loinc.org#64750-3 "Severity of symptoms"
 * focus 1..1 MS
 * focus only Reference(SymptomObservation)
 * value[x] 1..1 MS

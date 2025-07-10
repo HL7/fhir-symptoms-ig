@@ -12,6 +12,7 @@ Title: "Symptom Observation"
 * encounter 0..1 MS //reference(Encounter) 0..1 - how to fit surrounding events into this
 //  ^short = "What was occurring at the time of symptom onset." 
 * effective[x] MS
+* effective[x] only Timing
 * performer 1..1 MS
 //  ^short = "Who from the care team documents the patient symptom, where and how it is documented, and in what format it is documented."
 * value[x] 1..1 MS

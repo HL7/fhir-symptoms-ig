@@ -4,11 +4,13 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/ClinicalCourseObservation" key="StructureDefinition-ClinicalCourseObservation" name="Clinical Course Observation"/>
 <artifact id="StructureDefinition/FunctionalImpactObservation" key="StructureDefinition-FunctionalImpactObservation" name="Functional Impact Observation"/>
 <artifact id="StructureDefinition/QualityObservation" key="StructureDefinition-QualityObservation" name="Quality Observation"/>
 <artifact id="StructureDefinition/SeverityObservation" key="StructureDefinition-SeverityObservation" name="Severity Observation"/>
 <artifact id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
 <artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
+<artifact id="StructureDefinition/TrendObservation" key="StructureDefinition-TrendObservation" name="Trend Observation"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
