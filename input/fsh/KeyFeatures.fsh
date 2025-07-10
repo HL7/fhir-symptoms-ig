@@ -11,8 +11,7 @@ Title: "Severity Observation"
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
 * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
-* bodySite MS
-* bodySite from http://loinc.org/vs/LL5065-9 (example)
+* note MS
 
 Profile: QualityObservation
 Parent: Observation
@@ -20,13 +19,12 @@ Id: QualityObservation
 Description: "The quality of the patient's experienced symptom."
 Title: "Quality Observation"
 
-* code 1..1 MS
+* code 1..1 MS //32419-4, 72098-7
 * focus 1..1 MS  
 * focus only Reference(SymptomObservation)
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* bodySite MS
-* bodySite from http://loinc.org/vs/LL5065-9 (example)
+* note MS
 
 Profile: FunctionalImpactObservation
 Parent: Observation
@@ -34,10 +32,9 @@ Id: FunctionalImpactObservation
 Description: "The functional impact of the patient's experienced symptom."
 Title: "Functional Impact Observation"
 
-* code 1..1 MS
+* code 1..1 MS //70795-0, 47420-5, 54522-8
 * focus 1..1 MS  
 * focus only Reference(SymptomObservation)
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* bodySite MS
-* bodySite from http://loinc.org/vs/LL5065-9 (example)
+* note MS
