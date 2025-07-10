@@ -14,11 +14,13 @@ class KeyFeatures {
 }
 KeyFeatures *-- "0..1" Quality
 class Quality {
+  Annotation 0..1 note
   code scaleCode
   CodeableConceptOrString value
 }
 KeyFeatures *-- "0..1" Severity
 class Severity {
+  Annotation 0..1 note
   code scaleCode
   CodeableConceptOrString value
 }
