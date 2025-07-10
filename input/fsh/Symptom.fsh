@@ -9,7 +9,7 @@ Title: "Symptom Observation"
 * code = http://loinc.org#75325-1 "Symptom"
 * subject 1..1 MS
 * subject only Reference(Patient)
-* encounter 0..1 MS //reference(Encounter) 0..1 - how to fit surrounding events into this
+// * encounter 0..1 MS //reference(Encounter) 0..1 - how to fit surrounding events into this
 //  ^short = "What was occurring at the time of symptom onset." 
 * effective[x] MS
 * effective[x] only Timing
@@ -19,5 +19,5 @@ Title: "Symptom Observation"
 * value[x] only CodeableConcept
 * note MS
 //  ^short = "Patient or caregiver description of symptom"
-* bodyStructure MS
+// * bodyStructure MS
 

@@ -4,7 +4,7 @@ Id: ClinicalCourseObservation
 Description: "The character of symptom onset."
 Title: "Clinical Course Observation"
 
-* code = http://loinc.org#-9 "Trend"
+* code = http://loinc.org#89253-9 "Trend"
 * focus 1..1 MS
 * focus only Reference(SymptomObservation)
 * value[x] 1..1 MS
