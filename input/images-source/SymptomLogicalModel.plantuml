@@ -22,14 +22,14 @@ class Severity {
   code scaleCode
   CodeableConceptOrString value
 }
-KeyFeatures *-- "0..*" FunctionalImpact
+KeyFeatures *-- "0..1" FunctionalImpact
 class FunctionalImpact {
   Annotation 0..1 note
   CodeableConcept 0..1 affectiveGrade
   code scaleCode
   CodeableConceptOrString value
 }
-KeyFeatures *-- "0..*" SurroundingEvents
+KeyFeatures *-- "0..1" SurroundingEvents
 class SurroundingEvents {
   CodeableConcept 0..* otherEvents
 }
