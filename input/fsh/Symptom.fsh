@@ -6,7 +6,7 @@ Title: "Symptom Observation"
 
 * identifier 1..1 MS
 * status 1..1
-* code = http://loinc.org#75325-1 "Symptom"
+* code from https://hl7.org/fhir/ValueSet/clinical-findings //= http://loinc.org#75325-1 "Symptom"
 * subject 1..1 MS
 * subject only Reference(Patient)
 // * encounter 0..1 MS //reference(Encounter) 0..1 - how to fit surrounding events into this
@@ -21,4 +21,13 @@ Title: "Symptom Observation"
 //  ^short = "Patient or caregiver description of symptom"
 * bodySite MS
 * bodySite from http://loinc.org/vs/LL5065-9 (example)
-
+* component 0..* MS 
+* component ^slicing.discriminator.type = #profile
+* component ^slicing.discriminator.path = "resource"
+* component ^slicing.rules = #open
+* component contains quality 0..1 MS and
+                     severity 0..1 MS and
+                     functionalImpact 0..1 MS
+* component[quality].resource only QualityObservation
+* component[severity].resource only SeverityObservation
+* component[functionalImpact].resource only FunctionalImpactObservation
