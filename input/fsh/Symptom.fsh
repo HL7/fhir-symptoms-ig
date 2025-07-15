@@ -25,9 +25,11 @@ Title: "Symptom Observation"
 * component ^slicing.discriminator.type = #profile
 * component ^slicing.discriminator.path = "resource"
 * component ^slicing.rules = #open
+* component ^slicing.description = "Slice based on the component.code pattern"
 * component contains quality 0..1 MS and
                      severity 0..1 MS and
                      functionalImpact 0..1 MS
-* component[quality].resource only QualityObservation
-* component[severity].resource only SeverityObservation
-* component[functionalImpact].resource only FunctionalImpactObservation
+//* component[quality].resource only QualityObservation
+//* component[severity].resource only SeverityObservation
+//* component[functionalImpact].resource only FunctionalImpactObservation
+
