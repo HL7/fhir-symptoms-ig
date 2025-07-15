@@ -6,30 +6,40 @@ Title: "Symptom Observation"
 
 * identifier 1..1 MS
 * status 1..1
-* code from https://hl7.org/fhir/ValueSet/clinical-findings //= http://loinc.org#75325-1 "Symptom"
+* code from https://hl7.org/fhir/ValueSet/clinical-findings (preferred) //= http://loinc.org#75325-1 "Symptom"
 * subject 1..1 MS
 * subject only Reference(Patient)
 // * encounter 0..1 MS //reference(Encounter) 0..1 - how to fit surrounding events into this
-//  ^short = "What was occurring at the time of symptom onset." 
+// * ^short = "What was occurring at the time of symptom onset." 
 * effective[x] MS
 * performer 1..1 MS
 * performer only Reference(Patient or RelatedPerson)
-//  ^short = "Who from the care team documents the patient symptom, where and how it is documented, and in what format it is documented."
+  //* ^short = "Who from the care team documents the patient symptom, where and how it is documented, and in what format it is documented."
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
+* value[x] from https://loinc.org/LL365-8 (required)
 * note MS
-//  ^short = "Patient or caregiver description of symptom"
+  * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
 * bodySite from http://loinc.org/vs/LL5065-9 (example)
 * component 0..* MS 
-* component ^slicing.discriminator.type = #profile
-* component ^slicing.discriminator.path = "resource"
+* component ^slicing.discriminator.type = #value
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains quality 0..1 MS and
                      severity 0..1 MS and
                      functionalImpact 0..1 MS
-//* component[quality].resource only QualityObservation
-//* component[severity].resource only SeverityObservation
-//* component[functionalImpact].resource only FunctionalImpactObservation
+* component[quality]
+  * code = http://loinc.org#32419-4 "Pain quality"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
+* component[severity]
+  * code = http://loinc.org#64750-3 "Severity of symptoms"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
+* component[functionalImpact]
+  * code = http://loinc.org#70795-0 "Impact on quality of life [FACIT]"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
 
