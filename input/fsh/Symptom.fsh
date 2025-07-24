@@ -29,17 +29,23 @@ Title: "Symptom Observation"
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains quality 0..1 MS and
                      severity 0..1 MS and
-                     functionalImpact 0..1 MS
+                     functionalImpact 0..* MS
 * component[quality]
   * code = http://loinc.org#32419-4 "Pain quality"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
+  * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
 * component[severity]
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
 * component[functionalImpact]
-  * code = http://loinc.org#70795-0 "Impact on quality of life [FACIT]"
+  * code from FunctionalFinding (example)
   * value[x] only CodeableConcept
-  * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
+  * valueCodeableConcept from http://loinc.org/vs/LL365-8 (required)
 
+
+ValueSet: FunctionalFinding
+Id: FunctionalFinding
+Title: "Functional Impact"
+Description: "Set of codes from SNOMED CT that describe different functional impact observations"
+* codes from system http://snomed.info/sct where concept is-a "118228005"
