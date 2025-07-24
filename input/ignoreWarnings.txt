@@ -9,6 +9,8 @@
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning' which is experimental, but this structure is not labeled as experimental
+Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 
 # 02 - We will provide examples before going to ballot
 The Implementation Guide contains no examples for this profile
+
