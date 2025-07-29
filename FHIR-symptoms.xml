@@ -4,11 +4,10 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/ClinicalCourseObservation" key="StructureDefinition-ClinicalCourseObservation" name="Clinical Course Observation"/>
+<artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
 <artifact id="ValueSet/FunctionalFinding" key="ValueSet-FunctionalFinding" name="Functional Impact"/>
 <artifact id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
 <artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
-<artifact id="StructureDefinition/TrendObservation" key="StructureDefinition-TrendObservation" name="Trend Observation"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

@@ -5,31 +5,40 @@ Description: "The Symptom observation contains all information given about a pat
 Title: "Symptom Observation"
 
 * identifier 1..1 MS
-* status 1..1
-* code from https://hl7.org/fhir/ValueSet/clinical-findings (preferred) //= http://loinc.org#75325-1 "Symptom"
+* status 1..1 MS
+* code 1..1 MS
+  * ^short = "Coded description of symptom"
+* code from https://hl7.org/fhir/ValueSet/clinical-findings (example)
 * subject 1..1 MS
 * subject only Reference(Patient)
-// * encounter 0..1 MS //reference(Encounter) 0..1 - how to fit surrounding events into this
-// * ^short = "What was occurring at the time of symptom onset." 
 * effective[x] MS
 * performer 1..1 MS
+  * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
-  //* ^short = "Who from the care team documents the patient symptom, where and how it is documented, and in what format it is documented."
 * value[x] 1..1 MS
+  * ^short = "Indicates whether the patient has the symptom or not"
 * value[x] only CodeableConcept
 * value[x] from https://loinc.org/LL365-8 (required)
 * note MS
   * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
+  * ^short = "Where the patient feels the symptom in the body"
 * bodySite from http://loinc.org/vs/LL5065-9 (example)
 * component 0..* MS 
+  * ^short = "Various information about the symptom"
+  * code 1..1 MS
+  * value[x] 1..1 MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* component ^slicing.description = "Different symptom component observations"
 * component contains quality 0..1 MS and
                      severity 0..1 MS and
-                     functionalImpact 0..* MS
+                     functionalImpact 0..* MS and
+                     clinicalCourse 0..1 MS and
+                     trend 0..1 MS and
+                     affectiveGrade 0..1 MS
+                     
 * component[quality]
   * code = http://loinc.org#32419-4 "Pain quality"
   * value[x] only CodeableConcept
@@ -42,10 +51,36 @@ Title: "Symptom Observation"
   * code from FunctionalFinding (example)
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL365-8 (required)
+* component[clinicalCourse]
+  * code = http://loinc.org#89261-2 "Clinical course"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
+* component[trend]
+  * code = http://loinc.org#89253-9 "Trend"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from http://loinc.org/vs/LL4938-8 (example)
+* component[affectiveGrade]
+  * code = http://snomed.info/sct#279116004 "Affective response to pain"
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from AffectiveGrade (example)
 
 
 ValueSet: FunctionalFinding
 Id: FunctionalFinding
 Title: "Functional Impact"
 Description: "Set of codes from SNOMED CT that describe different functional impact observations"
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright Â© 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CTÂ®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = true
 * codes from system http://snomed.info/sct where concept is-a "118228005"
+
+ValueSet: AffectiveGrade
+Id: AffectiveGrade
+Title: "Affective Grade"
+Description: "Set of codes from LOINC that describe a patient's affective grade"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINCÂ® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^experimental = true
+* codes from system http://loinc.org where concept is-a "75798-9"

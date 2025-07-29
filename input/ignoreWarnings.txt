@@ -14,3 +14,6 @@ Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.
 # 02 - We will provide examples before going to ballot
 The Implementation Guide contains no examples for this profile
 
+# 03 - Valid value sets that seemingly don't have definitions
+A definition could not be found for Canonical URL 'https://hl7.org/fhir/ValueSet/clinical-findings'
+A definition could not be found for Canonical URL 'https://loinc.org/LL365-8'

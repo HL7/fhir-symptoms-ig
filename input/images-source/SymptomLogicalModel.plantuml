@@ -3,33 +3,37 @@ class Symptom {
   string identifier
   CodeableConcept symptomCode
   Patient affectedPatient
-  CareTeamMember recorder
+  CareTeamMember reporter
   Annotation 0..* symptomDescription
+  BodyStructure 0..* location
   CodeableConcept 0..1 clinicalCourse
   CodeableConcept 0..1 trend
 }
 Symptom *-- "0..*" KeyFeatures
 class KeyFeatures {
-  BodyStructure 0..* location
 }
 KeyFeatures *-- "0..1" Quality
 class Quality {
   Annotation 0..1 note
   code scaleCode
-  CodeableConceptOrString value
+  CodeableConcept value
 }
 KeyFeatures *-- "0..1" Severity
 class Severity {
   Annotation 0..1 note
   code scaleCode
-  CodeableConceptOrString value
+  CodeableConcept value
+}
+KeyFeatures *-- "0..1" AffectiveGrade
+class AffectiveGrade {
+  Annotation 0..1 note
+  CodeableConcept value
 }
 KeyFeatures *-- "0..1" FunctionalImpact
 class FunctionalImpact {
   Annotation 0..1 note
-  CodeableConcept 0..1 affectiveGrade
   code scaleCode
-  CodeableConceptOrString value
+  CodeableConcept value
 }
 KeyFeatures *-- "0..1" SurroundingEvents
 class SurroundingEvents {
@@ -38,7 +42,7 @@ class SurroundingEvents {
 SurroundingEvents *-- "0..*" Triggers
 class Triggers {
   CodeableConcept triggerCode
-  CodeableConceptOrString value
+  CodeableConcept value
   Annotation 0..1 note
 }
 SurroundingEvents *-- "0..*" ExacerbatingFactors

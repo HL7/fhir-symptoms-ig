@@ -1,0 +1,1 @@
+[Symptoms Logical Model](StructureDefinition-SymptomLogicalModel.html)
