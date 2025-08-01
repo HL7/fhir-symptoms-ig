@@ -39,29 +39,36 @@ Title: "Symptom Observation"
                      trend 0..1 MS and
                      affectiveGrade 0..1 MS
                      
-* component[quality]
+* component[quality] ^short = "The patient's internal perception of the symptom" 
   * code = http://loinc.org#32419-4 "Pain quality"
+    * ^short = "Code for the specific scale or assessment (if any) used to determine the quality" 
   * value[x] only CodeableConcept
+    * ^short = "Code that represents the symptom quality" 
   * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
-* component[severity]
+* component[severity] ^short = "The intensity with which the patient experiences the symptom"
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
-* component[functionalImpact]
+* component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
   * code from FunctionalFinding (example)
+    * ^short = "Code for the specific scale or assessment if any used to determine the severity" 
   * value[x] only CodeableConcept
+    * ^short = "Code that represents the symptom severity" 
   * valueCodeableConcept from http://loinc.org/vs/LL365-8 (required)
-* component[clinicalCourse]
+* component[clinicalCourse] ^short = "Character of symptom onset" 
+  * ^comment = "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
-* component[trend]
+* component[trend] ^short = "Intensity of symptom over time"
+  * ^comment = "Whether a condition is improving, worsening, stable, or resolved."
   * code = http://loinc.org#89253-9 "Trend"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL4938-8 (example)
-* component[affectiveGrade]
+* component[affectiveGrade] ^short = "Emotional or mental impact of a symptom" 
   * code = http://snomed.info/sct#279116004 "Affective response to pain"
   * value[x] only CodeableConcept
+    * ^short = "Code that represents the affective grade" 
   * valueCodeableConcept from AffectiveGrade (example)
 
 
