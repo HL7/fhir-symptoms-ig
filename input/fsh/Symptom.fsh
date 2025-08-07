@@ -72,7 +72,7 @@ Title: "Symptom Observation"
     * ^short = "Code that represents the affective grade" 
   * valueCodeableConcept from AffectiveGrade (example)
 * component[surroundingEvents] ^short = "What was occurring at the time of symptom onset" // loinc 42550-4	Event description.medication
-  * code = http://loinc.org#38211-9 "Pain initiating event"
+  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
