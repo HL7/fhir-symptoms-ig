@@ -37,7 +37,8 @@ Title: "Symptom Observation"
                      functionalImpact 0..* MS and
                      clinicalCourse 0..1 MS and
                      trend 0..1 MS and
-                     affectiveGrade 0..1 MS
+                     affectiveGrade 0..1 MS and 
+                     surroundingEvents 0..* MS
                      
 * component[quality] ^short = "The patient's internal perception of the symptom" 
   * code = http://loinc.org#32419-4 "Pain quality"
@@ -70,7 +71,12 @@ Title: "Symptom Observation"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the affective grade" 
   * valueCodeableConcept from AffectiveGrade (example)
-
+* component[surroundingEvents] ^short = "What was occurring at the time of symptom onset" // loinc 42550-4	Event description.medication
+  * code = http://loinc.org#38211-9 "Pain initiating event"
+    * ^short = "Code for the specific type of event"
+  * value[x] only CodeableConcept
+    * ^short = "Code or string describing the specific event" 
+  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
 
 ValueSet: FunctionalFinding
 Id: FunctionalFinding
@@ -91,3 +97,4 @@ Description: "Set of codes from LOINC that describe a patient's affective grade"
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINCÂ® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = true
 * codes from system http://loinc.org where concept is-a "75798-9"
+
