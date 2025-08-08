@@ -4,7 +4,6 @@ Id: SymptomObservation
 Description: "The Symptom observation contains all information given about a patient's symptoms."
 Title: "Symptom Observation"
 
-* identifier 1..1 MS
 * status 1..1 MS
 * code 1..1 MS
   * ^short = "Coded description of symptom"
