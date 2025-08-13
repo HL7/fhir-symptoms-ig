@@ -19,7 +19,7 @@ Title: "Symptom Logical Model"
 * keyFeatures.quality.value 1..1 CodeableConcept "Code that represents the symptom quality" 
 
 * keyFeatures.severity 0..1 BackboneElement "The intensity with which the patient experiences the symptom."
-* keyFeatures.severity.note 0..1 Annotation "Textual description of the symptom quality" 
+* keyFeatures.severity.note 0..1 Annotation "Textual description of the symptom severity" 
 * keyFeatures.severity.scaleCode 0..1 code "Code for the specific scale or assessment if any used to determine the severity" 
 * keyFeatures.severity.value 1..1 CodeableConcept "Code that represents the symptom severity" 
 
