@@ -9,8 +9,10 @@ Title: "Symptom Observation"
   * ^short = "Coded description of symptom"
 * code from https://hl7.org/fhir/ValueSet/clinical-findings (example)
 * subject 1..1 MS
+  * ^short = "The patient who is experiencing the symptom"
 * subject only Reference(Patient)
 * effective[x] MS
+* issued MS
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
@@ -27,7 +29,7 @@ Title: "Symptom Observation"
   * ^short = "Various information about the symptom"
   * code 1..1 MS
   * value[x] 1..1 MS
-* component.extension contains SymptomAnnotation named text 0..1 MS
+* component.extension contains http://hl7.org/fhir/StructureDefinition/note named text 0..1 MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
@@ -38,20 +40,24 @@ Title: "Symptom Observation"
                      clinicalCourse 0..1 MS and
                      trend 0..1 MS and
                      affectiveGrade 0..1 MS and 
-                     surroundingEvents 0..* MS
+                     triggers 0..* MS and
+                     exacerbatingFactors 0..* MS and
+                     alleviatingFactors 0..* MS and
+                     otherEvents 0..* MS
                      
 * component[quality] ^short = "The patient's internal perception of the symptom" 
   * code = http://loinc.org#32419-4 "Pain quality"
-    * ^short = "Code for the specific scale or assessment (if any) used to determine the quality" 
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
   * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
+  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
 * component[severity] ^short = "The intensity with which the patient experiences the symptom"
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
+  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
 * component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
@@ -60,6 +66,7 @@ Title: "Symptom Observation"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom severity" 
   * valueCodeableConcept from http://loinc.org/vs/LL365-8 (required)
+  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the impact" 
 * component[clinicalCourse] ^short = "Character of symptom onset" 
@@ -67,6 +74,7 @@ Title: "Symptom Observation"
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
+  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
 * component[trend] ^short = "Intensity of symptom over time"
@@ -83,8 +91,35 @@ Title: "Symptom Observation"
   * valueCodeableConcept from AffectiveGrade (example)
   * extension[text]
     * ^short = "Textual description of the impact of the symptom" 
-* component[surroundingEvents] ^short = "What was occurring at the time of symptom onset" // loinc 42550-4	Event description.medication
-  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported" //triggers should be seperate from exacerbating and alleviating
+* component[triggers] ^short = "Actions or environments that initiate the symptom"
+  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+    * ^short = "Code for the specific type of event"
+  * value[x] only CodeableConcept
+    * ^short = "Code or string describing the specific event" 
+  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
+  * extension contains SurroundingEventMedication named relatedMedication 0..* MS
+  * extension[text]
+    * ^short = "Textual description of the event" 
+* component[exacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that increase or worsen symptoms"
+  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+    * ^short = "Code for the specific type of event"
+  * value[x] only CodeableConcept
+    * ^short = "Code or string describing the specific event" 
+  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
+  * extension contains SurroundingEventMedication named relatedMedication 0..* MS
+  * extension[text]
+    * ^short = "Textual description of the event" 
+* component[alleviatingFactors] ^short = "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
+  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+    * ^short = "Code for the specific type of event"
+  * value[x] only CodeableConcept
+    * ^short = "Code or string describing the specific event" 
+  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
+  * extension contains SurroundingEventMedication named relatedMedication 0..* MS
+  * extension[text]
+    * ^short = "Textual description of the event" 
+* component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
+  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
@@ -112,9 +147,19 @@ Description: "Set of codes from LOINC that describe a patient's affective grade"
 * ^experimental = true
 * codes from system http://loinc.org where concept is-a "75798-9"
 
-Extension: SymptomAnnotation
-Id: SymptomAnnotation
-Description: "Verbatim information provided by the patient"
-* value[x] only Annotation
+Extension: AssessmentScaleCode
+Id: AssessmentScaleCode
+Title: "Assessment Scale Code"
+Description: "Code for the specific scale or assessment used to determine the feature"
+* value[x] only CodeableConcept
+* ^context[+].type = #element
+* ^context[=].expression = "Observation.component"
+
+Extension: SurroundingEventMedication
+Id: SurroundingEventMedication
+Title: "Surrounding Event Medication"
+Description: "Medication that when taken affecting the factor"
+* value[x] only Reference
+* valueReference only Reference(MedicationStatement)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"

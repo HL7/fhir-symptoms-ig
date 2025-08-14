@@ -5,18 +5,22 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
+<artifact id="StructureDefinition/AssessmentScaleCode" key="StructureDefinition-AssessmentScaleCode" name="Assessment Scale Code"/>
 <artifact id="ValueSet/FunctionalFinding" key="ValueSet-FunctionalFinding" name="Functional Impact"/>
+<artifact id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
 <artifact id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
 <artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
+<artifact id="CapabilityStatement/SymptomCapabilities" key="CapabilityStatement-SymptomCapabilities" name="Symptom System Capabilities"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="background" name="Background"/>
 <page key="changes" name="Change Log"/>
+<page key="conformance" name="Conformance Expectations"/>
+<page key="exchange" name="Exchange Patterns"/>
 <page key="index" name="IG Home"/>
-<page key="logical" name="Symptoms Logical Model"/>
-<page key="profiles" name="Symptoms Profiles"/>
+<page key="acknowledgements" name="Project and Participants"/>
+<page key="background" name="Reading This IG"/>
 <page key="toc" name="Table of Contents"/>
-<page key="technical" name="Technical Information"/>
 <page key="terminology" name="Terminology"/>
+<page key="usecases" name="Use Cases"/>
 </specification>

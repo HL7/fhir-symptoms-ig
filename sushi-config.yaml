@@ -8,7 +8,7 @@ canonical: http://hl7.org/fhir/uv/symptoms
 name: Symptoms Data Standards
 title: FHIR R5 Symptoms Implementation Guide
 description: A guide that details how to capture and exchange Symptoms data in FHIR
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -40,31 +40,37 @@ pages:
   index.md:
     title: IG Home
   background.md:
-    title: Background
-  logical.md:
-    title: Symptoms Logical Model
-  profiles.md:
-    title: Symptoms Profiles
+    title: Reading This IG
+  usecases.md:
+    title: Use Cases
+  acknowledgements.md:
+    title: Project and Participants
+  conformance.md:
+    title: Conformance Expectations
+  exchange.md:
+    title: Exchange Patterns
   terminology.md:
     title: Terminology
-  technical.md:
-    title: Technical Information
   changes.md:
     title: Change Log
     
 menu:
   Home: index.html
-  Background: background.html
+  Background:
+    Reading this IG: background.html
+    Use Cases: usecases.html
+    Projects and Participants: acknowledgements.html
   Specification:
-    Logical Model: logical.html
-    Profiles: profiles.html
+    Conformance Expectations: conformance.html
+    Exchange Patterns: exchange.html
+  FHIR Artifacts:
+    Artifacts: artifacts.html
     Terminology: terminology.html
   Support:
     Discussion Forum: https://chat.fhir.org/#channels/501058/Symptoms.20on.20FHIR
     Project Page: https://confluence.hl7.org/spaces/CIC/pages/324960988/Symptoms+Standardization+Project
-#    Specification Dashboard: 
+#    Project Dashboard: 
 #    Propose a Change: 
-    Technical Info: technical.html
   Change Log: changes.html
 
 

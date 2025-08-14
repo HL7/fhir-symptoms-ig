@@ -36,16 +36,15 @@ Title: "Symptom Logical Model"
 
 * keyFeatures.surroundingEvents.triggers 0..* BackboneElement "Actions or environments that initiate the symptom."
 * keyFeatures.surroundingEvents.triggers.triggerCode 1..1 CodeableConcept "Code describing the type of trigger" 
-* keyFeatures.surroundingEvents.triggers.value[x] 1..1 CodeableConcept or string "Code or string describing the specific event." 
 * keyFeatures.surroundingEvents.triggers.note 0..1 Annotation "Free text related to the observation"
 
 * keyFeatures.surroundingEvents.exacerbatingFactors 0..* BackboneElement "" "Patient reported actions, conditions, events, physical objects or other factors that increase or worsen symptoms or the condition of interest (pain, nausea, dyspnea, dizziness, or other)."
-* keyFeatures.surroundingEvents.exacerbatingFactors.factor 0..* CodeableReference "Reference to the factor" 
+* keyFeatures.surroundingEvents.exacerbatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
 * keyFeatures.surroundingEvents.exacerbatingFactors.relatedMedication 0..* Medication ""
 * keyFeatures.surroundingEvents.exacerbatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 
 * keyFeatures.surroundingEvents.alleviatingFactors 0..* BackboneElement "" "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
-* keyFeatures.surroundingEvents.alleviatingFactors.factor 0..* CodeableReference "Reference to the factor" 
+* keyFeatures.surroundingEvents.alleviatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
 * keyFeatures.surroundingEvents.alleviatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 * keyFeatures.surroundingEvents.alleviatingFactors.relatedMedication 0..* Medication ""
 

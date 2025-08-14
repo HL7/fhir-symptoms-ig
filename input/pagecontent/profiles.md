@@ -1,1 +1,0 @@
-[Symptoms Main Profile](StructureDefinition-SymptomObservation.html)
