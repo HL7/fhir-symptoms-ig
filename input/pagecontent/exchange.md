@@ -6,6 +6,10 @@ This guide presumes that systems that are exchange symptom data shall do so usin
 
 Symptoms **SHALL** be recorded using the [CREATE]({{site.data.fhir.path}}http.html#create) and [UPDATE]({{site.data.fhir.path}}http.html#update) interactions.
 
+### Symptoms Reading
+
+Symptoms **SHALL** be retrieved using the [READ]({{site.data.fhir.path}}http.html#read) interaction.
+
 ### Symptoms Searching
 
 Systems **SHALL** allow for symptoms to be searched for using the [SEARCH]({{site.data.fhir.path}}http.html#search) interaction with the following search parameters:
