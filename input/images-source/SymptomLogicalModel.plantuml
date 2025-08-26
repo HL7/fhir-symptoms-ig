@@ -8,9 +8,9 @@ class Symptom {
   BodyStructure 0..* location
   CodeableConcept 0..1 clinicalCourse
   CodeableConcept 0..1 trend
-  Symptom 0..* associatedSymptom
   Condition 0..* associatedCondition
 }
+Symptom *-- "0..*" Symptom : associatedSymptoms
 Symptom *-- "0..*" KeyFeatures
 class KeyFeatures {
 }

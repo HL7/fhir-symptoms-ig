@@ -10,7 +10,8 @@ Title: "Symptom Logical Model"
 * reporter[x] 1..1 Patient or RelatedPerson "The person who is reporting the symptom information"
 * symptomDescription 0..* Annotation "Textual description of symptom as provided by patient or care team member"
 * location 0..* BodyStructure "Where the patient feels the symptom in the body."
-* associatedSymptoms 0..* Observation "Other symptoms associated with this symptom"
+* associatedSymptoms 0..* SymptomLogicalModel
+ "Other symptoms associated with this symptom"
 * associatedConditions 0..* Condition "Condition associated with this symptom"
 
 * keyFeatures 1..1 BackboneElement "Key Features" "The key features of the symptom"

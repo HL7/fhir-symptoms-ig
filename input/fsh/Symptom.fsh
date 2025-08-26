@@ -1,7 +1,7 @@
 Profile: SymptomObservation
 Parent: Observation
 Id: SymptomObservation
-Description: "The Symptom observation contains all information given about a patient's symptoms."
+Description: "The Symptom observation contains all information given about a patient's symptoms.  NOTE: References to Conditions will be from the Condition.evidence element."
 Title: "Symptom Observation"
 
 * status 1..1 MS
@@ -26,7 +26,7 @@ Title: "Symptom Observation"
   * ^short = "Where the patient feels the symptom in the body"
 * bodySite from http://loinc.org/vs/LL5065-9 (example)
 * hasMember MS
-* hasMember only Reference(Observation)
+* hasMember only Reference(SymptomObservation)
   * ^short = "Other symptoms related to this symptom"
 * component 0..* MS 
   * ^short = "Various information about the symptom"
