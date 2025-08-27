@@ -4,6 +4,9 @@ Id: SymptomObservation
 Description: "The Symptom observation contains all information given about a patient's symptoms.  NOTE: References to Conditions will be from the Condition.evidence element."
 Title: "Symptom Observation"
 
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS
+* extension[associatedSymptom].valueReference only Reference(SymptomObservation)
+* extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
 * status 1..1 MS
 * code 1..1 MS
   * ^short = "Coded description of symptom"
@@ -25,13 +28,20 @@ Title: "Symptom Observation"
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
 * bodySite from http://loinc.org/vs/LL5065-9 (example)
-* hasMember MS
-* hasMember only Reference(SymptomObservation)
-  * ^short = "Other symptoms related to this symptom"
+
+* dataAbsentReason 0..0
+* interpretation 0..0
+* specimen 0..0
+* device 0..0
+* referenceRange 0..0
+
 * component 0..* MS 
   * ^short = "Various information about the symptom"
   * code 1..1 MS
   * value[x] 1..1 MS
+  * dataAbsentReason 0..0
+  * interpretation 0..0
+  * referenceRange 0..0
 * component.extension contains http://hl7.org/fhir/StructureDefinition/note named text 0..1 MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
