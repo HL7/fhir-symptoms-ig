@@ -6,7 +6,7 @@
 id: hl7.fhir.uv.symptoms
 canonical: http://hl7.org/fhir/uv/symptoms
 name: Symptoms Data Standards
-title: FHIR R5 Symptoms Implementation Guide
+title: FHIR R4 Symptoms Implementation Guide
 description: A guide that details how to capture and exchange Symptoms data in FHIR
 status: active # draft | active | retired | unknown
 version: 0.1.0

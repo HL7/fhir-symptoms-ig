@@ -54,10 +54,10 @@ Title: "Symptom Logical Model"
 * keyFeatures.surroundingEvents.otherEvents 0..* CodeableConcept "Patient-reported actions that were occuring at time of symptom onset"
 
 * timing 0..1 BackboneElement "" "Timing includes the actual or estimated date/time of onset, character of onset, how often the patient experiences the symptom, and the length of time the symptom persists."
-* timing.speed 0..1 CodeableConcept "The rate at which a physiological condition became apparent." ""
+* timing.speed 0..1 CodeableConcept "The rate at which a physiological symptom became apparent." ""
 * timing.onset[x] 0..1 dateTime or Period "Clinically relevant time or period for the symptom since first occurance." 
 * timing.note 0..1 Annotation "Free text related to the observation" 
-* timing.duration[x] 0..1 Duration or CodeableConcept "The length of time the symptom persists in this instance of occurance." ""
+* timing.duration[x] 0..1 Duration "The length of time the symptom persists in this instance of occurance." ""
 
 * frequency[x] 0..1 Quantity or CodeableConcept "How often the patient experiences the symptom i.e. expressed as 3x/day or 2x/week." 
 * clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."

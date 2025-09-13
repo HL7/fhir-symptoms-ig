@@ -4,9 +4,14 @@ Id: SymptomObservation
 Description: "The Symptom observation contains all information given about a patient's symptoms.  NOTE: References to Conditions will be from the Condition.evidence element."
 Title: "Symptom Observation"
 
-* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..* MS
+
 * extension[associatedSymptom].valueReference only Reference(SymptomObservation)
 * extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
+
+* extension[associatedCondition].valueReference only Reference(Condition)
+* extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
+
 * status 1..1 MS
 * code 1..1 MS
   * ^short = "Coded description of symptom"
@@ -14,7 +19,8 @@ Title: "Symptom Observation"
 * subject 1..1 MS
   * ^short = "The patient who is experiencing the symptom"
 * subject only Reference(Patient)
-* effective[x] MS
+* effective[x] 1..1 MS
+* effective[x] only dateTime or Period
 * issued MS
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
@@ -47,8 +53,8 @@ Title: "Symptom Observation"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Different symptom component observations"
-* component contains painQuality 0..1 MS and
-                     painSeverity 0..1 MS and
+* component contains quality 0..1 MS and
+                     severity 0..1 MS and
                      functionalImpact 0..* MS and
                      clinicalCourse 0..1 MS and
                      trend 0..1 MS and
@@ -57,17 +63,18 @@ Title: "Symptom Observation"
                      exacerbatingFactors 0..* MS and
                      alleviatingFactors 0..* MS and
                      otherEvents 0..* MS and
-                     frequency 0..1 MS 
+                     frequency 0..1 MS and
+                     speedOfOnset 0..1 MS
                      
-* component[painQuality] ^short = "The patient's internal perception of the symptom" 
-  * code = http://loinc.org#32419-4 "Pain quality"
+* component[quality] ^short = "The patient's internal perception of the symptom" 
+  * code = http://loinc.org#56823-8 "Problem quality or description"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
   * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
   * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
-* component[painSeverity] ^short = "The intensity with which the patient experiences the symptom"
+* component[severity] ^short = "The intensity with which the patient experiences the symptom"
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
@@ -76,9 +83,9 @@ Title: "Symptom Observation"
     * ^short = "Textual description of the symptom severity" 
 * component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
   * code from FunctionalFinding (example)
-    * ^short = "Code for the specific scale or assessment if any used to determine the severity" 
+    * ^short = "Code for the specific scale or assessment if any used to determine the functional impact" 
   * value[x] only CodeableConcept
-    * ^short = "Code that represents the symptom severity" 
+    * ^short = "Code that represents the symptom functional impact" 
   * valueCodeableConcept from http://loinc.org/vs/LL365-8 (required)
   * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
@@ -134,20 +141,22 @@ Title: "Symptom Observation"
     * ^short = "Textual description of the event" 
 * component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
   * code = http://loinc.org#96542-6 "Travel in 14 days prior to symptom onset" 
-    * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
-    * ^short = "Code or string describing the specific event" 
   * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[frequency] ^short = "How often the patient experiences the symptom."
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
-    * ^short = ""
   * value[x] only CodeableConcept or Ratio
-    * ^short = "" 
-  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
+  * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
+* component[speedOfOnset] ^short = "The rate at which a physiological symptom became apparent."
+  * code = http://loinc.org#99495-4 "Speed of condition onset" 
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from SpeedOfOnset (preferred)
+  * extension[text]
+    * ^short = "Textual description of the reported speed of onset" 
 
 
 ValueSet: FunctionalFinding
@@ -169,6 +178,15 @@ Description: "Set of codes from LOINC that describe a patient's affective grade"
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINCÂ® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = true
 * codes from system http://loinc.org where concept is-a "75798-9"
+
+ValueSet: SpeedOfOnset
+Id: SpeedOfOnset
+Title: "Speed of Onset"
+Description: "Set of codes from SNOMED that describe the speed of onset of a patient's symptom"
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright Â© 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"""
+* ^experimental = true
+* http://snomed.info/sct#61751001
+* http://snomed.info/sct#385315009
 
 Extension: AssessmentScaleCode
 Id: AssessmentScaleCode
