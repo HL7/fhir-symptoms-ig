@@ -10,7 +10,7 @@ Usage: #definition
 * date = "2025-01-01"
 * description = "Capabilities required for a system exchanging symptoms data."
 * kind = #requirements
-* fhirVersion = #5.0.0
+* fhirVersion = #4.0.1
 * format[0] = #json
 * format[1] = #xml
 * rest[0]
