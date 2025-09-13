@@ -47,8 +47,8 @@ Title: "Symptom Observation"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Different symptom component observations"
-* component contains quality 0..1 MS and
-                     severity 0..1 MS and
+* component contains painQuality 0..1 MS and
+                     painSeverity 0..1 MS and
                      functionalImpact 0..* MS and
                      clinicalCourse 0..1 MS and
                      trend 0..1 MS and
@@ -56,9 +56,10 @@ Title: "Symptom Observation"
                      triggers 0..* MS and
                      exacerbatingFactors 0..* MS and
                      alleviatingFactors 0..* MS and
-                     otherEvents 0..* MS
+                     otherEvents 0..* MS and
+                     frequency 0..1 MS 
                      
-* component[quality] ^short = "The patient's internal perception of the symptom" 
+* component[painQuality] ^short = "The patient's internal perception of the symptom" 
   * code = http://loinc.org#32419-4 "Pain quality"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
@@ -66,7 +67,7 @@ Title: "Symptom Observation"
   * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
-* component[severity] ^short = "The intensity with which the patient experiences the symptom"
+* component[painSeverity] ^short = "The intensity with which the patient experiences the symptom"
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
@@ -114,7 +115,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[exacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that increase or worsen symptoms"
-  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+  * code = http://loinc.org#100752-5 "Exacerbating factors - Reported" 
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
@@ -123,7 +124,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[alleviatingFactors] ^short = "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
-  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+  * code = http://loinc.org#100753-3 "Alleviating factors - Reported"   
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
@@ -132,13 +133,22 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
-  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+  * code = http://loinc.org#96542-6 "Travel in 14 days prior to symptom onset" 
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
   * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
   * extension[text]
     * ^short = "Textual description of the event" 
+* component[frequency] ^short = "How often the patient experiences the symptom."
+  * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
+    * ^short = ""
+  * value[x] only CodeableConcept or Ratio
+    * ^short = "" 
+  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
+  * extension[text]
+    * ^short = "Textual description of the reported frequency" 
+
 
 ValueSet: FunctionalFinding
 Id: FunctionalFinding

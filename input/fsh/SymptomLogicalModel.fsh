@@ -58,9 +58,8 @@ Title: "Symptom Logical Model"
 * timing.onset[x] 0..1 dateTime or Period "Clinically relevant time or period for the symptom since first occurance." 
 * timing.note 0..1 Annotation "Free text related to the observation" 
 * timing.duration[x] 0..1 Duration or CodeableConcept "The length of time the symptom persists in this instance of occurance." ""
-* timing.frequency 0..1 Quantity "How often the patient experiences the symptom." ""
-* timing.timePattern 0..1 CodeableConcept "The pattern of experiencing the symptom" "Continuous, intermittent, paroxysmal, or cyclic"
 
+* frequency[x] 0..1 Quantity or CodeableConcept "How often the patient experiences the symptom i.e. expressed as 3x/day or 2x/week." 
 * clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."
 * trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved."
 
