@@ -33,8 +33,8 @@ Usage: #definition
       * name = "patient"
       * type = #reference
     * searchParam[+]
-      * name = "status"
-      * type = #token
+      * name = "date"
+      * type = #date
     * searchParam[+]
       * name = "value-concept"
       * type = #token
@@ -58,8 +58,8 @@ Usage: #definition
       * name = "patient"
       * type = #reference
     * searchParam[+]
-      * name = "status"
-      * type = #token
+      * name = "date"
+      * type = #date
     * searchParam[+]
       * name = "value-concept"
       * type = #token

@@ -16,6 +16,5 @@ Systems **SHALL** allow for symptoms to be searched for using the [SEARCH]({{sit
 
 * [code]({{site.data.fhir.path}}observation.html#search) - searching for a specific symptom
 * [patient]({{site.data.fhir.path}}observation.html#search) - searching for a specific patient
-* [status]({{site.data.fhir.path}}observation.html#search) - searching for symptoms with a specific status
 * [value-concept]({{site.data.fhir.path}}observation.html#search) - searching for whether a patient has or does not have a specific symptom
-
+* [date]({{site.data.fhir.path}}observation.html#search) - searching for a symptom that happened on a certain date

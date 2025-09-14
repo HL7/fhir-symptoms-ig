@@ -139,7 +139,7 @@ Title: "Symptom Observation"
   * valueCodeableConcept MS
   * valueRatio MS
     * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
-  * valueCodeableConcept from http://loinc.org/vs/104156-5 (preferred)
+  * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
 * component[speedOfOnset] ^short = "The rate at which a physiological symptom became apparent."
