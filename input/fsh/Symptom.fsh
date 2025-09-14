@@ -59,8 +59,7 @@ Title: "Symptom Observation"
                      clinicalCourse 0..1 MS and
                      trend 0..1 MS and
                      affectiveGrade 0..1 MS and 
-                     triggers 0..* MS and
-                     exacerbatingFactors 0..* MS and
+                     triggersOrExacerbatingFactors 0..* MS and
                      alleviatingFactors 0..* MS and
                      otherEvents 0..* MS and
                      frequency 0..1 MS and
@@ -112,7 +111,7 @@ Title: "Symptom Observation"
   * valueCodeableConcept from AffectiveGrade (example)
   * extension[text]
     * ^short = "Textual description of the impact of the symptom" 
-* component[exacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms"
+* component[triggersOrExacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms"
   * code = http://loinc.org#100752-5 "Exacerbating factors - Reported"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
