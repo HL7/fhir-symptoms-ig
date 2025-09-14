@@ -1,16 +1,12 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
-
-
-# 01 - Messages inherited from core FHIR specification
-Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
-The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning' which is experimental, but this structure is not labeled as experimental
-Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
-
-# 02 - Valid value sets that seemingly don't have definitions
+# 01 - Valid value sets that seemingly don't have definitions
 A definition could not be found for Canonical URL 'https://hl7.org/fhir/ValueSet/clinical-findings'
 A definition could not be found for Canonical URL 'https://loinc.org/LL365-8'
+A definition could not be found for Canonical URL 'http://loinc.org/vs/104156-5'
+
+# 02 - Pinned canonicals
+Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo to 5.2.0%
+
+# 03 - Inherited from FHIR Core
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
