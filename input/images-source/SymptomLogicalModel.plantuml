@@ -5,14 +5,15 @@ class Symptom {
   Patient affectedPatient
   CareTeamMember reporter
   Annotation 0..* symptomDescription
-  BodyStructure 0..* location
+  CodeableConcept 0..* location
   CodeableConcept 0..1 clinicalCourse
   CodeableConcept 0..1 trend
-  Condition 0..* associatedCondition
+  Condition 0..* associatedConditions
 }
 Symptom *-- "0..*" Symptom : associatedSymptoms
 Symptom *-- "0..*" KeyFeatures
 class KeyFeatures {
+  CodeableConceptOrRatio 0..1 frequency
 }
 KeyFeatures *-- "0..1" Quality
 class Quality {
@@ -41,13 +42,8 @@ KeyFeatures *-- "0..1" SurroundingEvents
 class SurroundingEvents {
   CodeableConcept 0..* otherEvents
 }
-SurroundingEvents *-- "0..*" Triggers
-class Triggers {
-  CodeableConcept trigger
-  Annotation 0..1 note
-}
-SurroundingEvents *-- "0..*" ExacerbatingFactors
-class ExacerbatingFactors {
+SurroundingEvents *-- "0..*" TriggersOrExacerbatingFactors
+class TriggersOrExacerbatingFactors {
   CodeableConcept factor
   Medication 0..* relatedMedication
   Annotation 0..1 note
@@ -64,9 +60,7 @@ class Timing {
   CodeableConcept 0..1 speed
   dateTimeOrPeriod 0..1 onset
   Annotation 0..1 note
-  CodableConceptOrDuration 0..1 duration
-  Quantity 0..1 frequency
-  CodeableConcept 0..1 timePattern
+  Duration 0..1 duration
 }
 
 Symptom *-- Metadata

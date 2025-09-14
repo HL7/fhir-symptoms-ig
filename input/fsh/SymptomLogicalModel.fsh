@@ -37,14 +37,10 @@ Title: "Symptom Logical Model"
 
 * keyFeatures.surroundingEvents 0..1 BackboneElement "What was occurring at the time of symptom onset." 
 
-* keyFeatures.surroundingEvents.triggers 0..* BackboneElement "Actions or environments that initiate the symptom."
-* keyFeatures.surroundingEvents.triggers.triggerCode 1..1 CodeableConcept "Code describing the type of trigger" 
-* keyFeatures.surroundingEvents.triggers.note 0..1 Annotation "Free text related to the observation"
-
-* keyFeatures.surroundingEvents.exacerbatingFactors 0..* BackboneElement "" "Patient reported actions, conditions, events, physical objects or other factors that initiate or worsen symptoms or the condition of interest (pain, nausea, dyspnea, dizziness, or other)."
-* keyFeatures.surroundingEvents.exacerbatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
-* keyFeatures.surroundingEvents.exacerbatingFactors.relatedMedication 0..* Medication "Medication that triggers or exacerbates the symptom"
-* keyFeatures.surroundingEvents.exacerbatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
+* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors 0..* BackboneElement "" "Patient reported actions, conditions, events, physical objects or other factors that initiate or worsen symptoms or the condition of interest (pain, nausea, dyspnea, dizziness, or other)."
+* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
+* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.relatedMedication 0..* Medication "Medication that triggers or exacerbates the symptom"
+* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 
 * keyFeatures.surroundingEvents.alleviatingFactors 0..* BackboneElement "" "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
 * keyFeatures.surroundingEvents.alleviatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 

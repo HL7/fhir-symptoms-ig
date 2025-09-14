@@ -14,8 +14,8 @@ Title: "Symptom Observation"
 
 * status 1..1 MS
 * code 1..1 MS
-  * ^short = "Coded description of symptom" //new value set
-* code from https://hl7.org/fhir/ValueSet/clinical-findings (example)
+  * ^short = "Coded description of symptom"
+* code from CommonSymptomCodes (preferred)
 * subject 1..1 MS
   * ^short = "The patient who is experiencing the symptom"
 * subject only Reference(Patient)
@@ -113,11 +113,10 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the impact of the symptom" 
 * component[exacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms"
-  * code = http://loinc.org#100752-5 "Exacerbating factors - Reported" //code from removed triggers: http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
+  * code = http://loinc.org#100752-5 "Exacerbating factors - Reported"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
   * extension contains SurroundingEventMedication named relatedMedication 0..* MS
   * extension[text]
     * ^short = "Textual description of the event" 
@@ -126,22 +125,20 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
   * extension contains SurroundingEventMedication named relatedMedication 0..* MS
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
-  * code = http://loinc.org#96542-6 "Travel in 14 days prior to symptom onset" 
   * value[x] only CodeableConcept
-  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[frequency] ^short = "How often the patient experiences the symptom."
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
   * value[x] only Ratio or CodeableConcept
-    * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code set 104156-5"
+    * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
   * valueCodeableConcept MS
   * valueRatio MS
+    * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
   * valueCodeableConcept from http://loinc.org/vs/104156-5 (preferred)
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
@@ -185,8 +182,40 @@ The SNOMED International IPS Terminology is distributed by International Health 
 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
+
 * http://snomed.info/sct#61751001
 * http://snomed.info/sct#385315009
+
+ValueSet: CommonSymptomCodes
+Id: CommonSymptomCodes
+Title: "Common Set of Symptom Codes"
+Description: "An initial set of Symptom Codes representing the most common symptoms."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* http://snomed.info/sct#57676002
+* http://snomed.info/sct#48694002
+* http://snomed.info/sct#24199005
+* http://snomed.info/sct#39898005
+* http://snomed.info/sct#25064002
+* http://snomed.info/sct#14760008
+* http://snomed.info/sct#21522001
+* http://snomed.info/sct#62315008
+* http://snomed.info/sct#404640003
+* http://snomed.info/sct#80313002
+* http://snomed.info/sct#267036007
+* http://snomed.info/sct#35489007
+* http://snomed.info/sct#366979004
+* http://snomed.info/sct#49727002
+* http://snomed.info/sct#29857009
+* http://snomed.info/sct#286933003
+* http://snomed.info/sct#6471006
+
+
 
 Extension: AssessmentScaleCode
 Id: AssessmentScaleCode

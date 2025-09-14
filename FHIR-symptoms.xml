@@ -6,6 +6,7 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
 <artifact id="StructureDefinition/AssessmentScaleCode" key="StructureDefinition-AssessmentScaleCode" name="Assessment Scale Code"/>
+<artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
 <artifact id="ValueSet/FunctionalFinding" key="ValueSet-FunctionalFinding" name="Functional Impact"/>
 <artifact id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
 <artifact id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
