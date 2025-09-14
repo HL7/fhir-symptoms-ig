@@ -14,7 +14,7 @@ Title: "Symptom Observation"
 
 * status 1..1 MS
 * code 1..1 MS
-  * ^short = "Coded description of symptom"
+  * ^short = "Coded description of symptom" //new value set
 * code from https://hl7.org/fhir/ValueSet/clinical-findings (example)
 * subject 1..1 MS
   * ^short = "The patient who is experiencing the symptom"
@@ -112,17 +112,8 @@ Title: "Symptom Observation"
   * valueCodeableConcept from AffectiveGrade (example)
   * extension[text]
     * ^short = "Textual description of the impact of the symptom" 
-* component[triggers] ^short = "Actions or environments that initiate the symptom"
-  * code = http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
-    * ^short = "Code for the specific type of event"
-  * value[x] only CodeableConcept
-    * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from http://loinc.org/vs/LL42549-6 (example)
-  * extension contains SurroundingEventMedication named relatedMedication 0..* MS
-  * extension[text]
-    * ^short = "Textual description of the event" 
-* component[exacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that increase or worsen symptoms"
-  * code = http://loinc.org#100752-5 "Exacerbating factors - Reported" 
+* component[exacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms"
+  * code = http://loinc.org#100752-5 "Exacerbating factors - Reported" //code from removed triggers: http://loinc.org#38211-9 "Pain initiating event Narrative - Reported"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
@@ -147,8 +138,9 @@ Title: "Symptom Observation"
     * ^short = "Textual description of the event" 
 * component[frequency] ^short = "How often the patient experiences the symptom."
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
-  * value[x] only CodeableConcept or Ratio
-  * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
+  * value[x] only Ratio or CodeableConcept
+    * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code set 104156-5"
+  * valueCodeableConcept from http://loinc.org/vs/104156-5 (preferred)
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
 * component[speedOfOnset] ^short = "The rate at which a physiological symptom became apparent."
@@ -157,6 +149,7 @@ Title: "Symptom Observation"
   * valueCodeableConcept from SpeedOfOnset (preferred)
   * extension[text]
     * ^short = "Textual description of the reported speed of onset" 
+
 
 
 ValueSet: FunctionalFinding
@@ -179,6 +172,7 @@ Description: "Set of codes from LOINC that describe a patient's affective grade"
 * ^experimental = true
 * codes from system http://loinc.org where concept is-a "75798-9"
 
+//99495-4 "Speed of condition onset" 
 ValueSet: SpeedOfOnset
 Id: SpeedOfOnset
 Title: "Speed of Onset"
