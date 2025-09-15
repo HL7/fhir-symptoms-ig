@@ -81,11 +81,8 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
 * component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
-  * code from FunctionalFinding (example)
-    * ^short = "Code for the specific scale or assessment if any used to determine the functional impact" 
-  * value[x] only CodeableConcept
-    * ^short = "Code that represents the symptom functional impact" 
-  * valueCodeableConcept from http://loinc.org/vs/LL365-8 (required)
+  * code from FunctionalClassification (preferred)
+    * ^short = "Code for the functional impact being described" 
   * extension contains AssessmentScaleCode named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the impact" 
@@ -149,11 +146,11 @@ Title: "Symptom Observation"
     * ^short = "Textual description of the reported speed of onset" 
 
 
-Extension: AssessmentScaleCode
-Id: AssessmentScaleCode
-Title: "Assessment Scale Code"
-Description: "Code for the specific scale or assessment used to determine the feature"
-* value[x] only CodeableConcept
+Extension: AssessmentScaleInformation
+Id: AssessmentScaleInformation
+Title: "Assessment Scale Information"
+Description: "Information about the specific scale or assessment used to determine the value.  This can be either just a code that represents the assessment scale or can be a reference to an Assessment Scale Observation."
+* value[x] only CodeableConcept or Reference(Observation)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
 

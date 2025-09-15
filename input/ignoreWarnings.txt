@@ -1,9 +1,8 @@
 == Suppressed Messages ==
 
-# 01 - Valid value sets that seemingly don't have definitions
-A definition could not be found for Canonical URL 'https://hl7.org/fhir/ValueSet/clinical-findings'
+# 01 - Valid value sets that seemingly don't have definitions or are too large
 A definition could not be found for Canonical URL 'https://loinc.org/LL365-8'
-A definition could not be found for Canonical URL 'http://loinc.org/vs/104156-5'
+The value set expansion is too large, and only a subset has been displayed
 
 # 02 - Pinned canonicals
 Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo to 5.2.0%

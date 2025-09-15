@@ -1,15 +1,3 @@
-ValueSet: FunctionalFinding
-Id: FunctionalFinding
-Title: "Functional Impact"
-Description: "Set of codes from SNOMED CT that describe different functional impact observations"
-* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
-
-The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
-
-The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
-* ^experimental = true
-* codes from system http://snomed.info/sct where concept is-a "118228005"
-
 ValueSet: AffectiveGrade
 Id: AffectiveGrade
 Title: "Affective Grade"
@@ -92,3 +80,10 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#55300003
 * http://snomed.info/sct#24199005
 * http://snomed.info/sct#365852007
+
+ValueSet: FunctionalClassification
+Id: FunctionalClassification
+Title: "Functional Classification Codes"
+Description: "The set of codes from WHO's International Classification of Functioning, Disability, and Health code system."
+* ^experimental = true
+* codes from system http://hl7.org/fhir/sid/icf
