@@ -70,20 +70,20 @@ Title: "Symptom Observation"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
   * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
-  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
 * component[severity] ^short = "The intensity with which the patient experiences the symptom"
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
-  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
 * component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
   * code from FunctionalClassification (preferred)
     * ^short = "Code for the functional impact being described" 
-  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the impact" 
 * component[clinicalCourse] ^short = "Character of symptom onset" 
@@ -91,7 +91,7 @@ Title: "Symptom Observation"
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
-  * extension contains AssessmentScaleCode named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
 * component[trend] ^short = "Intensity of symptom over time"
@@ -150,7 +150,7 @@ Extension: AssessmentScaleInformation
 Id: AssessmentScaleInformation
 Title: "Assessment Scale Information"
 Description: "Information about the specific scale or assessment used to determine the value.  This can be either just a code that represents the assessment scale or can be a reference to an Assessment Scale Observation."
-* value[x] only CodeableConcept or Reference(Observation)
+* value[x] only CodeableConcept or Reference(AssessmentScaleObservation)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
 

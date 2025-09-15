@@ -85,5 +85,5 @@ ValueSet: FunctionalClassification
 Id: FunctionalClassification
 Title: "Functional Classification Codes"
 Description: "The set of codes from WHO's International Classification of Functioning, Disability, and Health code system."
-* ^experimental = true
+* ^experimental = false
 * codes from system http://hl7.org/fhir/sid/icf
