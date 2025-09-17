@@ -87,3 +87,13 @@ Title: "Functional Classification Codes"
 Description: "The set of codes from WHO's International Classification of Functioning, Disability, and Health code system."
 * ^experimental = false
 * codes from system http://hl7.org/fhir/sid/icf
+
+
+ValueSet: YesNoList
+Id: YesNoList
+Title: "Yes/No Answer List"
+Description: "SNOMED codes for yes/no"
+* ^experimental = false
+
+* http://snomed.info/sct#373066001	
+* http://snomed.info/sct#373067005	

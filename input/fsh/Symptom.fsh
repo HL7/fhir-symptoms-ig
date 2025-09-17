@@ -28,12 +28,12 @@ Title: "Symptom Observation"
 * value[x] 1..1 MS
   * ^short = "Indicates whether the patient has the symptom or not"
 * value[x] only CodeableConcept
-* value[x] from https://loinc.org/LL365-8 (required)
+* value[x] from YesNoList (required) 
 * note MS
   * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
-* bodySite from http://loinc.org/vs/LL5065-9 (example)
+* bodySite from http://hl7.org/fhir/ValueSet/body-site (example) 
 
 * dataAbsentReason 0..0
 * interpretation 0..0
