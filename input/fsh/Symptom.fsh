@@ -33,7 +33,7 @@ Title: "Symptom Observation"
   * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
-* bodySite from http://hl7.org/fhir/ValueSet/body-site (example) 
+* bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred) 
 
 * dataAbsentReason 0..0
 * interpretation 0..0
