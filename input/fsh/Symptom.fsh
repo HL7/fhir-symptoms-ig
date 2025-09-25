@@ -16,6 +16,8 @@ Title: "Symptom Observation"
 * code 1..1 MS
   * ^short = "Coded description of symptom"
 * code from CommonSymptomCodes (preferred)
+  * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
+  * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
 * subject 1..1 MS
   * ^short = "The patient who is experiencing the symptom"
 * subject only Reference(Patient)
