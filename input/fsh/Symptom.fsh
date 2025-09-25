@@ -115,6 +115,7 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
+  * valueCodeableConcept from http://loinc.org/vs/LL6278-7 (example)
   * extension contains SurroundingEventMedication named relatedMedication 0..* MS
   * extension[text]
     * ^short = "Textual description of the event" 
@@ -123,11 +124,16 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
+  * valueCodeableConcept from http://loinc.org/vs/LL6279-5 (example)
   * extension contains SurroundingEventMedication named relatedMedication 0..* MS
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
+  * code = http://loinc.org#96542-6 ""
+    * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
+    * ^short = "Code or string describing the specific event"
+  * valueCodeableConcept from http://loinc.org/vs/LL361-7 (example)
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[frequency] ^short = "How often the patient experiences the symptom."
