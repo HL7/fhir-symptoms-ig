@@ -1,7 +1,7 @@
 Profile: SymptomObservation
 Parent: Observation
 Id: SymptomObservation
-Description: "The Symptom observation contains all information given about a patient's symptoms.  NOTE: References to Conditions will be from the Condition.evidence element."
+Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptoms."
 Title: "Symptom Observation"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..* MS
@@ -14,10 +14,7 @@ Title: "Symptom Observation"
 
 * status 1..1 MS
 * code 1..1 MS
-  * ^short = "Coded description of symptom"
-* code from CommonSymptomCodes (preferred)
-  * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
-  * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
+* code = http://loinc.org#75325-1 "Symptom"
 * subject 1..1 MS
   * ^short = "The patient who is experiencing the symptom"
 * subject only Reference(Patient)
@@ -28,9 +25,11 @@ Title: "Symptom Observation"
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
 * value[x] 1..1 MS
-  * ^short = "Indicates whether the patient has the symptom or not"
+  * ^short = "Coded description of symptom"
 * value[x] only CodeableConcept
-* value[x] from YesNoList (required) 
+* value[x] from CommonSymptomCodes (preferred)
+  * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
+  * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
 * note MS
   * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
@@ -152,6 +151,50 @@ Title: "Symptom Observation"
   * valueCodeableConcept from SpeedOfOnset (preferred)
   * extension[text]
     * ^short = "Textual description of the reported speed of onset" 
+
+Profile: SymptomAbsentObservation
+Parent: Observation
+Id: SymptomAbsentObservation
+Description: "Used to record the absence of a Symptom as reported by a patient or their caregiver."
+Title: "Symptom Absent Observation"
+
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..* MS
+
+* extension[associatedSymptom].valueReference only Reference(SymptomObservation)
+* extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
+
+* extension[associatedCondition].valueReference only Reference(Condition)
+* extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
+
+* status 1..1 MS
+* code 1..1 MS
+* code = SymptomTemporary#symptomAbsent "Symptom Absent"
+* subject 1..1 MS
+  * ^short = "The patient who is experiencing the symptom"
+* subject only Reference(Patient)
+* effective[x] MS
+* effective[x] only dateTime or Period
+* issued MS
+* performer 1..1 MS
+  * ^short = "The person who is reporting the symptom information"
+* performer only Reference(Patient or RelatedPerson)
+* value[x] 1..1 MS
+  * ^short = "Coded description of symptom"
+* value[x] only CodeableConcept
+* value[x] from CommonSymptomCodes (preferred)
+  * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
+  * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
+* note MS
+  * ^short = "Patient or caregiver description of symptom"
+* bodySite MS
+  * ^short = "Where the patient feels the symptom in the body"
+* bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred) 
+
+* dataAbsentReason 0..0
+* interpretation 0..0
+* specimen 0..0
+* device 0..0
+* referenceRange 0..0
 
 
 Extension: AssessmentScaleInformation

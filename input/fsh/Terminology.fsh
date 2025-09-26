@@ -1,3 +1,12 @@
+CodeSystem: SymptomTemporary
+Id: SymptomTemporary
+Title: "Temporary Symptom Codes"
+Description: "A code system that has codes for use in the IG that will eventually be migrated to other code systems such as LOINC or THO."
+* #symptom "Symptom" "Used to indicate the category of an observation when it is a symptom."
+* #symptomAbsent "Symptom Absent" "Used to indicate the absence of a symptom as opposed to the current LOINC code which indicates the presence of a symptom."
+* ^experimental = false
+* ^caseSensitive = true
+
 ValueSet: AffectiveGrade
 Id: AffectiveGrade
 Title: "Affective Grade"
@@ -87,13 +96,3 @@ Title: "Functional Classification Codes"
 Description: "The set of codes from WHO's International Classification of Functioning, Disability, and Health code system."
 * ^experimental = false
 * codes from system http://hl7.org/fhir/sid/icf
-
-
-ValueSet: YesNoList
-Id: YesNoList
-Title: "Yes/No Answer List"
-Description: "SNOMED codes for yes/no"
-* ^experimental = false
-
-* http://snomed.info/sct#373066001	
-* http://snomed.info/sct#373067005	

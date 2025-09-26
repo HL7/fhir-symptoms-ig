@@ -11,9 +11,11 @@
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
 <artifact id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
 <artifact id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
+<artifact id="StructureDefinition/SymptomAbsentObservation" key="StructureDefinition-SymptomAbsentObservation" name="Symptom Absent Observation"/>
 <artifact id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
 <artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
 <artifact id="CapabilityStatement/SymptomCapabilities" key="CapabilityStatement-SymptomCapabilities" name="Symptom System Capabilities"/>
+<artifact id="CodeSystem/SymptomTemporary" key="CodeSystem-SymptomTemporary" name="Temporary Symptom Codes"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
