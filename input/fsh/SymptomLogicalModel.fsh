@@ -6,6 +6,7 @@ Title: "Symptom Logical Model"
 
 * identifier 1..1 string "A unique string that identifies this instance of a symptom"
 * symptomCode 1..1 CodeableConcept "Coded description of symptom"
+* absentOrPresentFlag 1..1 boolean "Whether the symptom is present or absent"
 * affectedPatient 1..1 Patient "The patient who is experiencing the symptom"
 * reporter[x] 1..1 Patient or RelatedPerson "The person who is reporting the symptom information"
 * symptomDescription 0..* Annotation "Textual description of symptom as provided by patient or care team member"

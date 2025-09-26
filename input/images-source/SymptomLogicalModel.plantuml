@@ -2,6 +2,7 @@
 class Symptom {
   string identifier
   CodeableConcept symptomCode
+  boolean absentOrPresentFlag
   Patient affectedPatient
   CareTeamMember reporter
   Annotation 0..* symptomDescription
