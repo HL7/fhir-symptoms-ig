@@ -1,11 +1,10 @@
 == Suppressed Messages ==
 
-# 01 - Valid value sets that seemingly don't have definitions or are too large
-A definition could not be found for Canonical URL 'https://loinc.org/LL365-8'
-The value set expansion is too large, and only a subset has been displayed
-
-# 02 - Pinned canonicals
+# 01 - Pinned canonicals
 Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo to 5.2.0%
 
-# 03 - Inherited from FHIR Core
+# 02 - Inherited from FHIR Core
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# 03 - The codes in this code system are moving to LOINC and THO
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
