@@ -4,7 +4,7 @@ Id: SymptomObservation
 Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptoms."
 Title: "Symptom Observation"
 
-* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..* MS
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..*
 
 * extension[associatedSymptom].valueReference only Reference(SymptomObservation)
 * extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
@@ -20,7 +20,7 @@ Title: "Symptom Observation"
 * subject only Reference(Patient)
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period
-* issued MS
+* issued
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
@@ -30,7 +30,7 @@ Title: "Symptom Observation"
 * value[x] from CommonSymptomCodes (preferred)
   * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
   * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
-* note MS
+* note
   * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
@@ -42,49 +42,49 @@ Title: "Symptom Observation"
 * device 0..0
 * referenceRange 0..0
 
-* component 0..* MS 
+* component 0..* 
   * ^short = "Various information about the symptom"
-  * code 1..1 MS
-  * value[x] 1..1 MS
+  * code 1..1 
+  * value[x] 1..1 
   * dataAbsentReason 0..0
   * interpretation 0..0
   * referenceRange 0..0
-* component.extension contains http://hl7.org/fhir/StructureDefinition/note named text 0..1 MS
+* component.extension contains http://hl7.org/fhir/StructureDefinition/note named text 0..1
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Different symptom component observations"
-* component contains quality 0..1 MS and
-                     severity 0..1 MS and
-                     functionalImpact 0..* MS and
-                     clinicalCourse 0..1 MS and
-                     trend 0..1 MS and
-                     affectiveGrade 0..1 MS and 
-                     triggersOrExacerbatingFactors 0..* MS and
-                     alleviatingFactors 0..* MS and
-                     otherEvents 0..* MS and
-                     frequency 0..1 MS and
-                     speedOfOnset 0..1 MS
+* component contains quality 0..1 and
+                     severity 0..1 and
+                     functionalImpact 0..* and
+                     clinicalCourse 0..1 and
+                     trend 0..1 and
+                     affectiveGrade 0..1 and 
+                     triggersOrExacerbatingFactors 0..* and
+                     alleviatingFactors 0..* and
+                     otherEvents 0..* and
+                     frequency 0..1 and
+                     speedOfOnset 0..1
                      
 * component[quality] ^short = "The patient's internal perception of the symptom" 
   * code = http://loinc.org#56823-8 "Problem quality or description"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
   * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
-  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
 * component[severity] ^short = "The intensity with which the patient experiences the symptom"
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
-  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
 * component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
   * code from FunctionalClassification (preferred)
     * ^short = "Code for the functional impact being described" 
-  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the impact" 
 * component[clinicalCourse] ^short = "Character of symptom onset" 
@@ -92,7 +92,7 @@ Title: "Symptom Observation"
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
-  * extension contains AssessmentScaleInformation named scaleCode 0..1 MS
+  * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
 * component[trend] ^short = "Intensity of symptom over time"
@@ -115,7 +115,7 @@ Title: "Symptom Observation"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
   * valueCodeableConcept from http://loinc.org/vs/LL6278-7 (example)
-  * extension contains SurroundingEventMedication named relatedMedication 0..* MS
+  * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[alleviatingFactors] ^short = "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
@@ -124,7 +124,7 @@ Title: "Symptom Observation"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
   * valueCodeableConcept from http://loinc.org/vs/LL6279-5 (example)
-  * extension contains SurroundingEventMedication named relatedMedication 0..* MS
+  * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
@@ -139,8 +139,8 @@ Title: "Symptom Observation"
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
   * value[x] only Ratio or CodeableConcept
     * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
-  * valueCodeableConcept MS
-  * valueRatio MS
+  * valueCodeableConcept
+  * valueRatio
     * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
   * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
   * extension[text]
@@ -158,7 +158,7 @@ Id: SymptomAbsentObservation
 Description: "Used to record the absence of a Symptom as reported by a patient or their caregiver."
 Title: "Symptom Absent Observation"
 
-* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* MS and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..* MS
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..*
 
 * extension[associatedSymptom].valueReference only Reference(SymptomObservation)
 * extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
@@ -184,7 +184,7 @@ Title: "Symptom Absent Observation"
 * value[x] from CommonSymptomCodes (preferred)
   * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
   * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
-* note MS
+* note
   * ^short = "Patient or caregiver description of symptom"
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
