@@ -13,6 +13,13 @@ Title: "Symptom Observation"
 * extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
 
 * status 1..1 MS
+* category 0..1
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Send a category of symptoms"
+* category contains symptomCode 1..1 
+* category[symptomCode] = #symptom
 * code 1..1 MS
 * code = http://loinc.org#75325-1 "Symptom"
 * subject 1..1 MS
