@@ -13,7 +13,7 @@ Title: "Symptom Observation"
 * extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
 
 * status 1..1 MS
-* category 0..1 MS
+* category 1..* MS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
