@@ -32,7 +32,7 @@ Usage: #example
 * note.text = "For the last six weeks, I have been getting so winded when I have been walking up stairs."
 * bodySite = http://snomed.info/sct#39607008 "Lung structure"
 
-* component[trend].valueCodeableConcept = http://loinc.org#LA6751-7
+* component[severity].valueCodeableConcept = http://loinc.org#LA6751-7
 * component[triggersOrExacerbatingFactors].valueCodeableConcept = http://loinc.org#LA33517-6
 * component[alleviatingFactors].valueCodeableConcept = http://loinc.org#LA33524-2
 * component[frequency].valueCodeableConcept = http://loinc.org#LA24760-3
