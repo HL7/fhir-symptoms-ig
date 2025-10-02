@@ -41,6 +41,7 @@ Instance: FeverSymptomAbsence
 InstanceOf: SymptomAbsentObservation
 Description: "Absence of fever"
 Usage: #example 
+* extension[associatedSymptom].valueReference = Reference(ShortnessOfBreathSymptom)
 * status = #final
 * effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
