@@ -32,17 +32,18 @@ Usage: #example
 * note.text = "For the last six weeks, I have been getting so winded when I have been walking up stairs."
 * bodySite = http://snomed.info/sct#39607008 "Lung structure"
 
-* component[quality].valueCodeableConcept = http://loinc.org/vs/#LL4459-5
-* component[trend].valueCodeableConcept = http://loinc.org/#LA9041-0
+* component[trend].valueCodeableConcept = http://loinc.org#LA6751-7
 * component[triggersOrExacerbatingFactors].valueCodeableConcept = http://loinc.org#LA33517-6
 * component[alleviatingFactors].valueCodeableConcept = http://loinc.org#LA33524-2
 * component[frequency].valueCodeableConcept = http://loinc.org#LA24760-3
 
-Instance: cfsb1759361672597
+Instance: FeverSymptomAbsence
 InstanceOf: SymptomAbsentObservation
 Description: "Absence of fever"
 Usage: #example 
 * status = #final
+* effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
+* effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
 * issued = "2025-09-15T13:28:17.239+02:00"
 // Reference to Patient: Jane Doe - shortness of breath
 * subject = Reference(JaneDoe)

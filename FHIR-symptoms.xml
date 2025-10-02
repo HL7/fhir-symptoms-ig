@@ -8,7 +8,10 @@
 <artifact id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
 <artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Observation"/>
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
+<artifact id="Observation/FeverSymptomAbsence" key="Observation-FeverSymptomAbsence" name="FeverSymptomAbsence"/>
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
+<artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
+<artifact id="Observation/ShortnessOfBreathSymptom" key="Observation-ShortnessOfBreathSymptom" name="ShortnessOfBreathSymptom"/>
 <artifact id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
 <artifact id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
 <artifact id="StructureDefinition/SymptomAbsentObservation" key="StructureDefinition-SymptomAbsentObservation" name="Symptom Absent Observation"/>

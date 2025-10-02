@@ -19,7 +19,7 @@ Title: "Symptom Observation"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Send a category of symptoms"
 * category contains symptomCode 1..1 
-* category[symptomCode] = #symptom
+* category[symptomCode] = SymptomTemporary#symptom
 * code 1..1 MS
 * code = http://loinc.org#75325-1 "Symptom"
 * subject 1..1 MS
@@ -89,7 +89,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
 * component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
-  * code from FunctionalClassification (preferred)
+  * code from FunctionalClassification (required)
     * ^short = "Code for the functional impact being described" 
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
@@ -146,10 +146,9 @@ Title: "Symptom Observation"
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
   * value[x] only Ratio or CodeableConcept
     * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
-  * valueCodeableConcept
+  * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
   * valueRatio
     * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
-  * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
 * component[speedOfOnset] ^short = "The rate at which a physiological symptom became apparent."
