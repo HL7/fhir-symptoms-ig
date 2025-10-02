@@ -13,12 +13,12 @@ Title: "Symptom Observation"
 * extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
 
 * status 1..1 MS
-* category 0..1
+* category 0..1 MS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Send a category of symptoms"
-* category contains symptomCode 1..1 
+* category contains symptomCode 1..1 MS
 * category[symptomCode] = SymptomTemporary#symptom
 * code 1..1 MS
 * code = http://loinc.org#75325-1 "Symptom"
@@ -27,7 +27,8 @@ Title: "Symptom Observation"
 * subject only Reference(Patient)
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period
-* issued
+* issued 
+  * insert ShouldSupport([[Instant when symptom recorded]])
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
@@ -38,7 +39,7 @@ Title: "Symptom Observation"
   * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
   * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
 * note
-  * ^short = "Patient or caregiver description of symptom"
+  * insert ShouldSupport([[Patient or caregiver description of symptom]])
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred) 
@@ -50,7 +51,7 @@ Title: "Symptom Observation"
 * referenceRange 0..0
 
 * component 0..* 
-  * ^short = "Various information about the symptom"
+  * insert ShouldSupport([[Various information about the symptom]])
   * code 1..1 
   * value[x] 1..1 
   * dataAbsentReason 0..0
@@ -73,7 +74,8 @@ Title: "Symptom Observation"
                      frequency 0..1 and
                      speedOfOnset 0..1
                      
-* component[quality] ^short = "The patient's internal perception of the symptom" 
+* component[quality] 
+  * insert ShouldSupport([[The patient's internal perception of the symptom]])
   * code = http://loinc.org#56823-8 "Problem quality or description"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
@@ -81,20 +83,23 @@ Title: "Symptom Observation"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
-* component[severity] ^short = "The intensity with which the patient experiences the symptom"
+* component[severity] 
+  * insert ShouldSupport([[The intensity with which the patient experiences the symptom]])
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
-* component[functionalImpact] ^short = "How the symptom affects the patient's daily activities" 
+* component[functionalImpact] 
+  * insert ShouldSupport([[How the symptom affects the patient's daily activities]])
   * code from FunctionalClassification (required)
     * ^short = "Code for the functional impact being described" 
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the impact" 
-* component[clinicalCourse] ^short = "Character of symptom onset" 
+* component[clinicalCourse] 
+  * insert ShouldSupport([[Character of symptom onset]])
   * ^comment = "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
@@ -102,21 +107,24 @@ Title: "Symptom Observation"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
-* component[trend] ^short = "Intensity of symptom over time"
+* component[trend] 
+  * insert ShouldSupport([[Intensity of symptom over time]])
   * ^comment = "Whether a condition is improving, worsening, stable, or resolved."
   * code = http://loinc.org#89253-9 "Trend"
   * value[x] only CodeableConcept
   * valueCodeableConcept from http://loinc.org/vs/LL4938-8 (example)
   * extension[text]
     * ^short = "Textual description of the symptom trend" 
-* component[affectiveGrade] ^short = "Emotional or mental impact of a symptom" 
+* component[affectiveGrade] 
+  * insert ShouldSupport([[Emotional or mental impact of a symptom]])
   * code = http://snomed.info/sct#279116004 "Affective response to pain"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the affective grade" 
   * valueCodeableConcept from AffectiveGrade (example)
   * extension[text]
     * ^short = "Textual description of the impact of the symptom" 
-* component[triggersOrExacerbatingFactors] ^short = "Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms"
+* component[triggersOrExacerbatingFactors] 
+  * insert ShouldSupport([[Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms]])
   * code = http://loinc.org#100752-5 "Exacerbating factors - Reported"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
@@ -125,7 +133,8 @@ Title: "Symptom Observation"
   * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
-* component[alleviatingFactors] ^short = "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
+* component[alleviatingFactors] 
+  * insert ShouldSupport([[Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition]])
   * code = http://loinc.org#100753-3 "Alleviating factors - Reported"   
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
@@ -134,7 +143,8 @@ Title: "Symptom Observation"
   * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
-* component[otherEvents] ^short = "Patient-reported actions that were occuring at time of symptom onset"
+* component[otherEvents] 
+  * insert ShouldSupport([[Patient-reported actions that were occuring at time of symptom onset]])
   * code = http://loinc.org#96542-6 ""
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
@@ -142,7 +152,8 @@ Title: "Symptom Observation"
   * valueCodeableConcept from http://loinc.org/vs/LL361-7 (example)
   * extension[text]
     * ^short = "Textual description of the event" 
-* component[frequency] ^short = "How often the patient experiences the symptom."
+* component[frequency] 
+  * insert ShouldSupport([[How often the patient experiences the symptom.]])
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
   * value[x] only Ratio or CodeableConcept
     * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
@@ -151,7 +162,8 @@ Title: "Symptom Observation"
     * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
-* component[speedOfOnset] ^short = "The rate at which a physiological symptom became apparent."
+* component[speedOfOnset] 
+  * insert ShouldSupport([[The rate at which a physiological symptom became apparent.]])
   * code = http://loinc.org#99495-4 "Speed of condition onset" 
   * value[x] only CodeableConcept
   * valueCodeableConcept from SpeedOfOnset (preferred)
@@ -180,7 +192,8 @@ Title: "Symptom Absent Observation"
 * subject only Reference(Patient)
 * effective[x] MS
 * effective[x] only dateTime or Period
-* issued MS
+* issued
+  * insert ShouldSupport([[Instant when absence of symptom recorded]])
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
@@ -191,7 +204,7 @@ Title: "Symptom Absent Observation"
   * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
   * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
 * note
-  * ^short = "Patient or caregiver description of symptom"
+  * insert ShouldSupport([[Patient or caregiver description of absent symptom]])
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred) 
@@ -219,3 +232,6 @@ Description: "Medication that when taken affecting the factor"
 * valueReference only Reference(MedicationStatement)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
+
+RuleSet: ShouldSupport(label)
+* ^short = "\ud835\udde6\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udddf\ud835\uddd7\u0020\ud835\udde6\ud835\udde8\ud835\udde3\ud835\udde3\ud835\udde2\ud835\udde5\ud835\udde7 {label}"
