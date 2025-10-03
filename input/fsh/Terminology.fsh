@@ -96,3 +96,139 @@ Title: "Functional Classification Codes"
 Description: "The set of codes from WHO's International Classification of Functioning, Disability, and Health code system."
 * ^experimental = false
 * codes from system http://hl7.org/fhir/sid/icf
+
+ValueSet: QualityCodes
+Id: QualityCodes
+Title: "Quality Codes"
+Description: "Set of SNOMED codes to describe the symptom quality."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* include codes from system SNOMED_CT where concept is-a #410720000 //not quite right. number is correct, but i want the 19 children, not the 48
+
+ValueSet: SeverityCodes
+Id: SeverityCodes
+Title: "Severity Codes"
+Description: "Set of SNOMED codes to describe the symptom severity."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* include codes from system SNOMED_CT where concept is-a #272141005 
+
+ValueSet: ClinicalCourseCodes
+Id: ClinicalCourseCodes
+Title: "Clinical Course Codes"
+Description: "Set of SNOMED codes to describe the clinical course of the symptom."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* include codes from system SNOMED_CT where concept is-a #424124008 
+
+ValueSet: TrendCodes
+Id: TrendCodes
+Title: "Trend Codes"
+Description: "Set of SNOMED codes to describe the trend of the symptom."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* include codes from system SNOMED_CT where concept is-a #263703002 
+
+ValueSet: TriggersOrExacerbatingFactorCodes
+Id: TriggersOrExacerbatingFactorCodes
+Title: "Triggers or Exacerbating Factor Codes"
+Description: "Set of SNOMED codes to describe triggers or factors which exacerbate the symptom."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* http://snomed.info/sct#282260003 
+* http://snomed.info/sct#49727002 
+* http://snomed.info/sct#289123006 
+* http://snomed.info/sct#18949003 
+* http://snomed.info/sct#255710008 
+* http://snomed.info/sct#226029000 
+* http://snomed.info/sct#48694002 
+* http://snomed.info/sct#84229001 
+* http://snomed.info/sct#102491009 
+* http://snomed.info/sct#277773003  
+* http://snomed.info/sct#113011001 
+* http://snomed.info/sct#397578001 
+* http://snomed.info/sct#128975004 
+* http://snomed.info/sct#33586001  
+* http://snomed.info/sct#76067001 
+* http://snomed.info/sct#408797004 
+* http://snomed.info/sct#10904000 
+* http://snomed.info/sct#122546009 
+
+ValueSet: AlleviatingFactorCodes
+Id: AlleviatingFactorCodes
+Title: "Alleviating Factor Codes"
+Description: "Set of SNOMED codes to describe factors which alleviate the symptom."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* http://snomed.info/sct#44868003  
+* http://snomed.info/sct#231107005  
+* http://snomed.info/sct#394615007  
+* http://snomed.info/sct#225316001  
+* http://snomed.info/sct#7704007  
+* http://snomed.info/sct#182548004  
+* http://snomed.info/sct#182660006  
+* http://snomed.info/sct#183135000  
+* http://snomed.info/sct#414039005  
+* http://snomed.info/sct#719078002   
+* http://snomed.info/sct#226029000  
+* http://snomed.info/sct#91251008  
+* http://snomed.info/sct#133921002  
+* http://snomed.info/sct#228565006   
+* http://snomed.info/sct#266694003  
+* http://snomed.info/sct#19997007  
+* http://snomed.info/sct#266686005  
+* http://snomed.info/sct#387854002   
+* http://snomed.info/sct#416608005   
+* http://snomed.info/sct#21065008    
+* http://snomed.info/sct#386370001    
+* http://snomed.info/sct#84478008    
+* http://snomed.info/sct#11609002    
+* http://snomed.info/sct#308739004    
+* http://snomed.info/sct#128975004    
+* http://snomed.info/sct#33586001    
+* http://snomed.info/sct#386342003    
+* http://snomed.info/sct#311767007    
+* http://snomed.info/sct#386476006   
+
+ValueSet: FrequencyCodes
+Id: FrequencyCodes
+Title: "Frequency Codes"
+Description: "Set of SNOMED codes to describe the frequency of experiencing the symptom."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* include codes from system SNOMED_CT where concept is-a #272123002  

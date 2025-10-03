@@ -79,7 +79,7 @@ Title: "Symptom Observation"
   * code = http://loinc.org#56823-8 "Problem quality or description"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
-  * valueCodeableConcept from http://loinc.org/vs/LL4459-5 (example)
+  * valueCodeableConcept from QualityCodes (example) 
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
@@ -87,7 +87,7 @@ Title: "Symptom Observation"
   * insert ShouldSupport([[The intensity with which the patient experiences the symptom]])
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from http://loinc.org/vs/LL1156-0 (example)
+  * valueCodeableConcept from SeverityCodes (example) 
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
@@ -103,7 +103,7 @@ Title: "Symptom Observation"
   * ^comment = "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
+  * valueCodeableConcept from ClinicalCourseCodes (example) 
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
@@ -112,7 +112,7 @@ Title: "Symptom Observation"
   * ^comment = "Whether a condition is improving, worsening, stable, or resolved."
   * code = http://loinc.org#89253-9 "Trend"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from http://loinc.org/vs/LL4938-8 (example)
+  * valueCodeableConcept from TrendCodes (example) 
   * extension[text]
     * ^short = "Textual description of the symptom trend" 
 * component[affectiveGrade] 
@@ -129,7 +129,7 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from http://loinc.org/vs/LL6278-7 (example)
+  * valueCodeableConcept from TriggersOrExacerbatingFactorCodes (example) 
   * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
@@ -139,7 +139,7 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from http://loinc.org/vs/LL6279-5 (example)
+  * valueCodeableConcept from AlleviatingFactorCodes (example) 
   * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
@@ -149,7 +149,7 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event"
-  * valueCodeableConcept from http://loinc.org/vs/LL361-7 (example)
+  * valueCodeableConcept from http://loinc.org/vs/LL361-7 (example) //still yes/no list
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[frequency] 
@@ -157,7 +157,7 @@ Title: "Symptom Observation"
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
   * value[x] only Ratio or CodeableConcept
     * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
-  * valueCodeableConcept from http://loinc.org/vs/LL6514-5 (preferred)
+  * valueCodeableConcept from FrequencyCodes (preferred) 
   * valueRatio
     * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
   * extension[text]
