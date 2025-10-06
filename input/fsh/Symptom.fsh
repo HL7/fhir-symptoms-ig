@@ -36,8 +36,11 @@ Title: "Symptom Observation"
   * ^short = "Coded description of symptom"
 * value[x] only CodeableConcept
 * value[x] from CommonSymptomCodes (preferred)
-  * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
-  * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
+  * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+  * ^binding.extension[=].extension[+].url = "purpose"
+  * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#maximum
+  * ^binding.extension[=].extension[+].url = "valueSet"
+  * ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
 * note
   * insert ShouldSupport([[Patient or caregiver description of symptom]])
 * bodySite MS
@@ -79,7 +82,16 @@ Title: "Symptom Observation"
   * code = http://loinc.org#56823-8 "Problem quality or description"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the symptom quality" 
-  * valueCodeableConcept from QualityCodes (example) 
+  * valueCodeableConcept from QualityCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL4459-5"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom quality" 
@@ -87,7 +99,16 @@ Title: "Symptom Observation"
   * insert ShouldSupport([[The intensity with which the patient experiences the symptom]])
   * code = http://loinc.org#64750-3 "Severity of symptoms"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from SeverityCodes (example) 
+  * valueCodeableConcept from SeverityCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL1156-0"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
@@ -103,7 +124,16 @@ Title: "Symptom Observation"
   * ^comment = "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."
   * code = http://loinc.org#89261-2 "Clinical course"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from ClinicalCourseCodes (example) 
+  * valueCodeableConcept from ClinicalCourseCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL4997-4"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
@@ -112,7 +142,16 @@ Title: "Symptom Observation"
   * ^comment = "Whether a condition is improving, worsening, stable, or resolved."
   * code = http://loinc.org#89253-9 "Trend"
   * value[x] only CodeableConcept
-  * valueCodeableConcept from TrendCodes (example) 
+  * valueCodeableConcept from TrendCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL4938-8"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * extension[text]
     * ^short = "Textual description of the symptom trend" 
 * component[affectiveGrade] 
@@ -120,7 +159,7 @@ Title: "Symptom Observation"
   * code = http://snomed.info/sct#279116004 "Affective response to pain"
   * value[x] only CodeableConcept
     * ^short = "Code that represents the affective grade" 
-  * valueCodeableConcept from AffectiveGrade (example)
+  * valueCodeableConcept from AffectiveGrade (preferred)
   * extension[text]
     * ^short = "Textual description of the impact of the symptom" 
 * component[triggersOrExacerbatingFactors] 
@@ -129,7 +168,16 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from TriggersOrExacerbatingFactorCodes (example) 
+  * valueCodeableConcept from TriggersOrExacerbatingFactorCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL6278-7"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
@@ -139,7 +187,16 @@ Title: "Symptom Observation"
     * ^short = "Code for the specific type of event"
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event" 
-  * valueCodeableConcept from AlleviatingFactorCodes (example) 
+  * valueCodeableConcept from AlleviatingFactorCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL6279-5"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * extension contains SurroundingEventMedication named relatedMedication 0..*
   * extension[text]
     * ^short = "Textual description of the event" 
@@ -158,6 +215,15 @@ Title: "Symptom Observation"
   * value[x] only Ratio or CodeableConcept
     * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
   * valueCodeableConcept from FrequencyCodes (preferred) 
+    * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[+].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#preferred
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = "http://loinc.org/vs/LL6514-5"
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "LOINC binding when SNOMED is unavailable"
+    * ^binding.extension[=].extension[+].url = "shortDoco"
+    * ^binding.extension[=].extension[=].valueString = "LOINC binding when SNOMED is unavailable"
   * valueRatio
     * denominator.unit from http://hl7.org/fhir/ValueSet/duration-units
   * extension[text]
@@ -201,8 +267,11 @@ Title: "Symptom Absent Observation"
   * ^short = "Coded description of symptom"
 * value[x] only CodeableConcept
 * value[x] from CommonSymptomCodes (preferred)
-  * ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"
-  * ^binding.extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
+  * ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+  * ^binding.extension[=].extension[+].url = "purpose"
+  * ^binding.extension[=].extension[=].valueCode = http://hl7.org/fhir/tools/CodeSystem/additional-binding-purpose#maximum
+  * ^binding.extension[=].extension[+].url = "valueSet"
+  * ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/ValueSet/clinical-findings"
 * note
   * insert ShouldSupport([[Patient or caregiver description of absent symptom]])
 * bodySite MS

@@ -5,12 +5,17 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
+<artifact id="ValueSet/AlleviatingFactorCodes" key="ValueSet-AlleviatingFactorCodes" name="Alleviating Factor Codes"/>
 <artifact id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
 <artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Observation"/>
+<artifact id="ValueSet/ClinicalCourseCodes" key="ValueSet-ClinicalCourseCodes" name="Clinical Course Codes"/>
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
 <artifact id="Observation/FeverSymptomAbsence" key="Observation-FeverSymptomAbsence" name="FeverSymptomAbsence"/>
+<artifact id="ValueSet/FrequencyCodes" key="ValueSet-FrequencyCodes" name="Frequency Codes"/>
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
 <artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
+<artifact id="ValueSet/QualityCodes" key="ValueSet-QualityCodes" name="Quality Codes"/>
+<artifact id="ValueSet/SeverityCodes" key="ValueSet-SeverityCodes" name="Severity Codes"/>
 <artifact id="Observation/ShortnessOfBreathSymptom" key="Observation-ShortnessOfBreathSymptom" name="ShortnessOfBreathSymptom"/>
 <artifact id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
 <artifact id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
@@ -19,6 +24,8 @@
 <artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
 <artifact id="CapabilityStatement/SymptomCapabilities" key="CapabilityStatement-SymptomCapabilities" name="Symptom System Capabilities"/>
 <artifact id="CodeSystem/SymptomTemporary" key="CodeSystem-SymptomTemporary" name="Temporary Symptom Codes"/>
+<artifact id="ValueSet/TrendCodes" key="ValueSet-TrendCodes" name="Trend Codes"/>
+<artifact id="ValueSet/TriggersOrExacerbatingFactorCodes" key="ValueSet-TriggersOrExacerbatingFactorCodes" name="Triggers or Exacerbating Factor Codes"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
