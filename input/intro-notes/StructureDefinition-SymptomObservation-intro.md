@@ -31,15 +31,20 @@ In a normal profile, we would indicate the remaining data elements using the Mus
 ### Component Observations of the Symptom
 A lot of the structured information of the Symptom is profiled in the component observations.  These component observations do not have a life of their own but are tied to the symptom itself.  Every component observation has a note extension and does not allow a data absent reason, interpretation, or reference range element.
 
+The following component observations allow for an assessment scale code or reference to an asssessment scale observation to be provided:
+
 1. Quality - a patient's internal perception of the symptom.  This is represented by the LOINC code 56823-8 and a value that is the quality.
 1. Severity - the intensity with which the patient experiences the symptom.  This is represented by the LOINC code 64750-3 and a value that is the severity.
 1. Functional Impact - How the symptom affects the patient's daily activities. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  NOTE: This will also allow a variant of PACIO's PFE profile for providing the functional impact.
 1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course.  An optional scale code or reference to an assessment scale is provided.
+
+The following component observations have no assessment scale attached to them:
+
 1. Trend - whether a symptom is improving, worsening, stable, or resolved.  This is represented by the LOINC code 89253-9 and a value that is the trend.
 1. Affective Grade - the emotional or mental impact of the symptom.  This is represented by the SNOMED code 279116004 (Affective response to pain) and a value that is the affective grade.
 1. Triggers or Exacerbating Factors - these are factors which either trigger the symptom or exacerbate the symptom.  This is represented by the LOINC code 100752-5 and a value that is the factor.  It also provides an extension to indicate a medication that is believed to cause or exacerbate the symptom.
 1. Alleviating Factors - patient-reported actions, conditions, events, or other factors that decrease the symptoms. This is represented by the LOINC code 100753-3 and a value that is the factor. It also provides an extension to indicate a medication that is believed to alleviate the symptom.
-1. Other Events - this is a catch-all to report other events that were occurring at the time of the symptom onset but were not considered triggers.  This is represented by the LOINC code 96542-6 and a value that is the event.
+1. Other Events - this is a catch-all to report other events that were occurring at the time of the symptom onset but were not considered triggers.  This is represented by the code OTHEREVENTS and a value that is the event.
 1. Frequency - how often the patient experiences the symptom.  This is represented by the LOINC code 104156-5 and either a code that represents the frequency or a Ratio to express frequencies such as 2x/day.
 1. Speed Of Onset - the rate at which the symptom becomes apparent.  This is represented by the LOINC code 99495-4 and a value that is the speed of onset.
 

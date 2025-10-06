@@ -202,11 +202,10 @@ Title: "Symptom Observation"
     * ^short = "Textual description of the event" 
 * component[otherEvents] 
   * insert ShouldSupport([[Patient-reported actions that were occuring at time of symptom onset]])
-  * code = http://loinc.org#96542-6 ""
-    * ^short = "Code for the specific type of event"
+  * code = SymptomTemporary#OTHEREVENT
   * value[x] only CodeableConcept
     * ^short = "Code or string describing the specific event"
-  * valueCodeableConcept from http://loinc.org/vs/LL361-7 (example) //still yes/no list
+  * valueCodeableConcept from OtherEventCodes (example)
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[frequency] 
@@ -252,7 +251,7 @@ Title: "Symptom Absent Observation"
 
 * status 1..1 MS
 * code 1..1 MS
-* code = SymptomTemporary#symptomAbsent "Symptom Absent"
+* code = http://loinc.org#111551-8 "Symptom absent"
 * subject 1..1 MS
   * ^short = "The patient who is experiencing the symptom"
 * subject only Reference(Patient)

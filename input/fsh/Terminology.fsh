@@ -3,7 +3,7 @@ Id: SymptomTemporary
 Title: "Temporary Symptom Codes"
 Description: "A code system that has codes for use in the IG that will eventually be migrated to other code systems such as LOINC or THO."
 * #symptom "Symptom" "Used to indicate the category of an observation when it is a symptom."
-* #symptomAbsent "Symptom Absent" "Used to indicate the absence of a symptom as opposed to the current LOINC code which indicates the presence of a symptom."
+* #OTHEREVENT "Other Events" "Used to indicate other events that were occurring at the time of the symptom onset but were not considered triggers."
 * ^experimental = false
 * ^caseSensitive = true
 
@@ -219,6 +219,21 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#386342003    
 * http://snomed.info/sct#311767007    
 * http://snomed.info/sct#386476006   
+
+ValueSet: OtherEventCodes
+Id: OtherEventCodes
+Title: "Other Event Codes"
+Description: "Set of SNOMED codes to describe other events which were occurring at the same time as the symptom."
+* ^copyright = """This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+
+The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology
+
+The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
+* ^experimental = false
+
+* http://loinc.org#96542-6
+* http://snomed.info/sct#445000002
+
 
 ValueSet: FrequencyCodes
 Id: FrequencyCodes
