@@ -14,6 +14,7 @@
 <artifact id="ValueSet/FrequencyCodes" key="ValueSet-FrequencyCodes" name="Frequency Codes"/>
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
 <artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
+<artifact id="ValueSet/OtherEventCodes" key="ValueSet-OtherEventCodes" name="Other Event Codes"/>
 <artifact id="ValueSet/QualityCodes" key="ValueSet-QualityCodes" name="Quality Codes"/>
 <artifact id="ValueSet/SeverityCodes" key="ValueSet-SeverityCodes" name="Severity Codes"/>
 <artifact id="Observation/ShortnessOfBreathSymptom" key="Observation-ShortnessOfBreathSymptom" name="ShortnessOfBreathSymptom"/>

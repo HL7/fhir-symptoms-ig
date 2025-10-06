@@ -6,11 +6,10 @@ Title: "Symptom Observation"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..*
 
-* extension[associatedSymptom].valueReference only Reference(SymptomObservation)
-* extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
-
+* extension[associatedSymptom].valueReference only Reference(SymptomObservation or SymptomAbsentObservation)
+  * insert ShouldSupport([[Other symptoms associated with this symptom]])
 * extension[associatedCondition].valueReference only Reference(Condition)
-* extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
+  * insert ShouldSupport([[Conditions with some relationship to this symptom]])
 
 * status 1..1 MS
 * category 1..* MS
@@ -243,11 +242,10 @@ Title: "Symptom Absent Observation"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..*
 
-* extension[associatedSymptom].valueReference only Reference(SymptomObservation)
-* extension[associatedSymptom] ^short = "Other symptoms associated with this symptom"
-
+* extension[associatedSymptom].valueReference only Reference(SymptomObservation or SymptomAbsentObservation)
+  * insert ShouldSupport([[Other symptoms associated with this symptom]])
 * extension[associatedCondition].valueReference only Reference(Condition)
-* extension[associatedCondition] ^short = "Conditions with some relationship to this symptom"
+  * insert ShouldSupport([[Conditions with some relationship to this symptom]])
 
 * status 1..1 MS
 * code 1..1 MS
