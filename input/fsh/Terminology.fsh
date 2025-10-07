@@ -108,7 +108,25 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* include codes from system SNOMED_CT where concept is-a #410720000 //not quite right. number is correct, but i want the 19 children, not the 48
+* http://snomed.info/sct#27635008 
+* http://snomed.info/sct#36349006  
+* http://snomed.info/sct#73063007 
+* http://snomed.info/sct#279093005 
+* http://snomed.info/sct#279098001
+* http://snomed.info/sct#162503007  
+* http://snomed.info/sct#83644001
+* http://snomed.info/sct#723316007 
+* http://snomed.info/sct#723300005 
+* http://snomed.info/sct#301371003 
+* http://snomed.info/sct#279095003 
+* http://snomed.info/sct#8708008 
+* http://snomed.info/sct#49575005 
+* http://snomed.info/sct#103013007 
+* http://snomed.info/sct#71393004 
+* http://snomed.info/sct#279097006 
+* http://snomed.info/sct#29695002 
+* http://snomed.info/sct#162505000 
+* http://snomed.info/sct#786837007 
 
 ValueSet: SeverityCodes
 Id: SeverityCodes
@@ -134,7 +152,7 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* include codes from system SNOMED_CT where concept is-a #424124008 
+* include codes from system SNOMED_CT where concept is-a #288524001
 
 ValueSet: TrendCodes
 Id: TrendCodes
