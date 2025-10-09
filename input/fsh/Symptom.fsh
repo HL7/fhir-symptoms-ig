@@ -137,8 +137,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the clinical course of the symptom" 
 * component[trend] 
-  * insert ShouldSupport([[Intensity of symptom over time]])
-  * ^comment = "Whether a condition is improving, worsening, stable, or resolved."
+  * insert ShouldSupport([[Whether a condition is improving, worsening, stable, or resolved.]])
   * code = http://loinc.org#89253-9 "Trend"
   * value[x] only CodeableConcept
   * valueCodeableConcept from TrendCodes (preferred) 
