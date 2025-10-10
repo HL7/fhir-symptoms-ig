@@ -152,7 +152,9 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* include codes from system SNOMED_CT where concept is-a #288524001
+* http://snomed.info/sct#18131002
+* http://snomed.info/sct#90734009
+* http://snomed.info/sct#255212004
 
 ValueSet: TrendCodes
 Id: TrendCodes
@@ -165,7 +167,16 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* include codes from system SNOMED_CT where concept is-a #263703002 
+* http://snomed.info/sct#1250004
+* http://snomed.info/sct#35105006 
+* http://snomed.info/sct#231877006
+* http://snomed.info/sct#385425000
+* http://snomed.info/sct#385630006
+* http://snomed.info/sct#442474009
+* http://snomed.info/sct#409051000
+* http://snomed.info/sct#442387004
+* http://snomed.info/sct#445021000124109
+* http://snomed.info/sct#445031000124107
 
 ValueSet: TriggersOrExacerbatingFactorCodes
 Id: TriggersOrExacerbatingFactorCodes
@@ -263,5 +274,10 @@ The SNOMED International IPS Terminology is distributed by International Health 
 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
-
-* include codes from system SNOMED_CT where concept is-a #272123002  
+    
+* http://snomed.info/sct#255238004    
+* http://snomed.info/sct#255239007   
+* http://snomed.info/sct#307486002  
+* http://snomed.info/sct#27789000    
+* http://snomed.info/sct#70232002  
+* http://snomed.info/sct#5878004  

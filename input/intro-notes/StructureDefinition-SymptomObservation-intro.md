@@ -39,7 +39,7 @@ The following component observations allow for an assessment scale code or refer
 1. Quality - a patient's internal perception of the symptom.  This is represented by the LOINC code 56823-8 and a value that is the quality.
 1. Severity - the intensity with which the patient experiences the symptom.  This is represented by the LOINC code 64750-3 and a value that is the severity.
 1. Functional Impact - How the symptom affects the patient's daily activities. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  NOTE: This will also allow a variant of PACIO's PFE profile for providing the functional impact.
-1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course.  An optional scale code or reference to an assessment scale is provided.
+1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course. 
 
 The following component observations have no assessment scale attached to them:
 
