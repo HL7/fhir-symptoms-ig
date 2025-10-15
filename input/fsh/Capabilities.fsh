@@ -17,7 +17,8 @@ Usage: #definition
   * mode = #client
   * resource[+]
     * type = #Observation
-    * supportedProfile = Canonical(SymptomObservation)
+    * supportedProfile[+] = Canonical(SymptomObservation)
+    * supportedProfile[+] = Canonical(SymptomAbsentObservation)
     * interaction[+]
       * code = #search-type
     * interaction[+]
@@ -27,22 +28,23 @@ Usage: #definition
     * interaction[+]
       * code = #update
     * searchParam[+]
-      * name = "code"
+      * name = "category"
       * type = #token
     * searchParam[+]
       * name = "patient"
       * type = #reference
     * searchParam[+]
+      * name = "code-value-concept"
+      * type = #composite
+    * searchParam[+]
       * name = "date"
       * type = #date
-    * searchParam[+]
-      * name = "value-concept"
-      * type = #token
 * rest[+]
   * mode = #server
   * resource[+]
     * type = #Observation
-    * supportedProfile = Canonical(SymptomObservation)
+    * supportedProfile[+] = Canonical(SymptomObservation)
+    * supportedProfile[+] = Canonical(SymptomAbsentObservation)
     * interaction[+]
       * code = #search-type
     * interaction[+]
@@ -52,14 +54,14 @@ Usage: #definition
     * interaction[+]
       * code = #update
     * searchParam[+]
-      * name = "code"
+      * name = "category"
       * type = #token
     * searchParam[+]
       * name = "patient"
       * type = #reference
     * searchParam[+]
+      * name = "code-value-concept"
+      * type = #composite
+    * searchParam[+]
       * name = "date"
       * type = #date
-    * searchParam[+]
-      * name = "value-concept"
-      * type = #token
