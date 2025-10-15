@@ -8,3 +8,12 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # 03 - The codes in this code system are moving to LOINC and THO
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# 04 - We will add conformance clause testing eventually
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
+
+# 05 - Newly added LOINC code for Symptoms Absent Observation
+Unknown code '111551-8' in the CodeSystem 'http://loinc.org' version '2.81'
+
+# 06 - The value set is the entire ICF code system which is quite large
+The value set expansion is too large, and only a subset has been displayed

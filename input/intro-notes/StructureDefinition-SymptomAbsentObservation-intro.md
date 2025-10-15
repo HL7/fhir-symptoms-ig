@@ -1,7 +1,7 @@
 
 ### Mandatory Data Elements
 
-The following data elements SHALL or SHALL NOT be present. They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views](#profile) below provides the formal summary, definitions, and terminology requirements.  
+The following data elements must always be present or must be supported if the data is present in the sending system ([Must Support](conformance.html#mustsupport) definition). They are presented below with a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition](#profile) below provides the formal summary, definitions, and terminology requirements.
 
 **Each Symptom Absent Observation SHALL Have:**
 
@@ -15,7 +15,7 @@ The following data elements SHALL or SHALL NOT be present. They are presented be
 
 **Each Symptom Absent Observation  SHALL support:**
 
-1. bodySite - a code representing where the patient feels the symptom in the body
+1. bodySite - a code representing the body site where the symptom is NOT occurring, eg. no pain in my right knee
 
 **Each Symptom Absent Observation  SHALL NOT provide:**
 

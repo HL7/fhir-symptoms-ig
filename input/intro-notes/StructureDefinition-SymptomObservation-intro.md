@@ -1,7 +1,7 @@
 
 ### Mandatory Data Elements
 
-The following data elements SHALL or SHALL NOT be present. They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views](#profile) below provides the formal summary, definitions, and terminology requirements.  
+The following data elements must always be present or must be supported if the data is present in the sending system ([Must Support](conformance.html#mustsupport) definition). They are presented below with a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition](#profile) below provides the formal summary, definitions, and terminology requirements.
 
 **Each Symptom SHALL Have:**
 
@@ -34,15 +34,16 @@ In a normal profile, we would indicate the remaining data elements using the Mus
 ### Component Observations of the Symptom
 A lot of the structured information of the Symptom is profiled in the component observations.  These component observations do not have a life of their own but are tied to the symptom itself.  Every component observation has a note extension and does not allow a data absent reason, interpretation, or reference range element.
 
-The following component observations allow for an assessment scale code or reference to an asssessment scale observation to be provided:
+The following component observations allow for an assessment scale code or reference to an asssessment scale collection observation to be provided:
 
 1. Quality - a patient's internal perception of the symptom.  This is represented by the LOINC code 56823-8 and a value that is the quality.
 1. Severity - the intensity with which the patient experiences the symptom.  This is represented by the LOINC code 64750-3 and a value that is the severity.
-1. Functional Impact - How the symptom affects the patient's daily activities. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  NOTE: This will also allow a variant of PACIO's PFE profile for providing the functional impact.
-1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course. 
+
 
 The following component observations have no assessment scale attached to them:
 
+1. Functional Impact - How the symptom affects the patient's daily activities. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  As well, a Functional Assessment Collection can be provided to give more details of the functional impact.
+1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course. 
 1. Trend - whether a symptom is improving, worsening, stable, or resolved.  This is represented by the LOINC code 89253-9 and a value that is the trend.
 1. Affective Grade - the emotional or mental impact of the symptom.  This is represented by the SNOMED code 279116004 (Affective response to pain) and a value that is the affective grade.
 1. Triggers or Exacerbating Factors - these are factors which either trigger the symptom or exacerbate the symptom.  This is represented by the LOINC code 100752-5 and a value that is the factor.  It also provides an extension to indicate a medication that is believed to cause or exacerbate the symptom.

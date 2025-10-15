@@ -6,12 +6,16 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
 <artifact id="ValueSet/AlleviatingFactorCodes" key="ValueSet-AlleviatingFactorCodes" name="Alleviating Factor Codes"/>
+<artifact id="StructureDefinition/AssessmentScaleCollection" key="StructureDefinition-AssessmentScaleCollection" name="Assessment Scale Collection Observation"/>
 <artifact id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
-<artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Observation"/>
+<artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Single Observation"/>
 <artifact id="ValueSet/ClinicalCourseCodes" key="ValueSet-ClinicalCourseCodes" name="Clinical Course Codes"/>
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
 <artifact id="Observation/FeverSymptomAbsence" key="Observation-FeverSymptomAbsence" name="FeverSymptomAbsence"/>
 <artifact id="ValueSet/FrequencyCodes" key="ValueSet-FrequencyCodes" name="Frequency Codes"/>
+<artifact id="StructureDefinition/FunctionalAssessment" key="StructureDefinition-FunctionalAssessment" name="Functional Assessment"/>
+<artifact id="StructureDefinition/FunctionalAssessmentCollection" key="StructureDefinition-FunctionalAssessmentCollection" name="Functional Assessment Collection"/>
+<artifact id="StructureDefinition/FunctionalAssessmentObservation" key="StructureDefinition-FunctionalAssessmentObservation" name="Functional Assessment Single Observation"/>
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
 <artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
 <artifact id="ValueSet/OtherEventCodes" key="ValueSet-OtherEventCodes" name="Other Event Codes"/>
