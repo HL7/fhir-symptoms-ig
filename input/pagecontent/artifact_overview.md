@@ -4,18 +4,17 @@ These FHIR artifacts define the data that can be submitted as part of the requir
 
 The artifacts are of five types:
 
-* [Profiles]({{site.data.fhir.path}}profiling.html) constrain FHIR resources to reflect FAST Consent requirements
+* [Profiles]({{site.data.fhir.path}}profiling.html) constrain FHIR resources to reflect requirements for representing Symptoms
 * [Extensions]({{site.data.fhir.path}}extensibility.html) define additional data elements that can be conveyed as part of a resource
-* [Code Systems]({{site.data.fhir.path}}codesystem.html) define FAST Consent-specific terminologies to be used in one or more of those profiles
-* [Value Sets]({{site.data.fhir.path}}valueset.html) define the specific subsets of both FAST Consent-defined and other code systems that can be (or are recommended to be) used within one or more profile elements
-* [Operations]({{site.data.fhir.path}}operationdefinition.html) which define the FAST Consent-specific operations.
+* [Code Systems]({{site.data.fhir.path}}codesystem.html) define guide-specific terminologies to be used in one or more of those profiles
+* [Value Sets]({{site.data.fhir.path}}valueset.html) define the specific subsets of code systems that can be (or are recommended to be) used within one or more profile elements
 
 [Terminology Artifacts](terminology.html) can be found on its own page.
 
 ### Guide Artifacts
 
 #### Capability Statements
-* [EHR PAS Capabilities](CapabilityStatement-SymptomCapabilities.html) - Required for systems exchanging Symptoms
+* [Symptom System Capabilities](CapabilityStatement-SymptomCapabilities.html) - Required for systems exchanging Symptoms
 
 #### Symptoms Logical Model
 * [Symptoms Logical Model](StructureDefinition-SymptomLogicalModel.html) - {{site.data.StructureDefinition-SymptomLogicalModel.description}}
