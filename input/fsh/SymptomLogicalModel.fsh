@@ -1,7 +1,7 @@
 Logical: SymptomLogicalModel
 Parent: Element
 Id: SymptomLogicalModel
-Description: "Details about the Symptom."
+Description: "A logical model showing the elements of a Symptom that have been deemed important and relevant for capture and exchange."
 Title: "Symptom Logical Model"
 
 * identifier 1..1 string "A unique string that identifies this instance of a symptom"

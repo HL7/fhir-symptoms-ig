@@ -31,10 +31,10 @@ parameters:
   path-expansion-params: '../../exp-params.json'
   apply-publisher: true
   apply-contact: true
+  produce-jekyll-data: true
   globals-in-artifacts: true
   pin-canonicals: pin-multiples
   shownav: true
-
 
 pages:
   index.md:
@@ -49,6 +49,8 @@ pages:
     title: Conformance Expectations
   exchange.md:
     title: Exchange Patterns
+  artifact_overview.md:
+    title: Artifact Overview
   terminology.md:
     title: Terminology
   changes.md:
@@ -64,6 +66,7 @@ menu:
     Conformance Expectations: conformance.html
     Exchange Patterns: exchange.html
   FHIR Artifacts:
+    Overview: artifact_overview.html
     Artifacts: artifacts.html
     Terminology: terminology.html
   Support:

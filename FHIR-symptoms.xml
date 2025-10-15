@@ -33,6 +33,7 @@
 <artifact id="ValueSet/TriggersOrExacerbatingFactorCodes" key="ValueSet-TriggersOrExacerbatingFactorCodes" name="Triggers or Exacerbating Factor Codes"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="artifact_overview" name="Artifact Overview"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Change Log"/>
 <page key="conformance" name="Conformance Expectations"/>
