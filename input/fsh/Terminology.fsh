@@ -139,7 +139,7 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* include codes from system SNOMED_CT where concept is-a #272141005 
+* include codes from system http://snomed.info/sct where concept is-a #272141005 
 
 ValueSet: ClinicalCourseCodes
 Id: ClinicalCourseCodes

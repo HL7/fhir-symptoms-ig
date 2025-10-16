@@ -26,6 +26,12 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: cic
 
+dependencies:
+  openehr.base:
+    id: openehr
+    uri: http://openehr.org/fhir/ImplementationGuide/openehr.base
+    version: dev
+
 parameters:
   show-inherited-invariants: false
   path-expansion-params: '../../exp-params.json'
@@ -35,6 +41,8 @@ parameters:
   globals-in-artifacts: true
   pin-canonicals: pin-multiples
   shownav: true
+#  path-resource:
+#    - '/input/archetypes'
 
 pages:
   index.md:
