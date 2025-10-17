@@ -56,7 +56,7 @@ Usage: #example
 
 * valueCodeableConcept = http://snomed.info/sct#14230001000004101 
 * valueCodeableConcept.text = "Perception of hearing loss (finding)"
-* bodySite = http://snomed.info/sct#69536005 "Head structure"
+* bodySite = http://snomed.info/sct#1910005 "Entire ear"
 
 * component[severity].valueCodeableConcept = http://snomed.info/sct#371923003
 * component[trend].valueCodeableConcept = http://snomed.info/sct#35105006
