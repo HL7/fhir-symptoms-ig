@@ -54,4 +54,19 @@ Usage: #example
 * valueCodeableConcept = http://snomed.info/sct#386661006
 * valueCodeableConcept.text = "Fever (finding)"
 
+Instance: ChillSymptomAbsence
+InstanceOf: SymptomAbsentObservation
+Description: "Absence of chills"
+Usage: #example 
+* extension[associatedSymptom].valueReference = Reference(ShortnessOfBreathSymptom)
+* status = #final
+* effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
+* effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
+* issued = "2025-09-15T13:28:17.239+02:00"
+// Reference to Patient: Jane Doe - shortness of breath
+* subject = Reference(JaneDoe)
+ // Reference to Patient: Jane Doe - shortness of breath
+* performer = Reference(JaneDoe)
 
+* valueCodeableConcept = http://snomed.info/sct#43724002 
+* valueCodeableConcept.text = "Chill (finding)"
