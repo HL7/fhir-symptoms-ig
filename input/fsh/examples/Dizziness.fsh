@@ -36,7 +36,8 @@ Usage: #example
 * component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004
 * component[frequency].valueCodeableConcept = http://snomed.info/sct#70232002
 * component[otherEvents].valueCodeableConcept = http://snomed.info/sct#128975004
-//* component[otherEvents].[text] = "Not alleviated by rest"
+* component[otherEvents].extension[text].valueAnnotation.time = "2025-10-16"
+* component[otherEvents].extension[text].valueAnnotation.text = "Not alleviated by rest"
 
 Instance: HearingLossSymptom
 InstanceOf: SymptomObservation

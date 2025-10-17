@@ -1,10 +1,10 @@
-### Chest Pain and Shortness of Breath
+### [Chest Pain and Shortness of Breath](Observation-ShortnessOfBreathSymptom.html)
 
 Jane Doe, a 60-year-old English-speaking Latina woman with a history of type 2 diabetes mellitus and hypertension, presented to the emergency department (ED) for evaluation of shortness of breath. When speaking to the ED triage nurse, she described her symptoms by saying: “For the last six weeks, I have been getting so winded when I have been walking upstairs.” The ED nurse documented a chief complaint of shortness of breath and mentioned in the ED triage note that the shortness of breath occurred upon exertion and resolved with rest.  The patient’s vital signs were documented in triage as blood pressure 162/90, respiratory rate 18, pulse 84, oxygen saturation 97% on room air, and temperature 98.2 degrees Fahrenheit.
 
 One hour later, the ED physician assessed the patient. At that time, the patient reported no current shortness of breath. She described intermittent shortness of breath that occurred with exertion and was relieved with rest. The most recent episode was yesterday. At that time, she ran up a flight of stairs as she was chasing her 5-year-old son. When she reached the top of the stairs, she was profoundly short of breath. The shortness of breath lasted approximately 5 minutes, and then it resolved. For the first time ever, she experienced chest pain in addition to the shortness of breath. The chest pain lasted 20 minutes and then resolved, too. Because this was the first ever episode of chest pain, she decided to seek emergency care. The chest pain was described as crushing or “like an elephant sitting on my chest”. There was no radiation of the pain. Concurrently with the shortness of breath and chest pain, she experienced dizziness and light-headedness. In terms of other associated symptoms, she denied fever or chills. There was no cough. While she felt light-headed, she did not pass out.
 
-### Dizziness
+### [Dizziness](Observation-DizzinessSymptom.html)
 
 Mr. John Doe is a 72-year-old male who presents to the office with a complaint of dizziness that has been progressively worsening over the past 3 weeks. He describes the dizziness as a sensation of light-headedness and feeling as though the room is spinning, particularly when he stands up or changes positions. He reports experiencing the dizziness several times throughout the day, especially after standing up from a seated position or when walking across the room. He denies any episodes of fainting or losing consciousness.
 
