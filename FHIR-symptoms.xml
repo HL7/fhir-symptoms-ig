@@ -9,18 +9,27 @@
 <artifact id="StructureDefinition/AssessmentScaleCollection" key="StructureDefinition-AssessmentScaleCollection" name="Assessment Scale Collection Observation"/>
 <artifact id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
 <artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Single Observation"/>
+<artifact id="Observation/ChillSymptomAbsence" key="Observation-ChillSymptomAbsence" name="ChillSymptomAbsence"/>
 <artifact id="ValueSet/ClinicalCourseCodes" key="ValueSet-ClinicalCourseCodes" name="Clinical Course Codes"/>
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
+<artifact id="Observation/CoughSymptom" key="Observation-CoughSymptom" name="CoughSymptom"/>
+<artifact id="Observation/DizzinessSymptom" key="Observation-DizzinessSymptom" name="DizzinessSymptom"/>
+<artifact id="Observation/FaintingSymptomAbsence" key="Observation-FaintingSymptomAbsence" name="FaintingSymptomAbsence"/>
+<artifact id="Observation/FeverSymptom" key="Observation-FeverSymptom" name="FeverSymptom"/>
 <artifact id="Observation/FeverSymptomAbsence" key="Observation-FeverSymptomAbsence" name="FeverSymptomAbsence"/>
 <artifact id="ValueSet/FrequencyCodes" key="ValueSet-FrequencyCodes" name="Frequency Codes"/>
 <artifact id="StructureDefinition/FunctionalAssessment" key="StructureDefinition-FunctionalAssessment" name="Functional Assessment"/>
 <artifact id="StructureDefinition/FunctionalAssessmentCollection" key="StructureDefinition-FunctionalAssessmentCollection" name="Functional Assessment Collection"/>
 <artifact id="StructureDefinition/FunctionalAssessmentObservation" key="StructureDefinition-FunctionalAssessmentObservation" name="Functional Assessment Single Observation"/>
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
+<artifact id="Observation/HearingLossSymptom" key="Observation-HearingLossSymptom" name="HearingLossSymptom"/>
 <artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
+<artifact id="Patient/JohnDoe" key="Patient-JohnDoe" name="JohnDoe"/>
+<artifact id="Observation/NaueaSymptomAbsence" key="Observation-NaueaSymptomAbsence" name="NaueaSymptomAbsence"/>
 <artifact id="ValueSet/OtherEventCodes" key="ValueSet-OtherEventCodes" name="Other Event Codes"/>
 <artifact id="ValueSet/QualityCodes" key="ValueSet-QualityCodes" name="Quality Codes"/>
 <artifact id="ValueSet/SeverityCodes" key="ValueSet-SeverityCodes" name="Severity Codes"/>
+<artifact id="Observation/ShortnessOfBreathPHSymptom" key="Observation-ShortnessOfBreathPHSymptom" name="ShortnessOfBreathPHSymptom"/>
 <artifact id="Observation/ShortnessOfBreathSymptom" key="Observation-ShortnessOfBreathSymptom" name="ShortnessOfBreathSymptom"/>
 <artifact id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
 <artifact id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
@@ -31,6 +40,8 @@
 <artifact id="CodeSystem/SymptomTemporary" key="CodeSystem-SymptomTemporary" name="Temporary Symptom Codes"/>
 <artifact id="ValueSet/TrendCodes" key="ValueSet-TrendCodes" name="Trend Codes"/>
 <artifact id="ValueSet/TriggersOrExacerbatingFactorCodes" key="ValueSet-TriggersOrExacerbatingFactorCodes" name="Triggers or Exacerbating Factor Codes"/>
+<artifact id="Patient/TrishDoe" key="Patient-TrishDoe" name="TrishDoe"/>
+<artifact id="Observation/UnconsciousnessSymptomAbsence" key="Observation-UnconsciousnessSymptomAbsence" name="UnconsciousnessSymptomAbsence"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifact_overview" name="Artifact Overview"/>
