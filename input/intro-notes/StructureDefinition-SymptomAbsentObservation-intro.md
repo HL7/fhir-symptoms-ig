@@ -9,7 +9,7 @@ The following data elements must always be present or must be supported if the d
 1. a category - one repetition must be set to 'symptom'
 1. a code (LOINC: 111551-8) that indicates this is a Symptom Absent observation
 1. a patient
-1. a dateTime or period detailing when the symptom was note present
+1. a dateTime or period detailing when the symptom was not present
 1. a performer of either the Patient or a RelatedPerson who provided the information about the symptom
 1. a valueCodeableConcept that provides the code identifying the specific symptom
 
