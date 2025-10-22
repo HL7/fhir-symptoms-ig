@@ -15,8 +15,8 @@ Instance: ShortnessOfBreathSymptom
 InstanceOf: SymptomObservation
 Description: "Shortness of breath"
 Usage: #example
-* extension[associatedSymptom].valueReference = Reference(ChestPainSymptom)
-* extension[associatedCondition].valueReference = Reference(Type2DiabetesMellitus)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(ChestPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(Type2DiabetesMellitus)
 * status = #final
 * subject = Reference(JaneDoe)
 * effectivePeriod.start = "2025-09-23T13:22:00.239+02:00"
@@ -41,8 +41,8 @@ Instance: ChestPainSymptom
 InstanceOf: SymptomObservation
 Description: "Chest pain"
 Usage: #example
-* extension[associatedSymptom].valueReference = Reference(ShortnessOfBreathSymptom)
-* extension[associatedCondition].valueReference = Reference(Type2DiabetesMellitus)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(ShortnessOfBreathSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(Type2DiabetesMellitus)
 * status = #final
 * subject = Reference(JaneDoe)
 * effectivePeriod.start = "2025-09-23T13:22:00.239+02:00"

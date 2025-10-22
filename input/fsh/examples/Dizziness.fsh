@@ -13,7 +13,7 @@ InstanceOf: SymptomObservation
 Description: "Dizziness"
 Usage: #example
  
-* extension[associatedSymptomOrCondition].valueReference = Reference(HearingLossSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(HearingLossSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(JohnDoe)
@@ -42,7 +42,7 @@ InstanceOf: SymptomObservation
 Description: "Hearing Loss"
 Usage: #example
  
-* extension[associatedSymptomOrCondition].valueReference = Reference(DizzinessSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DizzinessSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(JohnDoe)
@@ -65,7 +65,7 @@ Instance: FaintingSymptomAbsence
 InstanceOf: SymptomAbsentObservation
 Description: "No fainting"
 Usage: #example 
-* extension[associatedSymptomOrCondition].valueReference = Reference(DizzinessSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DizzinessSymptom)
 * status = #final
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
@@ -79,7 +79,7 @@ Instance: UnconsciousnessSymptomAbsence
 InstanceOf: SymptomAbsentObservation
 Description: "No loss of consciousness"
 Usage: #example 
-* extension[associatedSymptomOrCondition].valueReference = Reference(DizzinessSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DizzinessSymptom)
 * status = #final
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
@@ -93,7 +93,7 @@ Instance: NaueaSymptomAbsence
 InstanceOf: SymptomAbsentObservation
 Description: "Absense of nausea"
 Usage: #example 
-* extension[associatedSymptomOrCondition].valueReference = Reference(DizzinessSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DizzinessSymptom)
 * status = #final
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
