@@ -9,12 +9,14 @@
 <artifact id="StructureDefinition/AssessmentScaleCollection" key="StructureDefinition-AssessmentScaleCollection" name="Assessment Scale Collection Observation"/>
 <artifact id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
 <artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Single Observation"/>
+<artifact id="Observation/ChestPainSymptom" key="Observation-ChestPainSymptom" name="ChestPainSymptom"/>
 <artifact id="Observation/ChillSymptomAbsence" key="Observation-ChillSymptomAbsence" name="ChillSymptomAbsence"/>
 <artifact id="ValueSet/ClinicalCourseCodes" key="ValueSet-ClinicalCourseCodes" name="Clinical Course Codes"/>
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
 <artifact id="Observation/CoughSymptom" key="Observation-CoughSymptom" name="CoughSymptom"/>
 <artifact id="Observation/DizzinessSymptom" key="Observation-DizzinessSymptom" name="DizzinessSymptom"/>
 <artifact id="Observation/FaintingSymptomAbsence" key="Observation-FaintingSymptomAbsence" name="FaintingSymptomAbsence"/>
+<artifact id="Observation/FatigueSymptom" key="Observation-FatigueSymptom" name="FatigueSymptom"/>
 <artifact id="Observation/FeverSymptom" key="Observation-FeverSymptom" name="FeverSymptom"/>
 <artifact id="Observation/FeverSymptomAbsence" key="Observation-FeverSymptomAbsence" name="FeverSymptomAbsence"/>
 <artifact id="ValueSet/FrequencyCodes" key="ValueSet-FrequencyCodes" name="Frequency Codes"/>
@@ -41,6 +43,7 @@
 <artifact id="ValueSet/TrendCodes" key="ValueSet-TrendCodes" name="Trend Codes"/>
 <artifact id="ValueSet/TriggersOrExacerbatingFactorCodes" key="ValueSet-TriggersOrExacerbatingFactorCodes" name="Triggers or Exacerbating Factor Codes"/>
 <artifact id="Patient/TrishDoe" key="Patient-TrishDoe" name="TrishDoe"/>
+<artifact id="Condition/Type2DiabetesMellitus" key="Condition-Type2DiabetesMellitus" name="Type2DiabetesMellitus"/>
 <artifact id="Observation/UnconsciousnessSymptomAbsence" key="Observation-UnconsciousnessSymptomAbsence" name="UnconsciousnessSymptomAbsence"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

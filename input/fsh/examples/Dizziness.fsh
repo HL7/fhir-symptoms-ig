@@ -16,12 +16,10 @@ Usage: #example
 * extension[associatedSymptom].valueReference = Reference(HearingLossSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
- // Reference to Patient: John Doe - dizziness
 * subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
 * issued = "2025-10-16T13:42:17.239+02:00"
- // Reference to Patient: John Doe - dizziness
 * performer = Reference(JohnDoe)
 
 * valueCodeableConcept = http://snomed.info/sct#404640003
@@ -47,12 +45,10 @@ Usage: #example
 * extension[associatedSymptom].valueReference = Reference(DizzinessSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
- // Reference to Patient: John Doe - dizziness
 * subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-04-01T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
 * issued = "2025-10-16T13:42:17.239+02:00"
- // Reference to Patient: John Doe - dizziness
 * performer = Reference(JohnDoe)
 
 * valueCodeableConcept = http://snomed.info/sct#14230001000004101 
@@ -74,9 +70,7 @@ Usage: #example
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
 * issued = "2025-10-16T13:42:17.239+02:00"
-// Reference to Patient: Jane Doe - shortness of breath
 * subject = Reference(JohnDoe)
- // Reference to Patient: Jane Doe - shortness of breath
 * performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#271594007	
 * valueCodeableConcept.text = "Syncope attack"
@@ -90,9 +84,7 @@ Usage: #example
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
 * issued = "2025-10-16T13:42:17.239+02:00"
-// Reference to Patient: Jane Doe - shortness of breath
 * subject = Reference(JohnDoe)
- // Reference to Patient: Jane Doe - shortness of breath
 * performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#418107008 	
 * valueCodeableConcept.text = "Unconscious (finding)"
@@ -106,9 +98,7 @@ Usage: #example
 * effectivePeriod.start = "2025-09-25T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-10-16T13:42:17.239+02:00"
 * issued = "2025-10-16T13:42:17.239+02:00"
-// Reference to Patient: Jane Doe - shortness of breath
 * subject = Reference(JohnDoe)
- // Reference to Patient: Jane Doe - shortness of breath
 * performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#422587007	
 * valueCodeableConcept.text = "Nausea (finding)"
