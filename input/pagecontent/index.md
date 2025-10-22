@@ -25,7 +25,7 @@ This implementation guide (and the menu for it) is organized into the following 
 * [Change Log](changes.html) lists all of the changes between versions of the guide
  
 ### Dependencies
-{% include dependency-table-nontech.xhtml %}
+{% lang-fragment dependency-table-nontech.xhtml %}
 
 ### IP Statements
-{% include ip-statements.xhtml %}
+{% lang-fragment ip-statements.xhtml %}

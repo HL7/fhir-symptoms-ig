@@ -4,12 +4,9 @@ Id: SymptomObservation
 Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptoms."
 Title: "Symptom Observation"
 
-* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptom 0..* and http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedCondition 0..*
-
-* extension[associatedSymptom].valueReference only Reference(SymptomObservation or SymptomAbsentObservation)
-  * insert ShouldSupport([[Other symptoms associated with this symptom]])
-* extension[associatedCondition].valueReference only Reference(Condition)
-  * insert ShouldSupport([[Conditions with some relationship to this symptom]])
+* extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptomOrCondition 0..*
+* extension[associatedSymptomOrCondition].valueReference only Reference(SymptomObservation or SymptomAbsentObservation or Condition)
+  * insert ShouldSupport([[Other symptoms or conditions that are associated with this symptom]])
 
 * status 1..1 MS
 * category 1..* MS

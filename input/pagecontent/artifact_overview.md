@@ -42,8 +42,8 @@ The following examples are present in this guide to show specific use cases:
 
 
 ### Cross-Version Analysis
-{% include cross-version-analysis.xhtml %}
+{% lang-fragment cross-version-analysis.xhtml %}
 
 ### Global Profiles
 
-{% include globals-table.xhtml %}
+{% lang-fragment globals-table.xhtml %}
