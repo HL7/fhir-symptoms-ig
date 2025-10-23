@@ -43,6 +43,8 @@ Title: "Functional Assessment Collection"
 * category contains functionalDomain 0..*
 * category[functionalDomain] from FunctionalClassification (required)
 
+* hasMember only Reference(FunctionalAssessmentObservation)
+
 Profile: AssessmentScaleObservation
 Parent: Observation
 Id: AssessmentScaleObservation
