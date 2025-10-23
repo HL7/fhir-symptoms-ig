@@ -41,8 +41,9 @@ parameters:
   globals-in-artifacts: true
   pin-canonicals: pin-multiples
   shownav: true
-#  path-resource:
-#    - '/input/archetypes'
+  openehr: true
+  path-resource:
+    - '/input/archetypes'
 
 pages:
   index.md:

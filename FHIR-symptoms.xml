@@ -15,6 +15,12 @@
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
 <artifact id="Observation/CoughSymptom" key="Observation-CoughSymptom" name="CoughSymptom"/>
 <artifact id="Observation/DizzinessSymptom" key="Observation-DizzinessSymptom" name="DizzinessSymptom"/>
+<artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" name="EffectCS"/>
+<artifact id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" name="EffectVS"/>
+<artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" name="EpisodicityCS"/>
+<artifact id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" name="EpisodicityVS"/>
+<artifact id="ValueSet/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002" key="ValueSet-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002" name="ExcludedSymptomVS"/>
+<artifact id="StructureDefinition/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0" key="StructureDefinition-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0" name="ExclusionSymptomSignV0"/>
 <artifact id="Observation/FaintingSymptomAbsence" key="Observation-FaintingSymptomAbsence" name="FaintingSymptomAbsence"/>
 <artifact id="Observation/FatigueSymptom" key="Observation-FatigueSymptom" name="FatigueSymptom"/>
 <artifact id="Observation/FeverSymptom" key="Observation-FeverSymptom" name="FeverSymptom"/>
@@ -28,9 +34,15 @@
 <artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
 <artifact id="Patient/JohnDoe" key="Patient-JohnDoe" name="JohnDoe"/>
 <artifact id="Observation/NaueaSymptomAbsence" key="Observation-NaueaSymptomAbsence" name="NaueaSymptomAbsence"/>
+<artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" name="OccurrenceCS"/>
+<artifact id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" name="OccurrenceVS"/>
 <artifact id="ValueSet/OtherEventCodes" key="ValueSet-OtherEventCodes" name="Other Event Codes"/>
+<artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" name="ProgressionCS"/>
+<artifact id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" name="ProgressionVS"/>
 <artifact id="ValueSet/QualityCodes" key="ValueSet-QualityCodes" name="Quality Codes"/>
 <artifact id="ValueSet/SeverityCodes" key="ValueSet-SeverityCodes" name="Severity Codes"/>
+<artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" name="SeverityCategoryCS"/>
+<artifact id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" name="SeverityCategoryVS"/>
 <artifact id="Observation/ShortnessOfBreathPHSymptom" key="Observation-ShortnessOfBreathPHSymptom" name="ShortnessOfBreathPHSymptom"/>
 <artifact id="Observation/ShortnessOfBreathSymptom" key="Observation-ShortnessOfBreathSymptom" name="ShortnessOfBreathSymptom"/>
 <artifact id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
@@ -39,6 +51,7 @@
 <artifact id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
 <artifact id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
 <artifact id="CapabilityStatement/SymptomCapabilities" key="CapabilityStatement-SymptomCapabilities" name="Symptom System Capabilities"/>
+<artifact id="StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2" key="StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2" name="SymptomSignV2"/>
 <artifact id="CodeSystem/SymptomTemporary" key="CodeSystem-SymptomTemporary" name="Temporary Symptom Codes"/>
 <artifact id="ValueSet/TrendCodes" key="ValueSet-TrendCodes" name="Trend Codes"/>
 <artifact id="ValueSet/TriggersOrExacerbatingFactorCodes" key="ValueSet-TriggersOrExacerbatingFactorCodes" name="Triggers or Exacerbating Factor Codes"/>
