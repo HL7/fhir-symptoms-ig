@@ -26,7 +26,7 @@ Usage: #example
 * valueCodeableConcept.text = "Cough"
 * bodySite = http://snomed.info/sct#39607008 "Lung structure"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#444821000124100
+* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
 * component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
 * component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007
@@ -51,7 +51,7 @@ Usage: #example
 * valueCodeableConcept = http://snomed.info/sct#386661006	
 * valueCodeableConcept.text = "Fever (finding)"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#444821000124100
+* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
 * component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
 * component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 

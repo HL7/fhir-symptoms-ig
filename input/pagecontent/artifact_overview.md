@@ -19,6 +19,10 @@ The artifacts are of five types:
 #### Symptoms Logical Model
 * [Symptoms Logical Model](StructureDefinition-SymptomLogicalModel.html) - {{site.data.StructureDefinition-SymptomLogicalModel.description}}
 
+#### Symptoms OpenEHR Archetypes
+* [Symptom Sign Archetype](StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2.html) - the Symptom/Sign OpenEHR Archetype
+* [Exclusion Symptom Archetype](StructureDefinition-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.html) - the Exclusion Symptmo OpenEHR Archetype
+
 #### Profiles
 ##### Symptom Profiles
 * [Symptom Observation](StructureDefinition-SymptomObservation.html) - {{site.data.StructureDefinition-SymptomObservation.description}}
@@ -37,8 +41,22 @@ The artifacts are of five types:
 #### Examples
 The following examples are present in this guide to show specific use cases:
 
+##### Symptom Examples
+* [Chest Pain](Observation-ChestPainSymptom.html)
 * [Shortness of Breath](Observation-ShortnessOfBreathSymptom.html)
+* [Public Health Example Shortness of Breath](Observation-ShortnessOfBreathPHSymptom.html)
+* [Cough](Observation-CoughSymptom.html)
+* [Dizziness](Observation-DizzinessSymptom.html)
+* [Fatigue](Observation-FatigueSymptom.html)
+* [Fever](Observation-FeverSymptom.html)
+* [Hearing Loss](Observation-HearingLossSymptom.html)
+
+##### Symptom Absent Examples
 * [Absence of Fever](Observation-FeverSymptomAbsence.html)
+* [Absence of Chills](Observation-ChillSymptomAbsence.html)
+* [No Fainting](Observation-FaintingSymptomAbsence.html)
+* [Absence of Nausea](Observation-NauseaSymptomAbsence.html)
+* [No Loss of Consciousness](Observation-UnconsciousnessSymptomAbsence.html)
 
 
 ### Cross-Version Analysis

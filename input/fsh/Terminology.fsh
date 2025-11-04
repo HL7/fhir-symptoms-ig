@@ -40,21 +40,15 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* http://snomed.info/sct#51197009
-* http://snomed.info/sct#53430007
 * http://snomed.info/sct#116289008
-* http://snomed.info/sct#25064002
 * http://snomed.info/sct#403364000
-* http://snomed.info/sct#279039007
-* http://snomed.info/sct#30473006
-* http://snomed.info/sct#106131003
+* http://snomed.info/sct#48079002
 * http://snomed.info/sct#84229001
 * http://snomed.info/sct#422587007
-* http://snomed.info/sct#247950007
+* http://snomed.info/sct#53888004
 * http://snomed.info/sct#249473004
 * http://snomed.info/sct#198436008
 * http://snomed.info/sct#386661006
-* http://snomed.info/sct#23924001
 * http://snomed.info/sct#271594007
 * http://snomed.info/sct#300359004
 * http://snomed.info/sct#16331000
@@ -66,29 +60,36 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#42984000
 * http://snomed.info/sct#43724002
 * http://snomed.info/sct#278040002
-* http://snomed.info/sct#106076001
 * http://snomed.info/sct#165232002
 * http://snomed.info/sct#225038006
 * http://snomed.info/sct#22253000
 * http://snomed.info/sct#44169009
 * http://snomed.info/sct#36955009
-* http://snomed.info/sct#57676002
 * http://snomed.info/sct#48694002
 * http://snomed.info/sct#39898005
 * http://snomed.info/sct#14760008
-* http://snomed.info/sct#21522001
 * http://snomed.info/sct#62315008
 * http://snomed.info/sct#404640003
 * http://snomed.info/sct#80313002
 * http://snomed.info/sct#267036007
 * http://snomed.info/sct#366979004
 * http://snomed.info/sct#49727002
-* http://snomed.info/sct#29857009
 * http://snomed.info/sct#286933003
 * http://snomed.info/sct#6471006
 * http://snomed.info/sct#55300003
 * http://snomed.info/sct#24199005
-* http://snomed.info/sct#365852007
+
+* http://snomed.info/sct#51197009
+* http://snomed.info/sct#53430007
+* http://snomed.info/sct#25064002
+* http://snomed.info/sct#279039007
+* http://snomed.info/sct#30473006
+* http://snomed.info/sct#23924001
+* http://snomed.info/sct#57676002
+* http://snomed.info/sct#21522001
+* http://snomed.info/sct#29857009
+
+
 
 ValueSet: FunctionalClassification
 Id: FunctionalClassification
@@ -139,7 +140,7 @@ The SNOMED International IPS Terminology is distributed by International Health 
 The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"""
 * ^experimental = false
 
-* include codes from system http://snomed.info/sct where concept is-a #272141005 
+* include codes from system http://snomed.info/sct where concept descendant-of #272141005 
 
 ValueSet: ClinicalCourseCodes
 Id: ClinicalCourseCodes
@@ -175,8 +176,6 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#442474009
 * http://snomed.info/sct#409051000
 * http://snomed.info/sct#442387004
-* http://snomed.info/sct#445021000124109
-* http://snomed.info/sct#445031000124107
 
 ValueSet: TriggersOrExacerbatingFactorCodes
 Id: TriggersOrExacerbatingFactorCodes
@@ -246,7 +245,6 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#128975004    
 * http://snomed.info/sct#33586001    
 * http://snomed.info/sct#386342003    
-* http://snomed.info/sct#311767007    
 * http://snomed.info/sct#386476006   
 
 ValueSet: OtherEventCodes

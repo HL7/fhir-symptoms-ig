@@ -17,3 +17,27 @@ Unknown code '111551-8' in the CodeSystem 'http://loinc.org' version '2.81'
 
 # 06 - The value set is the entire ICF code system which is quite large
 The value set expansion is too large, and only a subset has been displayed
+
+# 07 - Parameter used for template to include openEHR views
+Unknown Parameters: [openehr=true]
+
+# 08 - This is a valid parameter
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# 09 - Include openehr.base to get the OpenEHR archetypes views
+The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#dev is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+
+# 10 - We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be.
+The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
+
+
+# OPENEHR - A number of errors, warnings, and info messages are generated with the inclusion of the openEHR archetypes.  These are known by Grahame and will be fixed with a future version of the publisher and template.
+ERROR: en/StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2%
+INFORMATION: ValueSet/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002%
+ERROR: ValueSet/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002%
+ERROR: StructureDefinition/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0%
+INFORMATION: StructureDefinition/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0%
+WARNING: StructureDefinition/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0%
+ERROR: StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2%
+WARNING: StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2%
+ERROR: http://hl7.org/fhir/uv/symptoms/StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2%

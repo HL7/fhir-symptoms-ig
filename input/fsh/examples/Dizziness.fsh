@@ -89,7 +89,7 @@ Usage: #example
 * valueCodeableConcept = http://snomed.info/sct#418107008 	
 * valueCodeableConcept.text = "Unconscious (finding)"
 
-Instance: NaueaSymptomAbsence
+Instance: NauseaSymptomAbsence
 InstanceOf: SymptomAbsentObservation
 Description: "Absense of nausea"
 Usage: #example 

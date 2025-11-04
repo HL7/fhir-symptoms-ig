@@ -34,7 +34,6 @@ dependencies:
 
 parameters:
   show-inherited-invariants: false
-  path-expansion-params: '../../exp-params.json'
   apply-publisher: true
   apply-contact: true
   produce-jekyll-data: true
@@ -52,6 +51,10 @@ pages:
     title: Reading This IG
   usecases.md:
     title: Use Cases
+  diagnosis.md:
+    title: Symptom/Diagnosis Relationship
+  profile.md:
+    title: Logical Model, OpenEHR Archetype, and FHIR Profile
   acknowledgements.md:
     title: Project and Participants
   conformance.md:
@@ -70,6 +73,8 @@ menu:
   Background:
     Reading this IG: background.html
     Use Cases: usecases.html
+    Symptom/Diagnosis Relationship: diagnosis.html
+    Logical Model: profile.html
     Projects and Participants: acknowledgements.html
   Specification:
     Conformance Expectations: conformance.html
