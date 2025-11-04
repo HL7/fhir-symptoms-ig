@@ -49,8 +49,8 @@ Usage: #example
 * effectivePeriod.end = "2025-09-23T13:42:00.239+02:00"
 * issued = "2025-09-15T13:28:17.239+02:00"
 * performer = Reference(JaneDoe)
-* valueCodeableConcept = http://snomed.info/sct#29857009
-* valueCodeableConcept.text = "Chest pain"
+* valueCodeableConcept = http://snomed.info/sct#22253000 
+* valueCodeableConcept.text = "Pain"
 * bodySite = http://snomed.info/sct#51185008 "Thoracic structure (body structure)"
 
 * component[quality].valueCodeableConcept = http://snomed.info/sct#279098001
