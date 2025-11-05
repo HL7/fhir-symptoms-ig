@@ -1,0 +1,14 @@
+{
+  "package-id" : "hl7.fhir.uv.symptoms",
+  "version" : "1.0.0-ballot",
+  "path" : "http://hl7.org/fhir/uv/symptoms/2026Jan",
+  "status" : "ballot",
+  "sequence" : "STU 1",
+  "mode": "working",
+  "desc" : "A guide that details how to capture and exchange Symptoms data in FHIR.",
+  "first" : true,
+  "title" : "Symptoms Data Standards",
+  "ci-build" : "http://build.fhir.org/ig/HL7/fhir-symptoms-ig",
+  "category" : "Clinical",
+  "introduction" : "This Implementation Guide defines how to represent and exchange standardized symptom data using FHIR to support improved diagnostic accuracy and patient outcomes. It is intended for EHR vendors, developers, and implementers who need to capture and share symptom information consistently across systems and care settings."
+}
