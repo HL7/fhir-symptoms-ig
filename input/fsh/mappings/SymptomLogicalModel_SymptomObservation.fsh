@@ -3,6 +3,8 @@ Id: Symptom
 Title: "Symptom Logical Model mapping to Symptom Observation"
 Description: "This table maps the Symptom Observation elements to the Symptom Logical Model"
 Source: SymptomLogicalModel
+Target: "https://build.fhir.org/ig/HL7/fhir-symptoms-ig/en/StructureDefinition-SymptomObservation.html"
+* -> "SymptomObservation"
 * symptomCode -> "category[symptomCode]" 
 * affectedPatient -> "subject" 
 * location -> "bodySite" 
