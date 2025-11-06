@@ -21,7 +21,7 @@ The artifacts are of five types:
 
 #### Symptoms OpenEHR Archetypes
 * [Symptom Sign Archetype](StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2.html) - the Symptom/Sign OpenEHR Archetype
-* [Exclusion Symptom Archetype](StructureDefinition-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.html) - the Exclusion Symptmo OpenEHR Archetype
+* [Exclusion Symptom Archetype](StructureDefinition-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.html) - the Exclusion Symptom OpenEHR Archetype
 
 #### Profiles
 ##### Symptom Profiles

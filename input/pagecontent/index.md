@@ -6,9 +6,11 @@ This guide provides FHIR profiles that structure symptom data for seamless excha
 
 #### From Pre-Coordinated to Post-Coordinated: Best Practices for Symptom Data Exchange
 
-Electronic health records (EHRs) and other clinical systems often capture and store symptoms as **pre-coordinated codes**, meaning one code combines multiple details—for example, “abdominal pain” includes both the symptom and the body site.
+Electronic health records (EHRs) and other clinical systems sometimes capture and store symptoms as **pre-coordinated concepts and/or text**, meaning one code combines multiple details—for example, “abdominal pain” includes both the symptom and the body site.
 
 For data exchange, this Implementation Guide (IG) recommends a **post-coordinated approach**. This means breaking down the combined code (decomposition) so the symptom goes in observation.value, while related details—such as body site—are recorded in separate fields. This structure improves flexibility and supports consistent interoperability across systems. See this Table which provides examples of Pre-Coordinated code versus the Post-Coordinated combinations.
+
+It is still necessary for the original pre-coordinated concept to be include in exchange and the FHIR CodableConcept structure allows this by including multiple Codings.  Our recommendation is that a system send the post-coordinated code as one Coding and also send the original concept as another Coding with the Coding.userSelected element set to 'true'.
 
 <table border="1">
   <thead>

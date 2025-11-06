@@ -79,17 +79,6 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#55300003
 * http://snomed.info/sct#24199005
 
-* http://snomed.info/sct#51197009
-* http://snomed.info/sct#53430007
-* http://snomed.info/sct#25064002
-* http://snomed.info/sct#279039007
-* http://snomed.info/sct#30473006
-* http://snomed.info/sct#23924001
-* http://snomed.info/sct#57676002
-* http://snomed.info/sct#21522001
-* http://snomed.info/sct#29857009
-
-
 
 ValueSet: FunctionalClassification
 Id: FunctionalClassification
