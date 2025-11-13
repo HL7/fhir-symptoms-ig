@@ -10,7 +10,7 @@ Mr. John Doe is a 72-year-old male who presents to the office with a complaint o
 
 The dizziness typically lasts for a few seconds to a minute and tends to resolve after he remains still or sits down. He has not experienced any significant headaches, chest pain, or shortness of breath associated with these episodes. He denies any recent falls but has noticed occasional unsteadiness while walking.
 
-The patient also mentions mild [hearing loss](Observation-HearingLossSymptom.html) in his right ear for the past few months, though it has not been bothersome until recently. He denies any ringing in the ears (tinnitus) or ear fullness.  He does not have any visual changes, such as double vision or blurred vision, and he has not experienced any [nausea](Observation-NaueaSymptomAbsence.html) or vomiting with the dizziness. 
+The patient also mentions mild [hearing loss](Observation-HearingLossSymptom.html) in his right ear for the past few months, though it has not been bothersome until recently. He denies any ringing in the ears (tinnitus) or ear fullness.  He does not have any visual changes, such as double vision or blurred vision, and he has not experienced any [nausea](Observation-NauseaSymptomAbsence.html) or vomiting with the dizziness. 
 
 He reports that his symptoms have not improved with increased fluid intake or rest, and he is concerned about the worsening of his dizziness. He also notes a slight decrease in his ability to perform his usual daily activities, though he is still able to walk short distances and complete light household chores.
 

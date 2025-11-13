@@ -27,6 +27,14 @@ The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#
 # 09 - We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be.
 The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
 
+#10 - We are mapping from the logical model to the profile in this guide - the URL is the canonical for this guide
+No definition could be found for URL value 'http://hl7.org/fhir/uv/symptoms'
+
+#11 - We do not have examples for these profiles as yet.  We will add them post-ballot.
+The Implementation Guide contains no examples for this extension
+
+# OPENEHR - We are using the openehr package to get the openEHR archetypes.
+This IG is version 4.0.1, while the IG 'openehr.base' is from version 5.0.0
 
 # OPENEHR - A number of errors, warnings, and info messages are generated with the inclusion of the openEHR archetypes.  These are known by Grahame and will be fixed with a future version of the publisher and template.
 ERROR: en/StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2%
