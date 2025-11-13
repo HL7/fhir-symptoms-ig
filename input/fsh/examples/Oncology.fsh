@@ -56,7 +56,7 @@ Usage: #example
 * valueCodeableConcept.text = "Constipation (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[functionalImpact].code = b4552
+* component[functionalImpact].code = http://snomed.info/sct#b4552
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
 
