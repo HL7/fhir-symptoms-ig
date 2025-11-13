@@ -56,7 +56,8 @@ Usage: #example
 * valueCodeableConcept.text = "Constipation (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[functionalImpact].code = b4552
+* component[functionalImpact].code = http://hl7.org/fhir/sid/icf#b4552
+* component[functionalImpact].valueInteger = 1
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
 
@@ -83,7 +84,7 @@ Usage: #example
 * component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
 * component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[frequency].valueRatio.numerator = 1
+* component[frequency].valueRatio.numerator.value = 1
 * component[frequency].valueRatio.denominator.value = 24
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
 
@@ -106,7 +107,8 @@ Usage: #example
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
 * component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
-* component[severity].extension[scaleCode].valueReference = Reference(PainAssessment)
+* component[severity].extension[scaleCode].valueReference = Reference(PainAssessmentCollection)
+* component[severity].valueCodeableConcept = http://snomed.info/sct#24484000
 * component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
@@ -132,11 +134,11 @@ Description: "Collection of rating of abdominal cramping pain"
 Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
-* code = 
+* code = http://loinc.org#80316-3
 * subject = Reference(MrDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
-* hasMember = Reference(AssessmentScaleObservation)
+* hasMember = Reference(PainAssessmentScale)
 
 Instance: PainAssessmentScale
 InstanceOf: AssessmentScaleObservation
@@ -144,8 +146,9 @@ Description: "Rating of abdominal cramping pain"
 Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
-* code = 
+* code = http://loinc.org#LA25253-8
 * subject = Reference(MrDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
-* valueRatio.numerator = 4
-* valueRatio.denominator = 10
+* performer = Reference(AdmissionsPerson)
+* valueRatio.numerator.value = 4
+* valueRatio.denominator.value = 10
