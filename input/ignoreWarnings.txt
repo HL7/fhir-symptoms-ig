@@ -30,8 +30,9 @@ The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be 
 #10 - We are mapping from the logical model to the profile in this guide - the URL is the canonical for this guide
 No definition could be found for URL value 'http://hl7.org/fhir/uv/symptoms'
 
-#11 - We do not have examples for these profiles as yet.  We will add them post-ballot.
+#11 - We do not have examples for these extensions and profiles as yet.  We will add them post-ballot.
 The Implementation Guide contains no examples for this extension
+The Implementation Guide contains no examples for this profile
 
 # OPENEHR - We are using the openehr package to get the openEHR archetypes.
 This IG is version 4.0.1, while the IG 'openehr.base' is from version 5.0.0

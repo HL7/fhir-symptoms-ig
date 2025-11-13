@@ -185,7 +185,6 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#226029000 
 * http://snomed.info/sct#48694002 
 * http://snomed.info/sct#84229001 
-* http://snomed.info/sct#102491009 
 * http://snomed.info/sct#277773003  
 * http://snomed.info/sct#113011001 
 * http://snomed.info/sct#397578001 
