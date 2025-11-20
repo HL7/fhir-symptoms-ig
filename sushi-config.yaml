@@ -86,8 +86,8 @@ menu:
   Support:
     Discussion Forum: https://chat.fhir.org/#channels/501058/Symptoms.20on.20FHIR
     Project Page: https://confluence.hl7.org/spaces/CIC/pages/324960988/Symptoms+Standardization+Project
-#    Project Dashboard: 
-#    Propose a Change: 
+    Project Dashboard: https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=18002
+    Propose a Change: https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=FHIR-symptoms
   Change Log: changes.html
 
 
