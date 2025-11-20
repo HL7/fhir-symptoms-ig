@@ -43,3 +43,7 @@ WARNING: StructureDefinition/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0%
 ERROR: StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2%
 WARNING: StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2%
 ERROR: http://hl7.org/fhir/uv/symptoms/StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2%
+No match found for CLUSTER.items%
+ERROR: CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2%
+ERROR: ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2%
+ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2-definitions.html#CLUSTER.items:at0028%
