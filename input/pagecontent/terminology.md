@@ -1,4 +1,4 @@
-This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the Prior Authorization Implementation Guide.
+This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the Symptoms Implementation Guide.
 
 ### Value Sets Published In This IG
 
