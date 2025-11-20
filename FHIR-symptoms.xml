@@ -10,6 +10,8 @@
 <artifact id="Practitioner/AdmissionsPerson" key="Practitioner-AdmissionsPerson" name="AdmissionsPerson"/>
 <artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
 <artifact id="ValueSet/AlleviatingFactorCodes" key="ValueSet-AlleviatingFactorCodes" name="Alleviating Factor Codes"/>
+<artifact id="Observation/AppetiteFunctionalAssessmentCollection" key="Observation-AppetiteFunctionalAssessmentCollection" name="AppetiteFunctionalAssessmentCollection"/>
+<artifact id="Observation/AppetiteFunctionalAssessmentScale" key="Observation-AppetiteFunctionalAssessmentScale" name="AppetiteFunctionalAssessmentScale"/>
 <artifact id="StructureDefinition/AssessmentScaleCollection" key="StructureDefinition-AssessmentScaleCollection" name="Assessment Scale Collection Observation"/>
 <artifact id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
 <artifact id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Single Observation"/>
@@ -36,7 +38,6 @@
 <artifact id="StructureDefinition/FunctionalAssessmentObservation" key="StructureDefinition-FunctionalAssessmentObservation" name="Functional Assessment Single Observation"/>
 <artifact id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
 <artifact id="Observation/HearingLossSymptom" key="Observation-HearingLossSymptom" name="HearingLossSymptom"/>
-<artifact id="Medication/IVMorphine" key="Medication-IVMorphine" name="IVMorphine"/>
 <artifact id="MedicationStatement/IVMorphineDoseage" key="MedicationStatement-IVMorphineDoseage" name="IVMorphineDoseage"/>
 <artifact id="Observation/InitialPainAssessmentCollection" key="Observation-InitialPainAssessmentCollection" name="InitialPainAssessmentCollection"/>
 <artifact id="Observation/InitialPainAssessmentScale" key="Observation-InitialPainAssessmentScale" name="InitialPainAssessmentScale"/>

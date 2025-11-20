@@ -109,8 +109,12 @@ Usage: #example
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
 * component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
-* component[severity].extension[scaleCode].valueReference = Reference(InitialPainAssessmentCollection)
 * component[severity].valueCodeableConcept = http://snomed.info/sct#24484000
+* component[severity].extension[scaleCode].valueReference = Reference(InitialPainAssessmentCollection)
+* component[functionalImpact]
+  * extension[functionalAssessment].valueReference = Reference(AppetiteFunctionalAssessmentCollection)
+  * code = http://hl7.org/fhir/sid/icf#b1302
+  * valueCodeableConcept = http://loinc.org#LA6568-5
 * component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
@@ -136,8 +140,9 @@ Usage: #example
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
 * component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
-* component[severity].extension[scaleCode].valueReference = Reference(UnmedicatedPainAssessmentCollection)
-* component[severity].valueCodeableConcept = http://snomed.info/sct#24484000
+* component[severity]
+  * extension[scaleCode].valueReference = Reference(UnmedicatedPainAssessmentCollection)
+  * valueCodeableConcept = http://snomed.info/sct#24484000
 * component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
 * component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
@@ -266,17 +271,35 @@ Usage: #example
 * valueRatio.numerator.value = 8
 * valueRatio.denominator.value = 10
 
+Instance: AppetiteFunctionalAssessmentCollection
+InstanceOf: FunctionalAssessmentCollection
+Description: "Collection of appetite assessment"
+Usage: #example
+* status = #final
+* category[functionalDomain] = http://hl7.org/fhir/sid/icf#b1302
+* code = http://loinc.org#70505-3
+* subject = Reference(MrDoe)
+* effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
+* performer = Reference(AdmissionsPerson)
+* hasMember = Reference(AppetiteFunctionalAssessmentScale)
+
+Instance: AppetiteFunctionalAssessmentScale
+InstanceOf: FunctionalAssessmentObservation
+Description: "Rating of appetite loss"
+Usage: #example
+* status = #final
+* category[functionalDomain] = http://hl7.org/fhir/sid/icf#b1302
+* code = http://loinc.org#70383-5
+* subject = Reference(MrDoe)
+* effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
+* performer = Reference(AdmissionsPerson)
+* valueCodeableConcept = http://loinc.org#LA6568-5
+
 Instance: IVMorphineDoseage
 InstanceOf: MedicationStatement
 Description: "Dose of IV morphine"
 Usage: #example
-* status = #recorded
-* medicationReference = Reference(IVMorphine)
+* status = #active
+* medicationCodeableConcept = http://snomed.info/sct#73572009
 * subject = Reference(MrDoe)
 * reasonReference = Reference(UnmedicatedAbdominalPainSymptom)
-
-Instance: IVMorphine
-InstanceOf: Medication
-Description: "Morphine delivered by IV"
-Usage: #example
-* code = http://snomed.info/sct#73572009
