@@ -6,7 +6,7 @@ Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportin
 # 02 - Inherited from FHIR Core
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# 03 - The codes in this code system are moving to LOINC and THO
+# 03 - The codes in this code system are moving to: THO - 'symptom' observation category and LOINC - 'Other Symptom Events'
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # 04 - We will add conformance clause testing eventually
@@ -24,7 +24,7 @@ Unknown Parameters: [openehr=true]
 # 08 - Include openehr.base to get the OpenEHR archetypes views
 The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#dev is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 
-# 09 - We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be.
+# 09 - We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be. (https://jira.hl7.org/browse/FHIR-53542)
 The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
 
 # 10 - We are mapping from the logical model to the profile in this guide - the URL is the canonical for this guide
@@ -36,7 +36,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 # OPENEHR - We are using the openehr package to get the openEHR archetypes.
 This IG is version 4.0.1, while the IG 'openehr.base' is from version 5.0.0
 
-# OPENEHR - A number of errors, warnings, and info messages are generated with the inclusion of the openEHR archetypes.  These are known by Grahame and will be fixed with a future version of the publisher and template.
+# OPENEHR - A number of errors, warnings, and info messages are generated with the inclusion of the openEHR archetypes.  These are known by the FHIR Product Director and will be fixed with a future version of the publisher and template. (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/OpenEHR.20Parsing.20errors/with/560290469)
 ERROR: en/StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2%
 INFORMATION: ValueSet/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002%
 ERROR: ValueSet/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002%
