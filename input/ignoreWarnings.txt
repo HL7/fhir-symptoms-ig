@@ -33,6 +33,10 @@ No definition could be found for URL value 'http://hl7.org/fhir/uv/symptoms'
 # 11 - The extension slices are correct.  They are not notes but are are other extensions allowed in those components.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/symptoms/StructureDefinition/SymptomObservation|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
+# 12 - The template is producing duplicate anchor IDs for two different mappings.
+The html source has duplicate anchor Ids:%
+
+
 # OPENEHR - We are using the openehr package to get the openEHR archetypes.
 This IG is version 4.0.1, while the IG 'openehr.base' is from version 5.0.0
 
