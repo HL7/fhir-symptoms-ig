@@ -12,7 +12,7 @@ Most code systems defined in HL7 IGs will need to move to THO later during the p
 # 04 - We will add conformance clause testing eventually
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
 
-# 05 - Newly added LOINC code for Symptoms Absent Observation
+# 05 - ERROR - Newly added LOINC code for Symptoms Absent Observation
 Unknown code '111551-8' in the CodeSystem 'http://loinc.org' version '2.81'
 
 # 06 - The value set is the entire ICF code system which is quite large
@@ -24,21 +24,18 @@ Unknown Parameters: [openehr=true]
 # 08 - Include openehr.base to get the OpenEHR archetypes views
 The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#dev is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 
-# 09 - We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be. (https://jira.hl7.org/browse/FHIR-53542)
+# 09 - ERROR We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be. (https://jira.hl7.org/browse/FHIR-53542)
 The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
 
-# 10 - We are mapping from the logical model to the profile in this guide - the URL is the canonical for this guide
-No definition could be found for URL value 'http://hl7.org/fhir/uv/symptoms'
-
-# 11 - The extension slices are correct.  They are not notes but are are other extensions allowed in those components.
+# 10 - The extension slices are correct.  They are not notes but are are other extensions allowed in those components.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/symptoms/StructureDefinition/SymptomObservation|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# 12 - The template is producing duplicate anchor IDs for two different mappings.
+# 11 - The template is producing duplicate anchor IDs for two different mappings.
 The html source has duplicate anchor Ids:%
-
 
 # OPENEHR - We are using the openehr package to get the openEHR archetypes.
 This IG is version 4.0.1, while the IG 'openehr.base' is from version 5.0.0
+This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.uv.tools#current' is for FHIR version 5.0.0
 
 # OPENEHR - A number of errors, warnings, and info messages are generated with the inclusion of the openEHR archetypes.  These are known by the FHIR Product Director and will be fixed with a future version of the publisher and template. (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/OpenEHR.20Parsing.20errors/with/560290469)
 ERROR: en/StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2%
