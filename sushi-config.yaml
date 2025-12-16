@@ -30,7 +30,7 @@ dependencies:
   openehr.base:
     id: openehr
     uri: http://openehr.org/fhir/ImplementationGuide/openehr.base
-    version: dev
+    version: 0.1.0
 
 parameters:
   show-inherited-invariants: false
