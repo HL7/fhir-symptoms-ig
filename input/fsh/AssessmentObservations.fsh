@@ -79,7 +79,7 @@ Title: "Assessment Scale Single Observation"
 Profile: FunctionalAssessmentObservation
 Parent: AssessmentScaleObservation
 Id: FunctionalAssessmentObservation
-Description: "A single observation related to a functional assessment of a patient.  This profile is used for exchanging an observatoin for a single question."
+Description: "A single observation related to a functional assessment of a patient.  This profile is used for exchanging an observation for a single question."
 Title: "Functional Assessment Single Observation"
 
 * category contains functionalDomain 0..*

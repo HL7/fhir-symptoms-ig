@@ -1,7 +1,7 @@
 Profile: SymptomObservation
 Parent: Observation
 Id: SymptomObservation
-Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptoms."
+Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptom."
 Title: "Symptom Observation"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptomOrCondition 0..*
@@ -264,7 +264,7 @@ Description: "Reference to a complete functional assessment collection."
 Extension: SurroundingEventMedication
 Id: SurroundingEventMedication
 Title: "Surrounding Event Medication"
-Description: "Medication that when taken affecting the factor"
+Description: "Medication that when taken affects the symptom"
 * value[x] only Reference
 * valueReference only Reference(MedicationStatement)
 * ^context[+].type = #element

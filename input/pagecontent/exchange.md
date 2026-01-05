@@ -1,6 +1,6 @@
 ### Overview
 
-This guide presumes that systems that are exchange symptom data shall do so using the [FHIR RESTful API]({{site.data.fhir.path}}http.html).
+This guide presumes that systems that are exchanging symptom data shall do so using the [FHIR RESTful API]({{site.data.fhir.path}}http.html).
 
 ### Symptoms Recording
 
