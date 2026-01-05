@@ -18,4 +18,3 @@ Along with those expectations, the following rules on MustSupport are also requi
 
 * Systems **SHALL** be capable of returning resource instances containing any of the data elements that are marked as Must Support.
 * Systems **SHALL** be capable of receiving all data elements that are marked as Must Support.  They **SHALL NOT** generate an error or cause the application to fail when receiving any data element that is marked as Must Support.
-* Systems **SHOULD NOT** send any data elements that are not marked as Must Support.  If these data elements are included, the receiving System **MAY** ignore those elements.
