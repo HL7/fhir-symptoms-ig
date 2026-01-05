@@ -1,6 +1,6 @@
 Complying with this implementation guide means complying with a number of profiles, extensions, value sets and custom search parameters.  This page provides an overview of where this information can be found.
 
-These FHIR artifacts define the data that can be submitted as part of the required Consent operations.
+These FHIR artifacts define the Symptoms information that can be exchanged.
 
 The artifacts are of five types:
 
@@ -8,8 +8,7 @@ The artifacts are of five types:
 * [Extensions]({{site.data.fhir.path}}extensibility.html) define additional data elements that can be conveyed as part of a resource
 * [Code Systems]({{site.data.fhir.path}}codesystem.html) define guide-specific terminologies to be used in one or more of those profiles
 * [Value Sets]({{site.data.fhir.path}}valueset.html) define the specific subsets of code systems that can be (or are recommended to be) used within one or more profile elements
-
-[Terminology Artifacts](terminology.html) can be found on its own page.
+* [Terminology Artifacts](terminology.html) can be found on its own page.
 
 ### Guide Artifacts
 
