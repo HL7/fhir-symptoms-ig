@@ -24,7 +24,7 @@ Title: "Symptom Observation"
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period
 * issued 
-  * insert ShouldSupport([[Instant when symptom recorded]])
+  * insert ShouldSupport([[Instant when this version of the symptom information was recorded]])
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
