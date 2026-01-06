@@ -40,13 +40,13 @@ Title: "Symptom Logical Model"
 
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors 0..* BackboneElement "" "Patient reported actions, conditions, events, physical objects or other factors that initiate or worsen symptoms or the condition of interest (pain, nausea, dyspnea, dizziness, or other)."
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
-* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.relatedMedication 0..* Medication "Medication that triggers or exacerbates the symptom"
+* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.relatedMedication[x] 0..* MedicationStatement or MedicationAdministration "Medication that triggers or exacerbates the symptom"
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 
 * keyFeatures.surroundingEvents.alleviatingFactors 0..* BackboneElement "" "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
 * keyFeatures.surroundingEvents.alleviatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
 * keyFeatures.surroundingEvents.alleviatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
-* keyFeatures.surroundingEvents.alleviatingFactors.relatedMedication 0..* Medication "Medication alleviating the symptom"
+* keyFeatures.surroundingEvents.alleviatingFactors.relatedMedication[x] 0..* MedicationStatement or MedicationAdministration "Medication alleviating the symptom"
 
 * keyFeatures.surroundingEvents.otherEvents 0..* CodeableConcept "Patient-reported actions that were occuring at time of symptom onset"
 

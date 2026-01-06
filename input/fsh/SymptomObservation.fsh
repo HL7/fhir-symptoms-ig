@@ -266,7 +266,7 @@ Id: SurroundingEventMedication
 Title: "Surrounding Event Medication"
 Description: "Medication that when taken affects the symptom"
 * value[x] only Reference
-* valueReference only Reference(MedicationStatement)
+* valueReference only Reference(MedicationStatement or MedicationAdministration)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
 
