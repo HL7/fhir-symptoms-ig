@@ -6,7 +6,7 @@ Title: "Symptom Logical Model"
 
 * identifier 1..1 string "A unique string that identifies this instance of a symptom"
 * symptomCode 1..1 CodeableConcept "Coded description of symptom"
-* absentOrPresentFlag 1..1 boolean "Whether the symptom is present or absent"
+* presentFlag 1..1 boolean "Whether the symptom is present or absent"
 * affectedPatient 1..1 Patient "The patient who is experiencing the symptom"
 * reporter[x] 1..1 Patient or RelatedPerson "The person who is reporting the symptom information"
 * symptomDescription 0..* Annotation "Textual description of symptom as provided by patient or caregiver"
@@ -61,6 +61,6 @@ Title: "Symptom Logical Model"
 * trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved."
 
 * metadata 1..1 BackboneElement "Non clinical information about the symptom"
-* metadata.documentationDate 1..1 dateTime "Date of recorded visit" "The date the symptom was entered, edited, or deleted."
+* metadata.documentationDate 1..1 dateTime "Date when symptom was documented in the system" "The date the symptom was entered, edited, or deleted."
 * metadata.issued 1..1 dateTime "Date/time when the current version was made available."
 
