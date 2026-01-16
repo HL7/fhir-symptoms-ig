@@ -61,6 +61,6 @@ Title: "Symptom Logical Model"
 * trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved."
 
 * metadata 1..1 BackboneElement "Non clinical information about the symptom"
-* metadata.documentationDate 1..1 dateTime "Date when symptom was documented in the system" "The date the symptom was entered, edited, or deleted."
+* metadata.documentationDate 1..1 dateTime "Date when symptom was documented in the system" "Date when symptom was documented in the system."
 * metadata.issued 1..1 dateTime "Date/time when the current version was made available."
 
