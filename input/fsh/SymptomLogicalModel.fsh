@@ -36,7 +36,7 @@ Title: "Symptom Logical Model"
 * keyFeatures.affectiveGrade.note 0..1 Annotation "Textual description of the grade" 
 * keyFeatures.affectiveGrade.value 1..1 CodeableConcept "Code that represents the affective grade" 
 
-* keyFeatures.surroundingEvents 0..* BackboneElement "Events or circumstances related to symptom onset or intensity" 
+* keyFeatures.surroundingEvents 0..1 BackboneElement "Events or circumstances related to symptom onset or intensity." 
 
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors 0..* BackboneElement "" "Patient reported actions, conditions, events, physical objects or other factors that initiate or worsen symptoms or the condition of interest (pain, nausea, dyspnea, dizziness, or other)."
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
