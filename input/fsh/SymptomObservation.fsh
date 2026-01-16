@@ -238,7 +238,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
 * component[speedOfOnset] 
-  * insert ShouldSupport([[The rate at which a physiological symptom became apparent.]])
+  * insert ShouldSupport([[Qualitative expression of how the patient perceived the rate of the symptom to become apparent.]])
   * code = http://loinc.org#99495-4 "Speed of condition onset" 
   * value[x] only CodeableConcept
   * valueCodeableConcept from SpeedOfOnset (preferred)
