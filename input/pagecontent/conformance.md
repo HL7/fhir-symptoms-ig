@@ -1,7 +1,7 @@
 ### Systems
 This guide defines the responsibilities of a Symptom system
 
-[**Symptom systems**](CapabilityStatement-SymptomCapabilities.html) are typically Electronic Medical Record (EHR) systems but could theoretically be any system responsible for recording patient symptoms.
+[**Symptom systems**](CapabilityStatement-SymptomCapabilities.html) are typically Electronic Health Record (EHR) systems but could theoretically be any system responsible for recording patient symptoms.
 
 ### MustSupport
 This implementation guide uses specific terminology to flag statements that have relevance for the evaluation of conformance with the guide:
