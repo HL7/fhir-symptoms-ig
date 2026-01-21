@@ -13,7 +13,12 @@ Title: "Affective Grade"
 Description: "Set of codes from LOINC that describe a patient's affective grade"
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = false
-* codes from system http://loinc.org where concept is-a "75798-9"
+
+* http://loinc.org#70392-6
+* http://loinc.org#70393-4
+* http://loinc.org#70394-2
+* http://loinc.org#70395-9
+* http://loinc.org#70397-5
 
 ValueSet: SpeedOfOnset
 Id: SpeedOfOnset
