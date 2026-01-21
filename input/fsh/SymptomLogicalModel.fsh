@@ -57,7 +57,7 @@ Title: "Symptom Logical Model"
 * timing.duration[x] 0..1 Duration "The length of time the symptom persists in this instance of occurence." ""
 
 * keyFeatures.frequency[x] 0..1 Ratio or CodeableConcept "How often the patient experiences the symptom i.e. expressed as 3x/day or 2x/week." 
-* clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Term to represent both the course and onset of a disease. Many conditions with an acute (sudden) onset also have an acute (short duration) course."
+* clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Qualitative expression of how the patient perceived the course or duration of the symptom."
 * trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved."
 
 * metadata 1..1 BackboneElement "Non clinical information about the symptom"
