@@ -40,7 +40,7 @@ Usage: #example
 
 Instance: WeightLossSymptom
 InstanceOf: SymptomObservation
-Description: "Constipation"
+Description: "Weight Loss"
 Usage: #example
  
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalDiscomfortSymptom)
@@ -52,14 +52,10 @@ Usage: #example
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
 * performer = Reference(MrDoe)
-* valueCodeableConcept = http://snomed.info/sct#14760008 	
-* valueCodeableConcept.text = "Constipation (finding)"
-* bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
-
-* component[functionalImpact].code = http://hl7.org/fhir/sid/icf#b4552
-* component[functionalImpact].valueInteger = 1
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* valueCodeableConcept = http://snomed.info/sct#262285001  	
+* valueCodeableConcept.text = "Weight decreased (finding)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001
 
 Instance: AbdominalDiscomfortSymptom
 InstanceOf: SymptomObservation
