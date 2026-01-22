@@ -33,10 +33,10 @@ Usage: #example
 * valueCodeableConcept.text = "Constipation (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003 "Life threatening severity (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: WeightLossSymptom
 InstanceOf: SymptomObservation
@@ -54,8 +54,8 @@ Usage: #example
 * performer = Reference(MrDoe)
 * valueCodeableConcept = http://snomed.info/sct#262285001  	
 * valueCodeableConcept.text = "Weight decreased (finding)"
-* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001
+* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006 "Increased (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001 "Gradual onset (qualifier value)"
 
 Instance: AbdominalDiscomfortSymptom
 InstanceOf: SymptomObservation
@@ -76,13 +76,13 @@ Usage: #example
 * valueCodeableConcept.text = "Abdominal discomfort (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
-* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
+* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005 "Cramping pain (finding)"
+* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003 "Life threatening severity (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
 * component[frequency].valueRatio.numerator.value = 1
 * component[frequency].valueRatio.denominator.value = 24
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: AbdominalPainSymptom
 InstanceOf: SymptomObservation
@@ -104,16 +104,16 @@ Usage: #example
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
-* component[severity].valueCodeableConcept = http://snomed.info/sct#24484000
+* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005 "Cramping pain (finding)"
+* component[severity].valueCodeableConcept = http://snomed.info/sct#24484000 "Severe (severity modifier) (qualifier value)"
 * component[severity].extension[scaleCode].valueReference = Reference(InitialPainAssessmentCollection)
 * component[functionalImpact]
   * extension[functionalAssessment].valueReference = Reference(AppetiteFunctionalAssessmentCollection)
   * code = http://hl7.org/fhir/sid/icf#b1302
-  * valueCodeableConcept = http://loinc.org#LA6568-5
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+  * valueCodeableConcept = http://loinc.org#LA6568-5 "Not at all"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: UnmedicatedAbdominalPainSymptom
 InstanceOf: SymptomObservation
@@ -135,13 +135,13 @@ Usage: #example
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
+* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005 "Cramping pain (finding)"
 * component[severity]
   * extension[scaleCode].valueReference = Reference(UnmedicatedPainAssessmentCollection)
-  * valueCodeableConcept = http://snomed.info/sct#24484000
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+  * valueCodeableConcept = http://snomed.info/sct#24484000 "Severe (severity modifier) (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: MedicatedAbdominalPainSymptom
 InstanceOf: SymptomObservation
@@ -163,14 +163,14 @@ Usage: #example
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
 
-* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005
+* component[quality].valueCodeableConcept = http://snomed.info/sct#279093005 "Cramping pain (finding)"
 * component[severity].extension[scaleCode].valueReference = Reference(MedicatedPainAssessmentCollection)
-* component[severity].valueCodeableConcept = http://snomed.info/sct#24484000
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#416608005
+* component[severity].valueCodeableConcept = http://snomed.info/sct#24484000 "Severe (severity modifier) (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#18629005 "Administration of drug or medicament (procedure)"
 * component[alleviatingFactors].extension[relatedMedication].valueReference = Reference(IVMorphineDoseage)
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: RectalBleedingSymptomAbsence
 InstanceOf: SymptomAbsentObservation

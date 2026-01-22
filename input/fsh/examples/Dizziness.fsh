@@ -26,14 +26,14 @@ Usage: #example
 * valueCodeableConcept.text = "Dizziness (finding)"
 * bodySite = http://snomed.info/sct#69536005 "Head structure"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#371923003
-* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006
-* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#258148007
-* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#303385001   
-* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#33586001   
-* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004
-* component[frequency].valueCodeableConcept = http://snomed.info/sct#70232002
-* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#128975004
+* component[severity].valueCodeableConcept = http://snomed.info/sct#371923003 "Mild to moderate (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006 "Increased (qualifier value)"
+* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#258148007 "Standing up (observable entity)"
+* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#303385001 "Does change position (finding)"
+* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#33586001 "Sitting position (finding)" 
+* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004 "Resting state (finding)"
+* component[frequency].valueCodeableConcept = http://snomed.info/sct#70232002 "Frequent (qualifier value)"
+* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#128975004 "Resting state (finding)"
 * component[otherEvents].extension[text].valueAnnotation.time = "2025-10-16"
 * component[otherEvents].extension[text].valueAnnotation.text = "Not alleviated by rest"
 
@@ -55,10 +55,10 @@ Usage: #example
 * valueCodeableConcept.text = "Perception of hearing loss (finding)"
 * bodySite = http://snomed.info/sct#1910005 "Entire ear"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#371923003
-* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006
-* component[frequency].valueCodeableConcept = http://snomed.info/sct#255238004
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001
+* component[severity].valueCodeableConcept = http://snomed.info/sct#371923003 "Mild to moderate (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#35105006 "Increased (qualifier value)"
+* component[frequency].valueCodeableConcept = http://snomed.info/sct#255238004 "Continuous (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001 "Gradual onset (qualifier value)"
 
 
 Instance: FaintingSymptomAbsence

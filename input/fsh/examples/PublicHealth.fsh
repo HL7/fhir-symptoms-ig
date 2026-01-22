@@ -26,13 +26,13 @@ Usage: #example
 * valueCodeableConcept.text = "Cough"
 * bodySite = http://snomed.info/sct#39607008 "Lung structure"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007
+* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003 "Life threatening severity (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 "International travel (event)"
 * component[otherEvents].extension[text].valueAnnotation.time = "2025-10-09"
 * component[otherEvents].extension[text].valueAnnotation.text = "International travel"
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: FeverSymptom
 InstanceOf: SymptomObservation
@@ -51,13 +51,13 @@ Usage: #example
 * valueCodeableConcept = http://snomed.info/sct#386661006	
 * valueCodeableConcept.text = "Fever (finding)"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 
+* component[severity].valueCodeableConcept = http://snomed.info/sct#442452003 "Life threatening severity (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 "International travel (event)"
 * component[otherEvents].extension[text].valueAnnotation.time = "2025-10-09"
 * component[otherEvents].extension[text].valueAnnotation.text = "International travel"
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: ShortnessOfBreathPHSymptom
 InstanceOf: SymptomObservation
@@ -76,13 +76,13 @@ Usage: #example
 * valueCodeableConcept.text = "Dyspnea (finding)"
 * bodySite = http://snomed.info/sct#39607008 "Lung structure"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#6736007
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 
+* component[severity].valueCodeableConcept = http://snomed.info/sct#6736007 "Moderate (severity modifier) (qualifier value)"
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 "International travel (event)"
 * component[otherEvents].extension[text].valueAnnotation.time = "2025-10-09"
 * component[otherEvents].extension[text].valueAnnotation.text = "International travel"
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 Instance: FatigueSymptom
 InstanceOf: SymptomObservation
@@ -101,9 +101,9 @@ Usage: #example
 * valueCodeableConcept.text = "Fatigue (finding)"
 
 * component[severity].valueCodeableConcept = http://snomed.info/sct#371923003
-* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002
-* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 
-* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 
+* component[clinicalCourse].valueCodeableConcept = http://snomed.info/sct#18131002 "Acute fulminating (qualifier value)"
+* component[trend].valueCodeableConcept = http://snomed.info/sct#231877006 "Worse (qualifier value)"
+* component[otherEvents].valueCodeableConcept = http://snomed.info/sct#874901007 "International travel (event)"
 * component[otherEvents].extension[text].valueAnnotation.time = "2025-10-09"
 * component[otherEvents].extension[text].valueAnnotation.text = "International travel"
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
