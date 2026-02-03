@@ -1,10 +1,36 @@
 ### Overview
 
-The purpose and rationale for this guide center around the absence of standardized definitions and formats for symptoms data that hinders effective sharing across providers, leading to data silos and interruptions in critical diagnostic thinking. This initiative aims to decrease missed, delayed, or inaccurate diagnoses by enhancing the documentation and exchange of symptoms, a crucial step in the diagnostic process.  
+#### Purpose and Scope
+The purpose of this implementation guide is to standardize the representation and exchange of patient-reported symptoms using FHIR R4 resources. The absence of standardized definitions and formats for symptoms data currently hinders effective sharing across providers, leading to data silos and interruptions in critical diagnostic thinking. This initiative aims to decrease missed, delayed, or inaccurate diagnoses by enhancing the documentation and exchange of symptoms, a crucial step in the diagnostic process.
 
-This guide provides FHIR profiles that structure symptom data for seamless exchange across visits and health systems. This will enhance recognition of symptom patterns, reducing clinician burden by streamlining the diagnostic process, and ultimately support informed diagnostic decision-making, improving outcomes for patients.
+Symptoms in the context of this guide refer to subjective observations reported by patients or their caregivers about changes in their health status. This guide focuses on capturing what patients report about their experiences, which may include both what clinicians would classify as true symptoms (subjective experiences like pain or fatigue) as well as signs (objective findings that patients observe about themselves, such as a rash or swelling). The semantic intent is to capture the patient’s perspective of their health concerns as they report them, recognizing that patients may not distinguish between symptoms and signs in the way healthcare professionals do.
 
-#### From Pre-Coordinated to Post-Coordinated: Best Practices for Symptom Data Exchange
+This implementation guide provides FHIR profiles that structure patient-reported symptom data for seamless exchange across visits and health systems. By standardizing how systems represent key symptom attributes—including severity, onset, duration, location, quality, and other characteristics—this guide supports enhanced recognition of symptom patterns, reduces clinician burden by streamlining the diagnostic process, and ultimately enables more informed diagnostic decision-making to improve patient outcomes.
+
+#### Intended Audience and System Capabilities
+This guide is intended for health information systems that have the capability to expose symptom data as discrete, structured FHIR elements. This includes:
+* Electronic Health Record (EHR) systems
+* Patient-facing applications and patient-reported outcome platforms
+* Care coordination platforms
+* Clinical decision support systems
+* Data analytics and population health systems
+
+**Important Note on Implementation Variability:** While this guide defines profiles with discrete elements for representing detailed symptom information, implementers should recognize that system capabilities vary. Some systems may have robust structured data capture for symptoms and can populate all discrete elements defined in the profiles. Other systems may have more limited capabilities and may only be able to return symptom information as narrative text in the Observation.value element, with minimal use of the other discrete profile elements. Both approaches are valid implementations of this guide, though systems with more granular data capture will provide richer information to support clinical decision-making.
+
+#### What This Guide Covers
+* Standardized FHIR profiles for representing patient-reported symptoms
+* Guidance on capturing symptom attributes as reported by patients (severity, onset, timing, location, quality, etc.)
+* Exchange patterns for sharing symptom information across care settings
+* Terminology bindings to support semantic interoperability
+* Use cases demonstrating symptom documentation and exchange scenarios
+
+#### What This Guide Does Not Cover
+* Clinical signs obtained through provider examination or diagnostic testing (unless reported by the patient themselves)
+* Diagnostic conclusions or clinical interpretations
+* Prescriptive guidance on clinical symptom assessment methodologies
+* Requirements for specific user interfaces or data capture workflows
+
+### From Pre-Coordinated to Post-Coordinated: Best Practices for Symptom Data Exchange
 
 Electronic health records (EHRs) and other clinical systems sometimes capture and store symptoms as **pre-coordinated concepts and/or text**, meaning one code combines multiple details—for example, “abdominal pain” includes both the symptom and the body site.
 
