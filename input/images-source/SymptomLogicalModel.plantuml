@@ -28,13 +28,8 @@ class Severity {
   code 0..1 scaleCode
   CodeableConcept value
 }
-KeyFeatures *-- "0..1" AffectiveGrade
-class AffectiveGrade {
-  Annotation 0..1 note
-  CodeableConcept value
-}
-KeyFeatures *-- "0..1" FunctionalImpact
-class FunctionalImpact {
+KeyFeatures *-- "0..1" Impact
+class Impact {
   Annotation 0..1 note
   code 0..1 scaleCode
   CodeableConcept value

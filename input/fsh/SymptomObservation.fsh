@@ -65,10 +65,9 @@ Title: "Symptom Observation"
 * component ^slicing.description = "Different symptom component observations"
 * component contains quality 0..1 and
                      severity 0..1 and
-                     functionalImpact 0..* and
+                     impact 0..* and
                      clinicalCourse 0..1 and
-                     trend 0..1 and
-                     affectiveGrade 0..1 and 
+                     trend 0..1 and 
                      triggersOrExacerbatingFactors 0..* and
                      alleviatingFactors 0..* and
                      otherEvents 0..* and
@@ -114,10 +113,13 @@ Title: "Symptom Observation"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
-* component[functionalImpact] 
-  * insert ShouldSupport([[How the symptom affects the patient's daily activities]])
+* component[impact] 
+  * insert ShouldSupport([[How the symptom is affecting the patient, either emotionally, mentally, or physically]])
   * code from FunctionalClassification (required)
-    * ^short = "Code for the functional impact being described" 
+    * ^short = "Code for the impact being described" 
+  * value[x] only CodeableConcept
+    * ^short = "Code that represents the affective grade" 
+  * valueCodeableConcept from AffectiveGrade (preferred)
   * extension contains FunctionalAssessment named functionalAssessment 0..1
   * extension[text]
     * ^short = "Textual description of the impact"
@@ -158,14 +160,6 @@ Title: "Symptom Observation"
     * ^binding.extension[=].extension[=].valueId = "LOINCTrend"
   * extension[text]
     * ^short = "Textual description of the symptom trend" 
-* component[affectiveGrade] 
-  * insert ShouldSupport([[Emotional or mental impact of a symptom]])
-  * code = http://snomed.info/sct#279116004 "Affective response to pain"
-  * value[x] only CodeableConcept
-    * ^short = "Code that represents the affective grade" 
-  * valueCodeableConcept from AffectiveGrade (preferred)
-  * extension[text]
-    * ^short = "Textual description of the impact of the symptom" 
 * component[triggersOrExacerbatingFactors] 
   * insert ShouldSupport([[Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms]])
   * code = http://loinc.org#100752-5 "Exacerbating factors - Reported"

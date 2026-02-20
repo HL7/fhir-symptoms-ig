@@ -107,7 +107,7 @@ Usage: #example
 * component[quality].valueCodeableConcept = http://snomed.info/sct#279093005 "Cramping pain (finding)"
 * component[severity].valueCodeableConcept = http://snomed.info/sct#24484000 "Severe (severity modifier) (qualifier value)"
 * component[severity].extension[scaleCode].valueReference = Reference(InitialPainAssessmentCollection)
-* component[functionalImpact]
+* component[impact]
   * extension[functionalAssessment].valueReference = Reference(AppetiteFunctionalAssessmentCollection)
   * code = http://hl7.org/fhir/sid/icf#b1302
   * valueCodeableConcept = http://loinc.org#LA6568-5 "Not at all"

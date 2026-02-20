@@ -42,10 +42,9 @@ The following component observations allow for an assessment scale code or refer
 
 The following component observations have no assessment scale attached to them:
 
-1. Functional Impact - How the symptom affects the patient's daily activities. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  As well, a Functional Assessment Collection can be provided to give more details of the functional impact.
+1. Impact - How the symptom is affecting the patient, either emotionally, mentally, or physically. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  As well, a Functional Assessment Collection can be provided to give more details of the functional impact.
 1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course. 
 1. Trend - whether a symptom is improving, worsening, stable, or resolved.  This is represented by the LOINC code 89253-9 and a value that is the trend.
-1. Affective Grade - the emotional or mental impact of the symptom.  This is represented by the SNOMED code 279116004 (Affective response to pain) and a value that is the affective grade.
 1. Triggers or Exacerbating Factors - patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms. This is represented by the LOINC code 100752-5 and a value that is the factor. It also provides an extension to indicate a medication that is believed to cause or exacerbate the symptom.
 1. Alleviating Factors - patient-reported actions, conditions, events, or other factors that decrease the symptoms. This is represented by the LOINC code 100753-3 and a value that is the factor. It also provides an extension to indicate a medication that is believed to alleviate the symptom.
 1. Other Events - this is a catch-all to report other events that were occurring at the time of the symptom onset but were not considered triggers.  This is represented by the code OTHEREVENTS and a value that is the event.

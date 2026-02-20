@@ -26,14 +26,10 @@ Title: "Symptom Logical Model"
 * keyFeatures.severity.scaleCode 0..1 code "Code for the specific scale or assessment if any used to determine the severity" 
 * keyFeatures.severity.value 1..1 CodeableConcept "Code that represents the symptom severity" 
 
-* keyFeatures.functionalImpact 0..1 BackboneElement "How the symptom affects the patient's daily activities." 
-* keyFeatures.functionalImpact.note 0..1 Annotation "Textual description of the impact" 
-* keyFeatures.functionalImpact.scaleCode 0..1 code "Code for the specific scale or assessment (if any) used to determine the impact" 
-* keyFeatures.functionalImpact.value 1..1 CodeableConcept "Code that represents the functional impact" 
-
-* keyFeatures.affectiveGrade 0..1 BackboneElement "Emotional or mental impact of a symptom." 
-* keyFeatures.affectiveGrade.note 0..1 Annotation "Textual description of the grade" 
-* keyFeatures.affectiveGrade.value 1..1 CodeableConcept "Code that represents the affective grade" 
+* keyFeatures.impact 0..1 BackboneElement "How the symptom is affecting the patient, either emotionally, mentally, or physically." 
+* keyFeatures.impact.note 0..1 Annotation "Textual description of the impact" 
+* keyFeatures.impact.scaleCode 0..1 code "Code for the specific scale or assessment (if any) used to determine the impact" 
+* keyFeatures.impact.value 1..1 CodeableConcept "Code that represents the impact" 
 
 * keyFeatures.surroundingEvents 0..1 BackboneElement "Events or circumstances related to symptom onset or intensity." 
 
