@@ -23,6 +23,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalDiscomfortSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(MrDoe)
@@ -46,6 +47,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalDiscomfortSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(ConstipationSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(MrDoe)
@@ -57,6 +59,25 @@ Usage: #example
 * component[trend].valueCodeableConcept = http://snomed.info/sct#35105006 "Increased (qualifier value)"
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001 "Gradual onset (qualifier value)"
 
+Instance: DecreasedAppetiteSymptom
+InstanceOf: SymptomObservation
+Description: "Decreased Appetite"
+Usage: #example
+ 
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalDiscomfortSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(ConstipationSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptomSymptom)
+* status = #final
+* code = http://loinc.org#75325-1 "Symptom"
+* subject = Reference(MrDoe)
+* effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
+* issued = "2025-11-10T13:42:17.239+02:00"
+* performer = Reference(MrDoe)
+* valueCodeableConcept = http://snomed.info/sct#64379006   	
+* valueCodeableConcept.text = "Decrease in appetite (finding)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001 "Gradual onset (qualifier value)"
+
 Instance: AbdominalDiscomfortSymptom
 InstanceOf: SymptomObservation
 Description: "Abdominal Discomfort"
@@ -65,6 +86,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(ConstipationSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
@@ -94,6 +116,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(UnmedicatedAbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(MedicatedAbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(MrDoe)
@@ -125,6 +148,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(MedicatedAbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(MrDoe)
@@ -153,6 +177,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(UnmedicatedAbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
 * subject = Reference(MrDoe)
@@ -183,6 +208,7 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(UnmedicatedAbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(MedicatedAbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
@@ -191,6 +217,27 @@ Usage: #example
 * performer = Reference(MrDoe)
 * valueCodeableConcept = http://snomed.info/sct#414992000 
 * valueCodeableConcept.text = "Painless rectal bleeding (finding)"
+
+Instance: EarlySatietySymptomAbsence
+InstanceOf: SymptomAbsentObservation
+Description: "Absence of early satiety"
+Usage: #example 
+ 
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(ConstipationSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalDiscomfortSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(UnmedicatedAbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(MedicatedAbdominalPainSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
+* status = #final
+* effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
+* effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
+* issued = "2025-09-15T13:28:17.239+02:00"
+* subject = Reference(MrDoe)
+* performer = Reference(MrDoe)
+* valueCodeableConcept = http://snomed.info/sct#442076002 
+* valueCodeableConcept.text = "Early satiety (finding) "
 
 Instance: InitialPainAssessmentCollection
 InstanceOf: AssessmentScaleCollection

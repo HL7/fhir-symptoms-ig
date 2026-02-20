@@ -21,7 +21,9 @@
 <artifact id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
 <artifact id="Observation/ConstipationSymptom" key="Observation-ConstipationSymptom" name="ConstipationSymptom"/>
 <artifact id="Observation/CoughSymptom" key="Observation-CoughSymptom" name="CoughSymptom"/>
+<artifact id="Observation/DecreasedAppetiteSymptom" key="Observation-DecreasedAppetiteSymptom" name="DecreasedAppetiteSymptom"/>
 <artifact id="Observation/DizzinessSymptom" key="Observation-DizzinessSymptom" name="DizzinessSymptom"/>
+<artifact id="Observation/EarlySatietySymptomAbsence" key="Observation-EarlySatietySymptomAbsence" name="EarlySatietySymptomAbsence"/>
 <artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" name="EffectCS"/>
 <artifact id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" name="EffectVS"/>
 <artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" name="EpisodicityCS"/>
