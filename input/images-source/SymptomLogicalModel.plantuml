@@ -33,7 +33,7 @@ class AffectiveGrade {
   Annotation 0..1 note
   CodeableConcept value
 }
-KeyFeatures *-- "0..1" FunctionalImpact
+KeyFeatures *-- "0..*" FunctionalImpact
 class FunctionalImpact {
   Annotation 0..1 note
   code 0..1 scaleCode
