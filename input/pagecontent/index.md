@@ -63,84 +63,165 @@ It is still necessary for the original pre-coordinated concept to be included in
     <td>coding.display</td>
   </tr>
   <tr>
-    <td>51197009</td>
+    <td>
+        <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=51197009&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+      51197009</td>
     <td>Stomach cramps (finding)</td>
     <td> </td>
-    <td>55300003</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=55300003&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        55300003</td>
     <td>Cramp (finding)</td>
-    <td>69695003</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=69695003&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        69695003</td>
     <td>Stomach structure (body structure)</td>
   </tr>
   <tr>
-    <td>53430007</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=53430007&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        53430007</td>
     <td>Pain of breast (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>76752008</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=76752008&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        76752008</td>
     <td>Breast structure (body structure)</td>
   </tr>
   <tr>
-    <td>25064002</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=25064002&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        25064002</td>
     <td>Headache (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>69536005</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=69536005&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        69536005</td>
     <td>Head structure (body structure)</td>
   </tr>
   <tr>
-    <td>279039007</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=279039007&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        279039007</td>
     <td>Low back pain (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>37822005</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=37822005&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        37822005</td>
     <td>Structure of back of abdominopelvic segment of trunk (body structure)</td>
   </tr>
   <tr>
-    <td>30473006</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=30473006&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        30473006</td>
     <td>Pain in pelvis (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>12921003</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=12921003&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        12921003</td>
     <td>Structure of pelvis (body structure)</td>
   </tr>
   <tr>
-    <td>23924001</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=23924001&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        23924001</td>
     <td>Tight chest (finding)</td>
     <td> </td>
-    <td>299954009</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=299954009&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        299954009</td>
     <td>Tightness sensation (finding)</td>
-    <td>51185008</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=51185008&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        51185008</td>
     <td>Thoracic structure (body structure)</td>
   </tr>
   <tr>
-    <td>57676002</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=57676002&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        57676002</td>
     <td>Pain of joint (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>39352004</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=39352004&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        39352004</td>
     <td>Joint structure (body structure)</td>
   </tr>
   <tr>
-    <td>21522001</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=21522001&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        21522001</td>
     <td>Abdominal pain (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>818983003</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=69695003&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        818983003</td>
     <td>Abdomen (body structure)</td>
   </tr>
   <tr>
-    <td>29857009</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=29857009&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        29857009</td>
     <td>Chest pain (finding)</td>
     <td> </td>
-    <td>22253000</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        22253000</td>
     <td>Pain (finding)</td>
-    <td>51185008</td>
+    <td>
+      <a href="https://browser.ihtsdotools.org/?perspective=full&conceptId1=51185008&edition=MAIN/2026-01-01&release=&languages=en"
+       target="_blank" rel="noopener">
+        51185008</td>
     <td>Thoracic structure (body structure)</td>
   </tr>
 </tbody></table>
