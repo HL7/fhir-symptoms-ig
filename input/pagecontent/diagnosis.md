@@ -61,4 +61,5 @@ Patient Experience  →  Symptom (Observation)
 
 ### Guidance Summary
 
-> **Best Practice:** Use `Condition.evidence.detail` to link Conditions to the Observations (Symptoms) that support them. Optionally use `Observation.extension:assocaitedSymptomOrConditoin` to indicate the reverse relationship. Ensure consistent coding, provenance, and temporal alignment to support computable reasoning and interoperability.
+> **Best Practice:** Use `Condition.evidence.detail` to link Conditions to the Observations (Symptoms) that support them. Optionally use `Observation.extension:assocaitedSymptomOrCondition` to indicate the reverse relationship. Ensure consistent coding, provenance, and temporal alignment to support computable reasoning and interoperability.
+{: modified}

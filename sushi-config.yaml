@@ -9,10 +9,10 @@ name: Symptoms Data Standards
 title: FHIR R4 Symptoms Implementation Guide
 description: A guide that details how to capture and exchange Symptoms data in FHIR
 status: active # draft | active | retired | unknown
-version: 1.0.0-ballot
+version: 1.0.0-snapshot
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: STU 1 Ballot
+releaseLabel: STU 1
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
@@ -31,6 +31,7 @@ dependencies:
     id: openehr
     uri: http://openehr.org/fhir/ImplementationGuide/openehr.base
     version: 0.1.0-snapshot
+    reason: Used to display the OpenEHR archetypes in a FHIR IG.
 
 parameters:
   show-inherited-invariants: false
@@ -53,6 +54,8 @@ pages:
     title: Use Cases
   diagnosis.md:
     title: Symptom/Diagnosis Relationship
+  recurring.md:
+    title: Updating vs. Creating a New Symptom Record
   profile.md:
     title: Logical Model, OpenEHR Archetype, and FHIR Profile
   acknowledgements.md:
@@ -74,6 +77,7 @@ menu:
     Reading this IG: background.html
     Use Cases: usecases.html
     Symptom/Diagnosis Relationship: diagnosis.html
+    Recurring Symptoms: recurring.html
     Logical Model: profile.html
     Projects and Participants: acknowledgements.html
   Specification:
