@@ -1,7 +1,7 @@
 Profile: SymptomObservation
 Parent: Observation
 Id: SymptomObservation
-Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptoms."
+Description: "Used to record the presence of a Symptom as reported by the patient or a patient's caregiver.  The Symptom observation contains all information given about a patient's symptom."
 Title: "Symptom Observation"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo named associatedSymptomOrCondition 0..*
@@ -24,7 +24,7 @@ Title: "Symptom Observation"
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period
 * issued 
-  * insert ShouldSupport([[Instant when symptom recorded]])
+  * insert ShouldSupport([[Instant when this version of the symptom information was recorded]])
 * performer 1..1 MS
   * ^short = "The person who is reporting the symptom information"
 * performer only Reference(Patient or RelatedPerson)
@@ -65,10 +65,9 @@ Title: "Symptom Observation"
 * component ^slicing.description = "Different symptom component observations"
 * component contains quality 0..1 and
                      severity 0..1 and
-                     functionalImpact 0..* and
+                     impact 0..* and
                      clinicalCourse 0..1 and
-                     trend 0..1 and
-                     affectiveGrade 0..1 and 
+                     trend 0..1 and 
                      triggersOrExacerbatingFactors 0..* and
                      alleviatingFactors 0..* and
                      otherEvents 0..* and
@@ -114,10 +113,13 @@ Title: "Symptom Observation"
   * extension contains AssessmentScaleInformation named scaleCode 0..1
   * extension[text]
     * ^short = "Textual description of the symptom severity" 
-* component[functionalImpact] 
-  * insert ShouldSupport([[How the symptom affects the patient's daily activities]])
+* component[impact] 
+  * insert ShouldSupport([[How the symptom is affecting the patient, either emotionally, mentally, or physically]])
   * code from FunctionalClassification (required)
-    * ^short = "Code for the functional impact being described" 
+    * ^short = "Code for the impact being described" 
+  * value[x] only CodeableConcept
+    * ^short = "Code that represents the affective grade" 
+  * valueCodeableConcept from AffectiveGrade (preferred)
   * extension contains FunctionalAssessment named functionalAssessment 0..1
   * extension[text]
     * ^short = "Textual description of the impact"
@@ -158,14 +160,6 @@ Title: "Symptom Observation"
     * ^binding.extension[=].extension[=].valueId = "LOINCTrend"
   * extension[text]
     * ^short = "Textual description of the symptom trend" 
-* component[affectiveGrade] 
-  * insert ShouldSupport([[Emotional or mental impact of a symptom]])
-  * code = http://snomed.info/sct#279116004 "Affective response to pain"
-  * value[x] only CodeableConcept
-    * ^short = "Code that represents the affective grade" 
-  * valueCodeableConcept from AffectiveGrade (preferred)
-  * extension[text]
-    * ^short = "Textual description of the impact of the symptom" 
 * component[triggersOrExacerbatingFactors] 
   * insert ShouldSupport([[Patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms]])
   * code = http://loinc.org#100752-5 "Exacerbating factors - Reported"
@@ -238,7 +232,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the reported frequency" 
 * component[speedOfOnset] 
-  * insert ShouldSupport([[The rate at which a physiological symptom became apparent.]])
+  * insert ShouldSupport([[Qualitative expression of how the patient perceived the rate of the symptom to become apparent.]])
   * code = http://loinc.org#99495-4 "Speed of condition onset" 
   * value[x] only CodeableConcept
   * valueCodeableConcept from SpeedOfOnset (preferred)
@@ -264,9 +258,9 @@ Description: "Reference to a complete functional assessment collection."
 Extension: SurroundingEventMedication
 Id: SurroundingEventMedication
 Title: "Surrounding Event Medication"
-Description: "Medication that when taken affecting the factor"
+Description: "Medication that when taken affects the symptom"
 * value[x] only Reference
-* valueReference only Reference(MedicationStatement)
+* valueReference only Reference(MedicationStatement or MedicationAdministration)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
 

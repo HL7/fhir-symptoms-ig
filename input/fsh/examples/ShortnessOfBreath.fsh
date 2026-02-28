@@ -30,11 +30,11 @@ Usage: #example
 * note.text = "For the last six weeks, I have been getting so winded when I have been walking up stairs."
 * bodySite = http://snomed.info/sct#39607008 "Lung structure"
 
-* component[severity].valueCodeableConcept = http://snomed.info/sct#6736007
-* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#226029000
-* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004
-* component[frequency].valueCodeableConcept = http://snomed.info/sct#70232002
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[severity].valueCodeableConcept = http://snomed.info/sct#6736007 "Moderate (severity modifier) (qualifier value)"
+* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#226029000 "Exercises (regime/therapy)"
+* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004 "Resting state (finding)"
+* component[frequency].valueCodeableConcept = http://snomed.info/sct#70232002 "Frequent (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 
 Instance: ChestPainSymptom
@@ -53,12 +53,12 @@ Usage: #example
 * valueCodeableConcept.text = "Pain"
 * bodySite = http://snomed.info/sct#51185008 "Thoracic structure (body structure)"
 
-* component[quality].valueCodeableConcept = http://snomed.info/sct#279098001
-* component[severity].valueCodeableConcept = http://snomed.info/sct#6736007
-* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#226029000
-* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004
-* component[frequency].valueCodeableConcept = http://snomed.info/sct#307486002
-* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009
+* component[quality].valueCodeableConcept = http://snomed.info/sct#279098001 "Crushing pain (finding)"
+* component[severity].valueCodeableConcept = http://snomed.info/sct#6736007 "Moderate (severity modifier) (qualifier value)"
+* component[triggersOrExacerbatingFactors].valueCodeableConcept = http://snomed.info/sct#226029000 "Exercises (regime/therapy)"
+* component[alleviatingFactors].valueCodeableConcept = http://snomed.info/sct#128975004 "Resting state (finding)"
+* component[frequency].valueCodeableConcept = http://snomed.info/sct#307486002 "Single event (qualifier value)"
+* component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#385315009 "Sudden onset (qualifier value)"
 
 
 Instance: FeverSymptomAbsence
