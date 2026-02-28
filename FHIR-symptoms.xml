@@ -9,7 +9,7 @@
 <artifact id="Observation/AbdominalDiscomfortSymptom" key="Observation-AbdominalDiscomfortSymptom" name="AbdominalDiscomfortSymptom"/>
 <artifact id="Observation/AbdominalPainSymptom" key="Observation-AbdominalPainSymptom" name="AbdominalPainSymptom"/>
 <artifact id="Practitioner/AdmissionsPerson" key="Practitioner-AdmissionsPerson" name="AdmissionsPerson"/>
-<artifact id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
+<artifact deprecated="true" id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
 <artifact id="ValueSet/AlleviatingFactorCodes" key="ValueSet-AlleviatingFactorCodes" name="Alleviating Factor Codes"/>
 <artifact id="Observation/AppetiteFunctionalAssessmentCollection" key="Observation-AppetiteFunctionalAssessmentCollection" name="AppetiteFunctionalAssessmentCollection"/>
 <artifact id="Observation/AppetiteFunctionalAssessmentScale" key="Observation-AppetiteFunctionalAssessmentScale" name="AppetiteFunctionalAssessmentScale"/>
@@ -46,10 +46,11 @@
 <artifact id="Observation/InitialPainAssessmentScale" key="Observation-InitialPainAssessmentScale" name="InitialPainAssessmentScale"/>
 <artifact id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
 <artifact id="Patient/JohnDoe" key="Patient-JohnDoe" name="JohnDoe"/>
+<artifact id="StructureDefinition/LocationQualifier" key="StructureDefinition-LocationQualifier" name="Location Qualifier"/>
 <artifact id="Observation/MedicatedAbdominalPainSymptom" key="Observation-MedicatedAbdominalPainSymptom" name="MedicatedAbdominalPainSymptom"/>
 <artifact id="Observation/MedicatedPainAssessmentCollection" key="Observation-MedicatedPainAssessmentCollection" name="MedicatedPainAssessmentCollection"/>
 <artifact id="Observation/MedicatedPainAssessmentScale" key="Observation-MedicatedPainAssessmentScale" name="MedicatedPainAssessmentScale"/>
-<artifact id="Patient/MrDoe" key="Patient-MrDoe" name="MrDoe"/>
+<artifact deprecated="true" id="Patient/MrDoe" key="Patient-MrDoe" name="MrDoe"/>
 <artifact deprecated="true" id="Observation/NaueaSymptomAbsence" key="Observation-NaueaSymptomAbsence" name="NaueaSymptomAbsence"/>
 <artifact id="Observation/NauseaSymptomAbsence" key="Observation-NauseaSymptomAbsence" name="NauseaSymptomAbsence"/>
 <artifact id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" name="OccurrenceCS"/>
