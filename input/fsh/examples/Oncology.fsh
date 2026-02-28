@@ -117,6 +117,7 @@ Usage: #example
 * valueCodeableConcept = http://snomed.info/sct#21522001
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
+* bodySite.extension[locationQualifier].valueString = "Radiates throughout my abdomen area"
 
 * component[quality].valueCodeableConcept = http://snomed.info/sct#279093005 "Cramping pain (finding)"
 * component[severity].valueCodeableConcept = http://snomed.info/sct#24484000 "Severe (severity modifier) (qualifier value)"
@@ -228,7 +229,7 @@ Usage: #example
 * subject = Reference(JohnDoe)
 * performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#442076002 
-* valueCodeableConcept.text = "Early satiety (finding) "
+* valueCodeableConcept.text = "Early satiety (finding)"
 
 Instance: InitialPainAssessmentCollection
 InstanceOf: AssessmentScaleCollection

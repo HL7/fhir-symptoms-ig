@@ -51,8 +51,8 @@ Usage: #example
 * issued = "2025-10-16T13:42:17.239+02:00"
 * performer = Reference(JohnDoe)
 
-* valueCodeableConcept = http://snomed.info/sct#14230001000004101 
-* valueCodeableConcept.text = "Perception of hearing loss (finding)"
+* valueCodeableConcept = http://snomed.info/sct#280122007
+* valueCodeableConcept.text = "Hearing worse (finding)"
 * bodySite = http://snomed.info/sct#1910005 "Entire ear"
 
 * component[severity].valueCodeableConcept = http://snomed.info/sct#371923003 "Mild to moderate (qualifier value)"
