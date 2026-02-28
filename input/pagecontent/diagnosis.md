@@ -28,8 +28,7 @@ When documenting a symptom Observation, the [`Observation associated Symptom or 
 
 ### Conceptual Model
 
-Patient Experience  →  Symptom (Observation)
-→  Clinical Interpretation  →  Diagnosis (Condition)
+<div>{%include SymptomDiagnosis.svg%}</div>
 
 - **Symptoms (Observations)** provide the *evidentiary basis* for diagnostic reasoning.  
 - **Diagnoses (Conditions)** represent the *resultant clinical interpretation*, often referencing the Observations that support them.
@@ -55,7 +54,7 @@ Patient Experience  →  Symptom (Observation)
 | Primary FHIR Resource | `Observation` | `Condition` |
 | Relationship Element | `Observation.extension:associatedSymptomOrCondition` | `Condition.evidence.detail` |
 | Typical Codes | SNOMED CT (e.g., *Pain in chest*), LOINC (e.g., *Severity of nausea*) | SNOMED CT, ICD-10 (e.g., *Pneumonia*, *Migraine*) |
-| Example Relationship | Symptom supports one or more Conditions | Condition references multiple supporting Observations |
+| Example Relationship | Observation supports zero to many Conditions | Condition references zero to many supporting Observations |
 
 ---
 

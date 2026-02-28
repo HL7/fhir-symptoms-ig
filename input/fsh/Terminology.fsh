@@ -7,19 +7,6 @@ Description: "A code system that has codes for use in the IG that will eventuall
 * ^experimental = false
 * ^caseSensitive = true
 
-ValueSet: AffectiveGrade
-Id: AffectiveGrade
-Title: "Affective Grade"
-Description: "Set of codes from LOINC that describe a patient's affective grade"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* ^experimental = false
-
-* http://loinc.org#70392-6
-* http://loinc.org#70393-4
-* http://loinc.org#70394-2
-* http://loinc.org#70395-9
-* http://loinc.org#70397-5
-
 ValueSet: SpeedOfOnset
 Id: SpeedOfOnset
 Title: "Speed of Onset"
@@ -83,7 +70,20 @@ The HL7 International IPS implementation guides incorporate SNOMED CT®, used by
 * http://snomed.info/sct#6471006
 * http://snomed.info/sct#55300003
 * http://snomed.info/sct#24199005
-
+* http://snomed.info/sct#131148009
+* http://snomed.info/sct#13791008
+* http://snomed.info/sct#248279007
+* http://snomed.info/sct#288939007
+* http://snomed.info/sct#267038008
+* http://snomed.info/sct#280122007
+* http://snomed.info/sct#271801002
+* http://snomed.info/sct#418290006
+* http://snomed.info/sct#386705008
+* http://snomed.info/sct#44077006
+* http://snomed.info/sct#73595000
+* http://snomed.info/sct#60862001
+* http://snomed.info/sct#262285001
+* http://snomed.info/sct#111516008
 
 ValueSet: FunctionalClassification
 Id: FunctionalClassification

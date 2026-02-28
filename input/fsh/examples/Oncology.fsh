@@ -1,12 +1,3 @@
-Instance: MrDoe
-InstanceOf: Patient
-Description: "Mr. Doe - Oncology"
-Usage: #example
- 
-* name.prefix = "Mr."
-* name.family = "Doe"
-* gender = #male
-
 Instance: AdmissionsPerson
 InstanceOf: Practitioner
 Description: "Admission to Hospital"
@@ -26,10 +17,10 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#14760008 	
 * valueCodeableConcept.text = "Constipation (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
@@ -50,10 +41,10 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#262285001  	
 * valueCodeableConcept.text = "Weight decreased (finding)"
 * component[trend].valueCodeableConcept = http://snomed.info/sct#35105006 "Increased (qualifier value)"
@@ -67,13 +58,13 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalDiscomfortSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(AbdominalPainSymptom)
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(ConstipationSymptom)
-* extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptomSymptom)
+* extension[associatedSymptomOrCondition][+].valueReference = Reference(WeightLossSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#64379006   	
 * valueCodeableConcept.text = "Decrease in appetite (finding)"
 * component[speedOfOnset].valueCodeableConcept = http://snomed.info/sct#61751001 "Gradual onset (qualifier value)"
@@ -90,10 +81,10 @@ Usage: #example
 * status = #final
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#43364001 
 * valueCodeableConcept.text = "Abdominal discomfort (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
@@ -119,10 +110,10 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#21522001
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
@@ -151,10 +142,10 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#21522001
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
@@ -180,10 +171,10 @@ Usage: #example
 * extension[associatedSymptomOrCondition][+].valueReference = Reference(DecreasedAppetiteSymptom)
 * status = #final
 * code = http://loinc.org#75325-1 "Symptom"
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectivePeriod.start = "2025-09-01T13:22:17.239+02:00"
 * issued = "2025-11-10T13:42:17.239+02:00"
-* performer = Reference(MrDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#21522001
 * valueCodeableConcept.text = "Abdominal pain (finding)"
 * bodySite = http://snomed.info/sct#113276009 "Intestinal structure (body structure)"
@@ -213,8 +204,8 @@ Usage: #example
 * effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
 * issued = "2025-09-15T13:28:17.239+02:00"
-* subject = Reference(MrDoe)
-* performer = Reference(MrDoe)
+* subject = Reference(JohnDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#414992000 
 * valueCodeableConcept.text = "Painless rectal bleeding (finding)"
 
@@ -234,8 +225,8 @@ Usage: #example
 * effectivePeriod.start = "2025-09-23T13:22:17.239+02:00"
 * effectivePeriod.end = "2025-09-23T13:42:17.239+02:00"
 * issued = "2025-09-15T13:28:17.239+02:00"
-* subject = Reference(MrDoe)
-* performer = Reference(MrDoe)
+* subject = Reference(JohnDoe)
+* performer = Reference(JohnDoe)
 * valueCodeableConcept = http://snomed.info/sct#442076002 
 * valueCodeableConcept.text = "Early satiety (finding) "
 
@@ -246,7 +237,7 @@ Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
 * code = http://loinc.org#80316-3
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * hasMember = Reference(InitialPainAssessmentScale)
@@ -258,7 +249,7 @@ Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
 * code = http://loinc.org#LA25253-8
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * valueRatio.numerator.value = 4
@@ -271,7 +262,7 @@ Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
 * code = http://loinc.org#80316-3
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * hasMember = Reference(UnmedicatedPainAssessmentScale)
@@ -283,7 +274,7 @@ Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
 * code = http://loinc.org#LA25253-8
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * valueRatio.numerator.value = 10
@@ -296,7 +287,7 @@ Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
 * code = http://loinc.org#80316-3
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * hasMember = Reference(MedicatedPainAssessmentScale)
@@ -308,7 +299,7 @@ Usage: #example
 * status = #final
 * category[survey].text = "Assessment Pain Scale"
 * code = http://loinc.org#LA25253-8
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * valueRatio.numerator.value = 8
@@ -321,7 +312,7 @@ Usage: #example
 * status = #final
 * category[functionalDomain] = http://hl7.org/fhir/sid/icf#b1302
 * code = http://loinc.org#70505-3
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * hasMember = Reference(AppetiteFunctionalAssessmentScale)
@@ -333,7 +324,7 @@ Usage: #example
 * status = #final
 * category[functionalDomain] = http://hl7.org/fhir/sid/icf#b1302
 * code = http://loinc.org#70383-5
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * effectiveDateTime = "2025-11-10T13:28:17.239+02:00"
 * performer = Reference(AdmissionsPerson)
 * valueCodeableConcept = http://loinc.org#LA6568-5
@@ -344,5 +335,5 @@ Description: "Dose of IV morphine"
 Usage: #example
 * status = #active
 * medicationCodeableConcept = http://snomed.info/sct#73572009
-* subject = Reference(MrDoe)
+* subject = Reference(JohnDoe)
 * reasonReference = Reference(UnmedicatedAbdominalPainSymptom)

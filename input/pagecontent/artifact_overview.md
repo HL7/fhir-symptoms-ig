@@ -10,6 +10,8 @@ The artifacts are of five types:
 * [Value Sets]({{site.data.fhir.path}}valueset.html) define the specific subsets of code systems that can be (or are recommended to be) used within one or more profile elements
 * [Terminology Artifacts](terminology.html) can be found on its own page.
 
+See [this page](profile.html) for a discussion of the logical model and the OpenEHR Archetype and its relationship to the profiles.
+
 ### Guide Artifacts
 
 #### Capability Statements
@@ -28,6 +30,8 @@ The artifacts are of five types:
 * [Symptom Absent Observation](StructureDefinition-SymptomAbsentObservation.html) - {{site.data.StructureDefinition-SymptomAbsentObservation.description}}
 
 ##### Assessment Scale Profiles
+The following profiles are derived from the equivalent [PACIO Functional Status Profiles](https://hl7.org/fhir/us/pacio-fs/artifacts.html#structures-resource-profiles) and have been made universal by removing references to US Core profiles.
+
 * [Assessment Scale Collection](StructureDefinition-AssessmentScaleCollection.html) - {{site.data.StructureDefinition-AssessmentScaleCollection.description}}
 * [Assessment Scale Observation](StructureDefinition-AssessmentScaleObservation.html) - {{site.data.StructureDefinition-AssessmentScaleObservation.description}}
 * [Functional Assessment Collection](StructureDefinition-FunctionalAssessmentCollection.html) - {{site.data.StructureDefinition-FunctionalAssessmentCollection.description}}

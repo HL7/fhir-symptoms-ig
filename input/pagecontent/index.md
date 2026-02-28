@@ -38,112 +38,19 @@ For data exchange, this Implementation Guide (IG) recommends a **post-coordinate
 
 It is still necessary for the original pre-coordinated concept to be included in exchange and the FHIR CodableConcept structure allows this by including multiple Codings.  Our recommendation is that a system send the post-coordinated code as one Coding and also send the original concept as another Coding with the Coding.userSelected element set to 'true'.
 
-<table border="1">
-  <thead>
-  <tr>
-    <th colspan="2">Pre-coordinated</th>
-    <th>Map to</th>
-    <th colspan="4">Post-coordinated</th>
-  </tr>
-  </thead>
-<tbody>
-  <tr>
-    <td colspan="2">Observation.value</td>
-    <td></td>
-    <td colspan="2">Observation.value</td>
-    <td colspan="2">Observation.bodySite</td>
-  </tr>
-  <tr>
-    <td>coding.code</td>
-    <td>coding.display</td>
-    <td> </td>
-    <td>value.coding.code</td>
-    <td>value.coding.display</td>
-    <td>coding.code</td>
-    <td>coding.display</td>
-  </tr>
-  <tr>
-    <td>51197009</td>
-    <td>Stomach cramps (finding)</td>
-    <td> </td>
-    <td>55300003</td>
-    <td>Cramp (finding)</td>
-    <td>69695003</td>
-    <td>Stomach structure (body structure)</td>
-  </tr>
-  <tr>
-    <td>53430007</td>
-    <td>Pain of breast (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>76752008</td>
-    <td>Breast structure (body structure)</td>
-  </tr>
-  <tr>
-    <td>25064002</td>
-    <td>Headache (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>69536005</td>
-    <td>Head structure (body structure)</td>
-  </tr>
-  <tr>
-    <td>279039007</td>
-    <td>Low back pain (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>37822005</td>
-    <td>Structure of back of abdominopelvic segment of trunk (body structure)</td>
-  </tr>
-  <tr>
-    <td>30473006</td>
-    <td>Pain in pelvis (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>12921003</td>
-    <td>Structure of pelvis (body structure)</td>
-  </tr>
-  <tr>
-    <td>23924001</td>
-    <td>Tight chest (finding)</td>
-    <td> </td>
-    <td>299954009</td>
-    <td>Tightness sensation (finding)</td>
-    <td>51185008</td>
-    <td>Thoracic structure (body structure)</td>
-  </tr>
-  <tr>
-    <td>57676002</td>
-    <td>Pain of joint (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>39352004</td>
-    <td>Joint structure (body structure)</td>
-  </tr>
-  <tr>
-    <td>21522001</td>
-    <td>Abdominal pain (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>818983003</td>
-    <td>Abdomen (body structure)</td>
-  </tr>
-  <tr>
-    <td>29857009</td>
-    <td>Chest pain (finding)</td>
-    <td> </td>
-    <td>22253000</td>
-    <td>Pain (finding)</td>
-    <td>51185008</td>
-    <td>Thoracic structure (body structure)</td>
-  </tr>
-</tbody></table>
+
+| Pre-coordinated coding.code | Pre-coordinated coding.display | Map to | Post-coordinated value.coding.code | Post-coordinated value.coding.display | Post-coordinated bodySite coding.code | Post-coordinated bodySite coding.display |
+|---|---|---|---|---|---|---|
+| [51197009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=51197009&edition=MAIN/2026-01-01&release=&languages=en) | Stomach cramps (finding) | | [55300003](https://browser.ihtsdotools.org/?perspective=full&conceptId1=55300003&edition=MAIN/2026-01-01&release=&languages=en) | Cramp (finding) | [69695003](https://browser.ihtsdotools.org/?perspective=full&conceptId1=69695003&edition=MAIN/2026-01-01&release=&languages=en) | Stomach structure (body structure) |
+| [53430007](https://browser.ihtsdotools.org/?perspective=full&conceptId1=53430007&edition=MAIN/2026-01-01&release=&languages=en) | Pain of breast (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [76752008](https://browser.ihtsdotools.org/?perspective=full&conceptId1=76752008&edition=MAIN/2026-01-01&release=&languages=en) | Breast structure (body structure) |
+| [25064002](https://browser.ihtsdotools.org/?perspective=full&conceptId1=25064002&edition=MAIN/2026-01-01&release=&languages=en) | Headache (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [69536005](https://browser.ihtsdotools.org/?perspective=full&conceptId1=69536005&edition=MAIN/2026-01-01&release=&languages=en) | Head structure (body structure) |
+| [279039007](https://browser.ihtsdotools.org/?perspective=full&conceptId1=279039007&edition=MAIN/2026-01-01&release=&languages=en) | Low back pain (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [37822005](https://browser.ihtsdotools.org/?perspective=full&conceptId1=37822005&edition=MAIN/2026-01-01&release=&languages=en) | Structure of back of abdominopelvic segment of trunk (body structure) |
+| [30473006](https://browser.ihtsdotools.org/?perspective=full&conceptId1=30473006&edition=MAIN/2026-01-01&release=&languages=en) | Pain in pelvis (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [12921003](https://browser.ihtsdotools.org/?perspective=full&conceptId1=12921003&edition=MAIN/2026-01-01&release=&languages=en) | Structure of pelvis (body structure) |
+| [23924001](https://browser.ihtsdotools.org/?perspective=full&conceptId1=23924001&edition=MAIN/2026-01-01&release=&languages=en) | Tight chest (finding) | | [299954009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=299954009&edition=MAIN/2026-01-01&release=&languages=en) | Tightness sensation (finding) | [51185008](https://browser.ihtsdotools.org/?perspective=full&conceptId1=51185008&edition=MAIN/2026-01-01&release=&languages=en) | Thoracic structure (body structure) |
+| [57676002](https://browser.ihtsdotools.org/?perspective=full&conceptId1=57676002&edition=MAIN/2026-01-01&release=&languages=en) | Pain of joint (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [39352004](https://browser.ihtsdotools.org/?perspective=full&conceptId1=39352004&edition=MAIN/2026-01-01&release=&languages=en) | Joint structure (body structure) |
+| [21522001](https://browser.ihtsdotools.org/?perspective=full&conceptId1=21522001&edition=MAIN/2026-01-01&release=&languages=en) | Abdominal pain (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [818983003](https://browser.ihtsdotools.org/?perspective=full&conceptId1=818983003&edition=MAIN/2026-01-01&release=&languages=en) | Abdomen (body structure) |
+| [29857009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=29857009&edition=MAIN/2026-01-01&release=&languages=en) | Chest pain (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [51185008](https://browser.ihtsdotools.org/?perspective=full&conceptId1=51185008&edition=MAIN/2026-01-01&release=&languages=en) | Thoracic structure (body structure) |
+**NOTE ON SNOMED CT USAGE:** Throughout this guide, we recommend and use SNOMED-CT codes.  Work is underway to include the common symptoms code in the IPS SNOMED value set which would then be accessible to all.
 
 
 ### Content and Organization

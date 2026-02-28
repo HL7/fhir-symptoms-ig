@@ -35,7 +35,7 @@ The triage nurse captures this patient-reported symptom in the EHR system, docum
 
 The system structures this information using the [shortness of breath symptom profile](Observation-ShortnessOfBreathSymptom.html), enabling the symptom to be discretely captured with timing, precipitating factors, and alleviating factors as the patient described them. The patient’s vital signs are also documented: blood pressure 162/90, respiratory rate 18, pulse 84, oxygen saturation 97% on room air, and temperature 98.2°F.
 
-One hour later, during the physician assessment, Jane provides additional detail about her symptoms. She tells the physician: *“Yesterday when I was chasing my 5-year-old son up the stairs, I got really short of breath and then I felt like an elephant was sitting on my chest. The chest pain lasted about 20 minutes. That’s never happened before, so I came to the ER.”*
+One hour later, during the physician assessment, Jane provides additional detail about her symptoms. She tells the physician: *“Yesterday when I was chasing my 5-year-old grandson up the stairs, I got really short of breath and then I felt like an elephant was sitting on my chest. The chest pain lasted about 20 minutes. That’s never happened before, so I came to the ER.”*
 
 The physician captures this expanded symptom narrative, documenting:
 
@@ -61,9 +61,9 @@ This use case illustrates detailed symptom characterization in an outpatient set
 
 ##### Patient-Provider Interaction
 
-Mr. John Doe, a 72-year-old male, schedules an appointment with his primary care physician and reports: *“I’ve been having dizziness that’s been getting worse over the past 3 weeks. It feels like I’m light-headed and the room is spinning, especially when I stand up.”*
+John Doe, a 72-year-old male, schedules an appointment with his primary care physician and reports: *“I’ve been having dizziness that’s been getting worse over the past 3 weeks. It feels like I’m light-headed and the room is spinning, especially when I stand up.”*
 
-During the clinical interview, the physician asks clarifying questions and Mr. Doe provides additional details:
+During the clinical interview, the physician asks clarifying questions and John provides additional details:
 
 - **Symptom quality**: “Light-headedness” and “room spinning” sensation
 - **Timing**: Multiple times throughout the day, particularly with positional changes (standing from sitting, walking)
@@ -127,7 +127,7 @@ This use case illustrates how patient-reported symptom progression over weeks to
 
 ##### Initial Primary Care Visit - Patient-Provider Interaction
 
-Mr. Doe visits his primary care physician and describes: *“I’ve been constipated for about two months now. I’m only going every 2-3 days, and when I do go, it’s hard and I have to strain. I’ve also been feeling more tired than usual.”*
+John Doe visits his primary care physician and describes: *“I’ve been constipated for about two months now. I’m only going every 2-3 days, and when I do go, it’s hard and I have to strain. I’ve also been feeling more tired than usual.”*
 
 The physician documents the patient’s reported symptoms:
 
@@ -140,7 +140,7 @@ The patient is counseled on dietary modifications, increased fluid intake, and p
 
 ##### Follow-up Visit (6 weeks later) - Patient-Provider Interaction
 
-Despite adoption of interventions recommended by his PCP, Mr. Doe returns and reports: *“The constipation is worse even though I’ve been using laxatives like you suggested. Now I’m having cramping pain on my left side when I try to go, and I’ve lost about 8 pounds without trying. I’m just not hungry anymore.”*
+Despite adoption of interventions recommended by his PCP, John Doe returns and reports: *“The constipation is worse even though I’ve been using laxatives like you suggested. Now I’m having cramping pain on my left side when I try to go, and I’ve lost about 8 pounds without trying. I’m just not hungry anymore.”*
 
 The physician updates the symptom documentation:
 
@@ -151,13 +151,13 @@ The physician updates the symptom documentation:
 
 ##### System Search Example
 
-A gastroenterology consultant accessing Mr. Doe’s records could query for “progressive constipation AND weight loss AND abdominal pain” to quickly retrieve this symptom timeline, supporting appropriate diagnostic planning (colonoscopy ordered).
+A gastroenterology consultant accessing John Doe’s records could query for “progressive constipation AND weight loss AND abdominal pain” to quickly retrieve this symptom timeline, supporting appropriate diagnostic planning (colonoscopy ordered).
 
 ##### Emergency Department Presentation - Patient-Provider Interaction
 
-Mr. Doe was evaluated by outpatient GI and underwent a colonoscopy, which revealed a partially obstructing mass in the sigmoid colon. Biopsies were taken, and pathology confirmed adenocarcinoma. He was awaiting oncology follow-up when he developed acute symptoms.
+John Doe was evaluated by outpatient GI and underwent a colonoscopy, which revealed a partially obstructing mass in the sigmoid colon. Biopsies were taken, and pathology confirmed adenocarcinoma. He was awaiting oncology follow-up when he developed acute symptoms.
 
-Mr. Doe presents to the ED and reports: *“I haven’t been able to pass anything for 48 hours, and the pain is excruciating—10 out of 10.”*
+John Doe presents to the ED and reports: *“I haven’t been able to pass anything for 48 hours, and the pain is excruciating—10 out of 10.”*
 
 ED staff document:
 

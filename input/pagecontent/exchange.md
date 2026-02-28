@@ -1,6 +1,6 @@
 ### Overview
 
-This guide presumes that systems that are exchanging symptom data shall do so using the [FHIR RESTful API]({{site.data.fhir.path}}http.html).
+This guide presumes that systems that are exchanging symptom data shall do so using the [FHIR RESTful API]({{site.data.fhir.path}}http.html).  If you are using the RESTful API, then the conformance statements in this section are mandatory.
 
 ### Symptoms Sending
 
@@ -14,10 +14,12 @@ If a Symptom was sent with a pre-coordinated concept or text, the original conce
 
 ### Symptoms Searching
 
-Systems **SHALL** allow for [Symptoms](StructureDefinition-SymptomObservation.html) and [Absent Symptoms](StructureDefinition-SymptomAbsentObservation.html) to be searched for using the [SEARCH]({{site.data.fhir.path}}http.html#search) interaction with the following search parameters:
+Systems **SHOULD** allow for [Symptoms](StructureDefinition-SymptomObservation.html) and [Absent Symptoms](StructureDefinition-SymptomAbsentObservation.html) to be searched for using the [SEARCH]({{site.data.fhir.path}}http.html#search) interaction.
+
+If a system supports Searching, then it **SHALL** support the following search parameters:
 
 * [category]({{site.data.fhir.path}}observation.html#search) - searching for observations that are of category symptoms, i.e. all symptoms and absent symptoms
 * [patient]({{site.data.fhir.path}}observation.html#search) - searching for a specific patient
 * [code]({{site.data.fhir.path}}observation.html#search) - searching for observations that are either a symptom (LOINC code 75325-1) or an absent symptom (LOINC code 111551-8)
 * [code-value-concept]({{site.data.fhir.path}}observation.html#search) - searching for whether a patient has or does not have a specific symptom
-* [date]({{site.data.fhir.path}}observation.html#search) - searching for a symptom that happened on a certain date
+* [date]({{site.data.fhir.path}}observation.html#search) - searching for a symptom that was recorded as occurring in a period that includes the given date

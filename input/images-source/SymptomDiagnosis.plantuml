@@ -1,0 +1,6 @@
+@startuml
+* Patient Experience
+* Symptom (Observation)
+* Clinical Interpretation
+* Diagnosis (Condition)
+@enduml

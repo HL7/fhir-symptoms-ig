@@ -43,7 +43,8 @@ Title: "Symptom Observation"
   * insert ShouldSupport([[Patient or caregiver description of symptom]])
 * bodySite MS
   * ^short = "Where the patient feels the symptom in the body"
-* bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred) 
+* bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
+* bodySite.extension contains LocationQualifier named locationQualifier 0..*
 
 * dataAbsentReason 0..0
 * interpretation 0..0
@@ -63,7 +64,7 @@ Title: "Symptom Observation"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Different symptom component observations"
-* component contains quality 0..1 and
+* component contains quality 0..* and
                      severity 0..1 and
                      impact 0..* and
                      clinicalCourse 0..1 and
@@ -71,7 +72,7 @@ Title: "Symptom Observation"
                      triggersOrExacerbatingFactors 0..* and
                      alleviatingFactors 0..* and
                      otherEvents 0..* and
-                     frequency 0..1 and
+                     frequency 0..* and
                      speedOfOnset 0..1
                      
 * component[quality] 
@@ -119,7 +120,7 @@ Title: "Symptom Observation"
     * ^short = "Code for the impact being described" 
   * value[x] only CodeableConcept
     * ^short = "Code that represents the affective grade" 
-  * valueCodeableConcept from AffectiveGrade (preferred)
+  * valueCodeableConcept from http://loinc.org/vs/LL4997-4 (example)
   * extension contains FunctionalAssessment named functionalAssessment 0..1
   * extension[text]
     * ^short = "Textual description of the impact"
@@ -211,7 +212,7 @@ Title: "Symptom Observation"
   * extension[text]
     * ^short = "Textual description of the event" 
 * component[frequency] 
-  * insert ShouldSupport([[How often the patient experiences the symptom.]])
+  * insert ShouldSupport([[How often the patient experiences the symptom.  Use multiple repetitions to provide both qualitative and quantitative frequencies.]])
   * code = http://loinc.org#104156-5 "Condition frequency - Reported" 
   * value[x] only Ratio or CodeableConcept
     * ^comment = "Frequency can be expressed as either a specific time frame i.e. 3x/day or 2x/week (preferred) or bound to the LOINC code answer set 104156-5"
@@ -242,7 +243,7 @@ Title: "Symptom Observation"
 Extension: AssessmentScaleInformation
 Id: AssessmentScaleInformation
 Title: "Assessment Scale Information"
-Description: "Information about the specific scale or assessment used to determine the value.  This can be either just a code that represents the assessment scale or can be a reference to an Assessment Scale Collection."
+Description: "Information about the specific scale or assessment used to determine the value. This can be either just a code that represents the assessment scale or can be a reference to an Assessment Scale Collection."
 * value[x] only CodeableConcept or Reference(AssessmentScaleCollection)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
@@ -250,8 +251,8 @@ Description: "Information about the specific scale or assessment used to determi
 Extension: FunctionalAssessment
 Id: FunctionalAssessment
 Title: "Functional Assessment"
-Description: "Reference to a complete functional assessment collection."
-* value[x] only Reference(FunctionalAssessmentCollection)
+Description: "Information about the specific functional scale or assessment used to determine the value. This can be either just a code that represents the assessment scale or can be a reference to an Functional Assessment Collection."
+* value[x] only CodeableConcept or Reference(FunctionalAssessmentCollection)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
 
@@ -263,6 +264,15 @@ Description: "Medication that when taken affects the symptom"
 * valueReference only Reference(MedicationStatement or MedicationAdministration)
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.component"
+
+Extension: LocationQualifier
+Id: LocationQualifier
+Title: "Location Qualifier"
+Description: "Provides qualifiers for the body site location of a symptom."
+* value[x] only string
+* ^context[+].type = #element
+* ^context[=].expression = "Observation.bodySite"
+
 
 RuleSet: ShouldSupport(label)
 * ^short = "\ud835\udde6\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udddf\ud835\uddd7\u0020\ud835\udde6\ud835\udde8\ud835\udde3\ud835\udde3\ud835\udde2\ud835\udde5\ud835\udde7 {label}"

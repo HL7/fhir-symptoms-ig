@@ -28,8 +28,7 @@ In a normal profile, we would indicate the remaining data elements using the Mus
 
 1. issued - when the symptoms information was recorded.  This is different from the effective dateTime or period.
 1. note - a text description of the symptom provided by the patient or caregiver
-1. associatedSymptom extension - used to associate other symptoms with this symptom for arbitrary groupings
-1. associatedCondition extension - used to indicate a relationship between this symptom and a condition, eg. a symptom known to be due to a patient's condition
+1. workflow-supportingInfo extension - used to associate other symptoms with this symptom for arbitrary groupings as well as indicating a relationship between this symptom and a condition, eg. a symptom known to be due to a patient's condition
 
 ### Component Observations of the Symptom
 A lot of the structured information of the Symptom is profiled in the component observations.  These component observations do not have a life of their own but are tied to the symptom itself.  Every component observation has a note extension and does not allow a data absent reason, interpretation, or reference range element.
@@ -38,11 +37,11 @@ The following component observations allow for an assessment scale code or refer
 
 1. Quality - a patient's internal perception of the symptom.  This is represented by the LOINC code 56823-8 and a value that is the quality.
 1. Severity - the intensity with which the patient experiences the symptom.  This is represented by the LOINC code 64750-3 and a value that is the severity.
+1. Impact - How the symptom is affecting the patient, either emotionally, mentally, or physically. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  As well, a Functional Assessment Collection can be provided to give more details of the functional impact.
 
 
 The following component observations have no assessment scale attached to them:
 
-1. Impact - How the symptom is affecting the patient, either emotionally, mentally, or physically. This is represented by a code taken from the WHO's International Classification of Functioning, Disability and Health code system.  As well, a Functional Assessment Collection can be provided to give more details of the functional impact.
 1. Clinical Course - the character of the symptom onset.  This is represented by the LOINC code 89261-2 and a value that is the clinical course. 
 1. Trend - whether a symptom is improving, worsening, stable, or resolved.  This is represented by the LOINC code 89253-9 and a value that is the trend.
 1. Triggers or Exacerbating Factors - patient reported actions, conditions, events, physical objects or other factors that initiate, increase or worsen symptoms. This is represented by the LOINC code 100752-5 and a value that is the factor. It also provides an extension to indicate a medication that is believed to cause or exacerbate the symptom.

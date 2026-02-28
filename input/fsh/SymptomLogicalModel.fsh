@@ -5,55 +5,61 @@ Description: """The FHIR Symptoms Logical Model defines the conceptual represent
 Title: "Symptom Logical Model"
 
 * identifier 1..1 string "A unique string that identifies this instance of a symptom"
-* symptomCode 1..1 CodeableConcept "Coded description of symptom"
+* symptomCode 1..1 code "Coded description of symptom"
 * presentFlag 1..1 boolean "Whether the symptom is present or absent"
 * affectedPatient 1..1 Patient "The patient who is experiencing the symptom"
 * reporter[x] 1..1 Patient or RelatedPerson "The person who is reporting the symptom information"
-* symptomDescription 0..* Annotation "Textual description of symptom as provided by patient or caregiver"
-* location 0..* CodeableConcept "Where the patient feels the symptom in the body."
+* symptomDescription 0..* Annotation "Textual description of symptom as provided by patient or related person"
 * associatedSymptoms 0..* SymptomLogicalModel "Other symptoms associated with this symptom. Used when a patient or caregiver reports multiple symptoms in an encounter and a system wants to link all of them together"
 * associatedConditions 0..* Condition "Condition associated with this symptom. Used when a patient, caregiver, or clinician wants to link a symptom to a new or existing Condition."
 
 * keyFeatures 1..1 BackboneElement "Key Features" "The key features of the symptom"
 
-* keyFeatures.quality 0..1 BackboneElement "The patient's internal perception of the symptom." 
+* keyFeatures.location 0..* BackboneElement "Where the patient feels the symptom in the body."
+* keyFeatures.location.code 1..1 code "Coded description of the location."
+* keyFeatures.location.qualifier 0..* string "Qualifers of the location, eg. radiating down my leg"
+
+* keyFeatures.quality 0..* BackboneElement "The patient's internal perception of the symptom." 
 * keyFeatures.quality.note 0..1 Annotation "Textual description of the symptom quality" 
 * keyFeatures.quality.scaleCode 0..1 code "Code for the specific scale or assessment (if any) used to determine the quality" 
-* keyFeatures.quality.value 1..1 CodeableConcept "Code that represents the symptom quality" 
+* keyFeatures.quality.value 1..1 code "Code that represents the symptom quality" 
 
 * keyFeatures.severity 0..1 BackboneElement "The intensity with which the patient experiences the symptom."
 * keyFeatures.severity.note 0..1 Annotation "Textual description of the symptom severity" 
 * keyFeatures.severity.scaleCode 0..1 code "Code for the specific scale or assessment if any used to determine the severity" 
-* keyFeatures.severity.value 1..1 CodeableConcept "Code that represents the symptom severity" 
+* keyFeatures.severity.value 1..1 code "Code that represents the symptom severity" 
 
-* keyFeatures.impact 0..1 BackboneElement "How the symptom is affecting the patient, either emotionally, mentally, or physically." 
+* keyFeatures.impact 0..* BackboneElement "How the symptom is affecting the patient, either emotionally, mentally, or physically." 
 * keyFeatures.impact.note 0..1 Annotation "Textual description of the impact" 
 * keyFeatures.impact.scaleCode 0..1 code "Code for the specific scale or assessment (if any) used to determine the impact" 
-* keyFeatures.impact.value 1..1 CodeableConcept "Code that represents the impact" 
+* keyFeatures.impact.value 1..1 code "Code that represents the impact" 
 
 * keyFeatures.surroundingEvents 0..1 BackboneElement "Events or circumstances related to symptom onset or intensity." 
 
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors 0..* BackboneElement "" "Patient reported actions, conditions, events, physical objects or other factors that initiate or worsen symptoms or the condition of interest (pain, nausea, dyspnea, dizziness, or other)."
-* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
+* keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.factor 1..1 code "Reference to the factor" 
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.relatedMedication[x] 0..* MedicationStatement or MedicationAdministration "Medication that patient suggests/reports triggers or exacerbates the symptom"
 * keyFeatures.surroundingEvents.triggerOrExacerbatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 
 * keyFeatures.surroundingEvents.alleviatingFactors 0..* BackboneElement "" "Patient-reported actions, conditions, events, or other factors that decrease the symptoms or condition"
-* keyFeatures.surroundingEvents.alleviatingFactors.factor 1..1 CodeableConcept "Reference to the factor" 
+* keyFeatures.surroundingEvents.alleviatingFactors.factor 1..1 code "Reference to the factor" 
 * keyFeatures.surroundingEvents.alleviatingFactors.note 0..1 Annotation "Information given about actions, conditions, events, or other factors"
 * keyFeatures.surroundingEvents.alleviatingFactors.relatedMedication[x] 0..* MedicationStatement or MedicationAdministration "Medication that patient suggests/reports alleviating the symptom"
 
-* keyFeatures.surroundingEvents.otherEvents 0..* CodeableConcept "Patient-reported actions that were occuring at time of symptom onset"
+* keyFeatures.surroundingEvents.otherEvents 0..* code "Patient-reported actions that were occuring at time of symptom onset"
 
 * timing 0..1 BackboneElement "" "Timing includes the actual or estimated date/time of onset, character of onset, how often the patient experiences the symptom, and the length of time the symptom persists."
-* timing.speedOfOnset 0..1 CodeableConcept "Qualitative expression of how the patient perceived the rate of the symptom to become apparent." ""
+* timing.speedOfOnset 0..1 code "Qualitative expression of how the patient perceived the rate of the symptom to become apparent." ""
 * timing.onset[x] 0..1 dateTime or Period "Clinically relevant time or period for the symptom since first occurence." 
-* timing.note 0..1 Annotation "Free text related to the observation" 
-* timing.duration[x] 0..1 Duration "The length of time the symptom persists in this instance of occurence." ""
+* timing.note 0..1 Annotation "Information given by the patient about the overall timing of the symptom." 
+* timing.duration 0..1 Duration "The length of time the symptom persists in this instance of occurence." ""
 
-* keyFeatures.frequency[x] 0..1 Ratio or CodeableConcept "How often the patient experiences the symptom i.e. expressed as 3x/day or 2x/week." 
-* clinicalCourse 0..1 CodeableConcept "Character of symptom onset." "Qualitative expression of how the patient perceived the course or duration of the symptom."
-* trend 0..1 CodeableConcept "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved."
+* keyFeatures.frequency 0..1 BackboneElement "How often the patient experiences the symptom i.e. expressed as 3x/day or 2x/week." 
+* keyFeatures.frequency.quality 0..1 string "A qualitative expression of the frequency, eg. often"
+* keyFeatures.frequency.quantity 0..1 Quantity "A quantitative expression of the frequency"
+
+* clinicalCourse 0..1 code "Character of symptom onset." "Qualitative expression of how the patient perceived the course or duration of the symptom."
+* trend 0..1 code "Intensity of symptom over time" "Whether a condition is improving, worsening, stable, or resolved."
 
 * metadata 1..1 BackboneElement "Non clinical information about the symptom"
 * metadata.documentationDate 1..1 dateTime "Date when symptom was documented in the system" "Date when symptom was documented in the system."
