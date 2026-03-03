@@ -50,6 +50,8 @@ It is still necessary for the original pre-coordinated concept to be included in
 | [57676002](https://browser.ihtsdotools.org/?perspective=full&conceptId1=57676002&edition=MAIN/2026-01-01&release=&languages=en) | Pain of joint (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [39352004](https://browser.ihtsdotools.org/?perspective=full&conceptId1=39352004&edition=MAIN/2026-01-01&release=&languages=en) | Joint structure (body structure) |
 | [21522001](https://browser.ihtsdotools.org/?perspective=full&conceptId1=21522001&edition=MAIN/2026-01-01&release=&languages=en) | Abdominal pain (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [818983003](https://browser.ihtsdotools.org/?perspective=full&conceptId1=818983003&edition=MAIN/2026-01-01&release=&languages=en) | Abdomen (body structure) |
 | [29857009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=29857009&edition=MAIN/2026-01-01&release=&languages=en) | Chest pain (finding) | | [22253000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=22253000&edition=MAIN/2026-01-01&release=&languages=en) | Pain (finding) | [51185008](https://browser.ihtsdotools.org/?perspective=full&conceptId1=51185008&edition=MAIN/2026-01-01&release=&languages=en) | Thoracic structure (body structure) |
+{:.grid}
+
 **NOTE ON SNOMED CT USAGE:** Throughout this guide, we recommend and use SNOMED-CT codes.  Work is underway to include the common symptoms code in the IPS SNOMED value set which would then be accessible to all.
 
 
