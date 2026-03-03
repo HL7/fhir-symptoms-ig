@@ -27,7 +27,6 @@ This use case demonstrates how patient-reported symptoms evolve from initial tri
 
 Jane Doe, a 60-year-old English-speaking Latina woman with a history of [type 2 diabetes mellitus](Condition-Type2DiabetesMellitus.html) and hypertension, arrives at the emergency department and reports to the triage nurse: *“For the last six weeks, I have been getting so winded when I have been walking upstairs.”*
 
-<<<<<<< HEAD
 The triage nurse captures this patient-reported symptom in the EHR system, documenting:
 
 - **Chief complaint**: Shortness of breath
