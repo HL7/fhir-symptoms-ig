@@ -1,9 +1,5 @@
 ## Version = 1.1.0
 
-
-#### Narrative Changes
-* 
-
 #### JIRA Issues Applied
 
 * [FHIR-53730](https://jira.hl7.org/browse/FHIR-53730) - Fixed several typos *(correction)* 

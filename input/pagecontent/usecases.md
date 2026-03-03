@@ -1,6 +1,4 @@
-### Use Cases
-
-#### Introduction
+### Introduction
 
 The following use cases illustrate how patient-reported symptoms are captured, documented, and exchanged using the profiles defined in this implementation guide. Each scenario demonstrates the interaction between patients (or their caregivers), clinical staff, and health information systems as symptom information flows through different care settings and clinical workflows.
 
@@ -17,13 +15,13 @@ The use cases span multiple clinical domains—emergency care, primary care, pub
 
 -----
 
-#### Use Case 1: Chest Pain and Shortness of Breath - Emergency Department Presentation
+### Use Case 1: Chest Pain and Shortness of Breath - Emergency Department Presentation
 
-##### Clinical Context
+#### Clinical Context
 
 This use case demonstrates how patient-reported symptoms evolve from initial triage through detailed physician assessment in an emergency department setting, and how discrete symptom data can support both immediate clinical decision-making and longitudinal pattern recognition.
 
-##### Patient-Provider Interaction
+#### Patient-Provider Interaction
 
 Jane Doe, a 60-year-old English-speaking Latina woman with a history of [type 2 diabetes mellitus](Condition-Type2DiabetesMellitus.html) and hypertension, arrives at the emergency department and reports to the triage nurse: *“For the last six weeks, I have been getting so winded when I have been walking upstairs.”*
 
@@ -43,7 +41,7 @@ The physician captures this expanded symptom narrative, documenting:
 - **Associated symptoms**: Dizziness and light-headedness concurrent with shortness of breath and chest pain
 - **Absent symptoms**: Patient denies [fever](Observation-FeverSymptomAbsence.html), [chills](Observation-ChillSymptomAbsence.html), cough, or syncope
 
-##### System Capabilities Demonstrated
+#### System Capabilities Demonstrated
 
 - Discrete capture of patient-described symptom characteristics (quality, timing, severity, precipitating/alleviating factors)
 - Documentation of symptom evolution over time (6 weeks of exertional dyspnea progressing to acute chest pain)
@@ -52,13 +50,13 @@ The physician captures this expanded symptom narrative, documenting:
 
 -----
 
-#### Use Case 2: Dizziness - Primary Care Office Visit
+### Use Case 2: Dizziness - Primary Care Office Visit
 
-##### Clinical Context
+#### Clinical Context
 
 This use case illustrates detailed symptom characterization in an outpatient setting, where the patient provides a comprehensive description of symptom quality, timing, duration, and associated/absent symptoms to help guide diagnostic workup.
 
-##### Patient-Provider Interaction
+#### Patient-Provider Interaction
 
 John Doe, a 72-year-old male, schedules an appointment with his primary care physician and reports: *“I’ve been having dizziness that’s been getting worse over the past 3 weeks. It feels like I’m light-headed and the room is spinning, especially when I stand up.”*
 
@@ -74,19 +72,19 @@ During the clinical interview, the physician asks clarifying questions and John 
 
 The physician documents this information using the [dizziness symptom profile](Observation-DizzinessSymptom.html), capturing all the discrete elements the patient reported. This structured documentation enables the symptom pattern to be recognized and compared with previous or future encounters.
 
-##### System Search Example
+#### System Search Example
 
 If this patient later presents to an emergency department, a provider could query the health information exchange for “patients with dizziness AND hearing loss” to quickly retrieve this documented symptom pattern and avoid duplicative history-taking.
 
 -----
 
-#### Use Case 3: Public Health Surveillance - Novel Influenza Presentation
+### Use Case 3: Public Health Surveillance - Novel Influenza Presentation
 
-##### Clinical Context
+#### Clinical Context
 
 This use case demonstrates how patient-reported symptoms in an acute respiratory illness can support both individual clinical care and public health surveillance when symptoms are captured in standardized, exchangeable formats.
 
-##### Patient-Provider Interaction
+#### Patient-Provider Interaction
 
 Trish Doe, a 45-year-old previously healthy female, presents to the emergency department and reports to the triage nurse: *“I’ve had a terrible cough and can’t catch my breath for three days now. My fever has been 102.5°F, and I feel absolutely exhausted.”*
 
@@ -118,13 +116,13 @@ Over the next 48 hours, her condition remains guarded, with fluctuating oxygen d
 
 -----
 
-#### Use Case 4: Oncology - Progressive Gastrointestinal Symptoms
+### Use Case 4: Oncology - Progressive Gastrointestinal Symptoms
 
-##### Clinical Context
+#### Clinical Context
 
 This use case illustrates how patient-reported symptom progression over weeks to months can be captured discretely to support pattern recognition and appropriate escalation of care, from primary care to specialty consultation to acute presentation.
 
-##### Initial Primary Care Visit - Patient-Provider Interaction
+#### Initial Primary Care Visit - Patient-Provider Interaction
 
 John Doe visits his primary care physician and describes: *“I’ve been constipated for about two months now. I’m only going every 2-3 days, and when I do go, it’s hard and I have to strain. I’ve also been feeling more tired than usual.”*
 
@@ -137,7 +135,7 @@ The physician documents the patient’s reported symptoms:
 
 The patient is counseled on dietary modifications, increased fluid intake, and physical activity. He drinks 4-5 glasses of water per day and consumes a moderate-fiber diet. Physical activity is limited to occasional weekend walks. Patient has not tried over-the-counter laxatives yet.
 
-##### Follow-up Visit (6 weeks later) - Patient-Provider Interaction
+#### Follow-up Visit (6 weeks later) - Patient-Provider Interaction
 
 Despite adoption of interventions recommended by his PCP, John Doe returns and reports: *“The constipation is worse even though I’ve been using laxatives like you suggested. Now I’m having cramping pain on my left side when I try to go, and I’ve lost about 8 pounds without trying. I’m just not hungry anymore.”*
 
@@ -148,11 +146,11 @@ The physician updates the symptom documentation:
 - **New constitutional symptoms**: Marked fatigue, decreased stamina, occasional lightheadedness, appetite decline (patient denies early satiety or globus sensation, “just does not feel like eating”), [unintentional weight loss](Observation-WeightLossSymptom.html) of 8 pounds over 3 months
 - **Absent symptoms**: Patient denies fever, chills, nausea, or vomiting
 
-##### System Search Example
+#### System Search Example
 
 A gastroenterology consultant accessing John Doe’s records could query for “progressive constipation AND weight loss AND abdominal pain” to quickly retrieve this symptom timeline, supporting appropriate diagnostic planning (colonoscopy ordered).
 
-##### Emergency Department Presentation - Patient-Provider Interaction
+#### Emergency Department Presentation - Patient-Provider Interaction
 
 John Doe was evaluated by outpatient GI and underwent a colonoscopy, which revealed a partially obstructing mass in the sigmoid colon. Biopsies were taken, and pathology confirmed adenocarcinoma. He was awaiting oncology follow-up when he developed acute symptoms.
 
@@ -164,7 +162,7 @@ ED staff document:
 - **Symptom response to treatment**: Pain decreased to 8/10 [after IV morphine administration](Observation-MedicatedAbdominalPainSymptom.html)
 - **Associated findings**: Complete inability to pass stool or flatus for 48 hours
 
-##### System Capabilities Demonstrated
+#### System Capabilities Demonstrated
 
 - Longitudinal symptom tracking across multiple encounters and care settings
 - Documentation of symptom progression and evolution (from mild intermittent constipation to acute bowel obstruction)
@@ -173,13 +171,13 @@ ED staff document:
 
 -----
 
-#### Use Case 5: Clinical Decision Support - Symptom Pattern Query
+### Use Case 5: Clinical Decision Support - Symptom Pattern Query
 
-##### Clinical Context
+#### Clinical Context
 
 This use case demonstrates how structured symptom data enables clinical decision support and diagnostic pattern recognition across a patient population.
 
-##### Scenario
+#### Scenario
 
 A healthcare system’s quality improvement team wants to identify patients who may have undiagnosed heart failure to facilitate earlier intervention. Using the structured symptom data captured in the symptom profiles, the system can execute queries such as:
 
@@ -196,7 +194,7 @@ Because symptoms are captured using standardized FHIR profiles with discrete dat
 - Quality measure reporting
 - Research and surveillance initiatives
 
-##### System Capabilities Demonstrated
+#### System Capabilities Demonstrated
 
 - Ability to search across symptom observations using coded values and attributes
 - Support for complex queries combining multiple symptom characteristics
