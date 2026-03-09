@@ -1,4 +1,6 @@
-## Version = 1.1.0
+## Version = 1.0.0
+
+Here are the changes from the balloted version to what was eventually published:
 
 #### JIRA Issues Applied
 
