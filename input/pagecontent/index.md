@@ -9,7 +9,9 @@ This implementation guide provides FHIR profiles that structure patient-reported
 
 ##### References
 [1] Singh H, Meyer AN, Thomas EJ. The frequency of diagnostic errors in outpatient care: estimations from three large observational studies involving US adult populations. BMJ Qual Saf. 2014;23(9):727-731. doi:10.1136/bmjqs-2013-002627
+
 [2] Newman-Toker DE, Nassery N, Schaffer AC, et al. Burden of serious harms from diagnostic error in the USA. BMJ Qual Saf. 2024;33(2):109-120. doi:10.1136/bmjqs-2021-014130
+
 [3] Liberman AL, Newman-Toker DE. Symptom-Disease Pair Analysis of Diagnostic Error (SPADE): a conceptual framework and methodological approach for unearthing misdiagnosis-related harms using big data. BMJ Qual Saf. 2018;27(7):557-566. doi:10.1136/bmjqs-2017-007032
 
 #### Intended Audience and System Capabilities

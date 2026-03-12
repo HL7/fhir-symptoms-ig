@@ -26,7 +26,7 @@ The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#
 The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
 
 # 09 - The extension slices are correct.  They are not notes but are are other extensions allowed in those components.
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/symptoms/StructureDefinition/SymptomObservation|1.0.0-snapshot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/symptoms/StructureDefinition/SymptomObservation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 10 - The template is producing duplicate anchor IDs for two different mappings.
 The html source has duplicate anchor Ids:%

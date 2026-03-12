@@ -8,7 +8,7 @@ Here are the changes from the balloted version to what was eventually published:
 * [FHIR-53731](https://jira.hl7.org/browse/FHIR-53731) - Corrected use case language *(correction)* [link](usecases.html)
 * [FHIR-53732](https://jira.hl7.org/browse/FHIR-53732) - Updated language in summary table *(correction)* [link](diagnosis.html#summary-table)
 * [FHIR-53733](https://jira.hl7.org/browse/FHIR-53733) - Updated wording in Diagnosis.md to indicate how we linked symptoms to conditions *(correction)* [link](diagnosis.html#linking-symptoms-and-diagnoses-in-fhir)
-* [FHIR-53734](https://jira.hl7.org/browse/FHIR-53734) - Removed SHOULD NOT conformance statement *(correction)* 
+* [FHIR-53734](https://jira.hl7.org/browse/FHIR-53734) - Removed conformance statement *(correction)* 
 * [FHIR-53735](https://jira.hl7.org/browse/FHIR-53735) - Clarified mandatory vs non-mandatory requirements when exchanging data *(correction)* [link](exchange.html#overview)
 * [FHIR-53736](https://jira.hl7.org/browse/FHIR-53736) - Changed 'recorded' to 'sent' *(correction)* [link](exchange.html#symptoms-sending)
 * [FHIR-53737](https://jira.hl7.org/browse/FHIR-53737) - Clarified information about artifacts *(correction)* [link](artifact_overview.html)

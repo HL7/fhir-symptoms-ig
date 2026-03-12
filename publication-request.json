@@ -1,10 +1,10 @@
 {
   "package-id" : "hl7.fhir.uv.symptoms",
-  "version" : "1.0.0-snapshot",
-  "path" : "http://hl7.org/fhir/uv/symptoms/1.0.0-snapshot",
-  "status" : "preview",
+  "version" : "1.0.0",
+  "path" : "http://hl7.org/fhir/uv/symptoms/STU1",
+  "status" : "trial-use",
   "sequence" : "STU 1",
-  "mode": "working",
+  "mode": "milestone",
   "first" : false,
-  "desc" : "This is the snapshot public review version of version 1.0.0"
+  "desc" : "This is the first published version of the Symptoms IG"
 }
