@@ -1,11 +1,16 @@
 ### Overview
 
 #### Purpose and Scope
-The purpose of this implementation guide is to standardize the representation and exchange of patient-reported symptoms using FHIR R4 resources. The absence of standardized definitions and formats for symptoms data currently hinders effective sharing across providers, leading to data silos and interruptions in critical diagnostic thinking. This initiative aims to decrease missed, delayed, or inaccurate diagnoses by enhancing the documentation and exchange of symptoms, a crucial step in the diagnostic process.
+The purpose of this implementation guide is to standardize the representation and exchange of patient-reported symptoms using FHIR R4 resources. The absence of standardized definitions and formats for symptoms data currently hinders effective sharing across providers. This initiative aims to decrease missed, delayed, or inaccurate diagnoses by supporting the standardized exchange of symptom data.
 
 Symptoms in the context of this guide refer to subjective observations reported by patients or their caregivers about changes in their health status. This guide focuses on capturing what patients report about their experiences, which may include both what clinicians would classify as true symptoms (subjective experiences like pain or fatigue) as well as signs (objective findings that patients observe about themselves, such as a rash or swelling). The semantic intent is to capture the patient’s perspective of their health concerns as they report them, recognizing that patients may not distinguish between symptoms and signs in the way healthcare professionals do.
 
-This implementation guide provides FHIR profiles that structure patient-reported symptom data for seamless exchange across visits and health systems. By standardizing how systems represent key symptom attributes—including severity, onset, duration, location, quality, and other characteristics—this guide supports enhanced recognition of symptom patterns, reduces clinician burden by streamlining the diagnostic process, and ultimately enables more informed diagnostic decision-making to improve patient outcomes.
+This implementation guide provides FHIR profiles that structure patient-reported symptom data for seamless exchange across visits and health systems. By standardizing how systems represent key symptom attributes, including severity, onset, duration, location, quality, and other characteristics, this guide supports the recognition of symptom patterns and ultimately supports more informed diagnostic decision-making to improve patient outcomes.
+
+##### References
+[1] Singh H, Meyer AN, Thomas EJ. The frequency of diagnostic errors in outpatient care: estimations from three large observational studies involving US adult populations. BMJ Qual Saf. 2014;23(9):727-731. doi:10.1136/bmjqs-2013-002627
+[2] Newman-Toker DE, Nassery N, Schaffer AC, et al. Burden of serious harms from diagnostic error in the USA. BMJ Qual Saf. 2024;33(2):109-120. doi:10.1136/bmjqs-2021-014130
+[3] Liberman AL, Newman-Toker DE. Symptom-Disease Pair Analysis of Diagnostic Error (SPADE): a conceptual framework and methodological approach for unearthing misdiagnosis-related harms using big data. BMJ Qual Saf. 2018;27(7):557-566. doi:10.1136/bmjqs-2017-007032
 
 #### Intended Audience and System Capabilities
 This guide is intended for health information systems that have the capability to expose symptom data as discrete, structured FHIR elements. This includes:
