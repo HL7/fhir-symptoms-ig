@@ -6,7 +6,7 @@ Pinned the version of http://hl7.org/fhir/StructureDefinition/workflow-supportin
 # 02 - Inherited from FHIR Core
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# 03 - The codes in this code system are moving to: THO - 'symptom' observation category and LOINC - 'Other Symptom Events'
+# 03 - The codes in this code system will eventually move out of the guide and to: THO - 'symptom' observation category and LOINC - 'Other Symptom Events'
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # 04 - We will add conformance clause testing eventually
@@ -25,7 +25,7 @@ The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#
 # 08 - ERROR We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be. (https://jira.hl7.org/browse/FHIR-53542)
 The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
 
-# 09 - The extension slices are correct.  They are not notes but are are other extensions allowed in those components.
+# 09 - The extension slices are correct.  They are not notes but are other extensions that are allowed in those components.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/symptoms/StructureDefinition/SymptomObservation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 10 - The template is producing duplicate anchor IDs for two different mappings.
