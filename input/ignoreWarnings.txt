@@ -23,7 +23,7 @@ Unknown Parameters: [openehr=true]
 The ImplementationGuide is based on FHIR version 4.0.1 but package openehr.base#0.1.0-snapshot is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 
 # 08 - ERROR We have requested that the note standard extension be allowed on Element.  The definition of the extension would imply that it should be. (https://jira.hl7.org/browse/FHIR-53542)
-The extension http://hl7.org/fhir/StructureDefinition/note is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
+The extension http://hl7.org/fhir/StructureDefinition/note v5.2.0 is not allowed to be used at this point (this element is [BackboneElement, Observation.component]; allowed for this version = e:Resource, e:Composition.section)
 
 # 09 - The extension slices are correct.  They are not notes but are other extensions that are allowed in those components.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/symptoms/StructureDefinition/SymptomObservation|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)

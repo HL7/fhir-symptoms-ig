@@ -3,6 +3,7 @@
 <version code="current" url="https://build.fhir.org/ig/HL7/fhir-symptoms-ig"/>
 <version code="1.0.0" url="http://hl7.org/fhir/uv/symptoms/STU1"/>
 <version code="1.0.0-ballot" deprecated="true" url="http://hl7.org/fhir/uv/symptoms/2026Jan"/>
+<version code="1.0.0-snapshot" deprecated="true" url="http://hl7.org/fhir/uv/symptoms/2026Jan"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
